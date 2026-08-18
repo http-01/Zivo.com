@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://http-01.github.io/Zivo.com/sitemap.xml
