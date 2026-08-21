@@ -1,90 +1,144 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import PersonCard from "@/components/PersonCard";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
-import { getCategoryBySlug, getPeopleByCategory, getAllCategories } from "@/lib/queries";
-import { PEOPLE_PER_PAGE } from "@/lib/constants";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTubers — Biographies & Net Worth | Zivo</title>
+<meta name="description" content="Browse biographies, careers and publicly reported net worth for notable YouTubers on Zivo.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root{
+    --ink:#161A2B; --ink-500:#454B6B; --ink-400:#6B7292; --ink-200:#C2C6D6; --ink-100:#E4E6ED;
+    --paper:#EDEEF2; --paper-50:#FFFFFF; --paper-100:#F7F7F9;
+    --gold:#C89B3C; --gold-200:#E6C878; --gold-50:#FBF3E1;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--paper); color:var(--ink);
+  }
+  a{color:inherit; text-decoration:none;}
+  .container{max-width:1100px; margin:0 auto; padding:0 20px;}
 
-export const revalidate = 3600;
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(255,255,255,0.92); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--ink-100);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .logo{display:flex; align-items:center; gap:8px; font-weight:700; font-size:1.25rem;}
+  .logo-mark{
+    width:28px; height:28px; border-radius:4px; background:var(--ink);
+    border:1px solid var(--gold); color:var(--gold-200);
+    display:flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:700;
+  }
+  .nav-links{display:flex; gap:24px; font-size:0.9rem;}
+  .nav-links a:hover{color:var(--gold);}
+  @media (max-width:640px){ .nav-links{display:none;} }
 
-export async function generateStaticParams() {
-  const categories = await getAllCategories();
-  return categories.map((c) => ({ slug: c.slug }));
-}
+  /* Page header */
+  .page-head{padding:40px 0 20px;}
+  .eyebrow{
+    font-family:ui-monospace,monospace; font-size:0.7rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--ink-400); margin:0 0 8px;
+  }
+  h1{font-size:2rem; margin:0 0 8px;}
+  .page-desc{color:var(--ink-500); max-width:600px; margin:0;}
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const category = await getCategoryBySlug(params.slug);
-  if (!category) return {};
-  return buildMetadata({
-    title: `${category.name} — Biographies & Net Worth`,
-    description:
-      category.description ||
-      `Explore biographies, careers and publicly reported net worth for notable ${category.name.toLowerCase()}.`,
-    path: `/category/${category.slug}`
-  });
-}
+  /* Grid */
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:16px; padding:24px 0 60px;
+  }
+  .card{
+    background:var(--paper-100); border:1px solid var(--ink-100); border-radius:6px;
+    overflow:hidden; display:flex; flex-direction:column; transition:transform .2s, box-shadow .2s;
+  }
+  .card:hover{transform:translateY(-3px); box-shadow:0 6px 16px rgba(22,26,43,0.08);}
+  .card-img{
+    aspect-ratio:4/5; background:var(--ink-100); position:relative;
+    display:flex; align-items:center; justify-content:center;
+    font-size:2.5rem; color:var(--ink-200); font-weight:600;
+  }
+  .card-img img{width:100%; height:100%; object-fit:cover;}
+  .stamp{
+    position:absolute; top:8px; left:8px; background:rgba(255,255,255,0.9);
+    border:1px solid var(--gold); color:var(--gold); font-size:0.65rem;
+    padding:2px 8px; border-radius:999px; font-family:ui-monospace,monospace;
+    text-transform:uppercase; letter-spacing:0.08em;
+  }
+  .card-body{padding:14px;}
+  .card-body h3{margin:0 0 4px; font-size:1.05rem;}
+  .card-meta{font-size:0.75rem; color:var(--ink-400); margin:0 0 6px; text-transform:uppercase; letter-spacing:0.05em;}
+  .card-desc{font-size:0.85rem; color:var(--ink-500); margin:0;}
 
-export default async function CategoryPage({
-  params,
-  searchParams
-}: {
-  params: { slug: string };
-  searchParams: { page?: string };
-}) {
-  const category = await getCategoryBySlug(params.slug);
-  if (!category) notFound();
+  .empty-state{
+    text-align:center; padding:60px 20px; color:var(--ink-500);
+    background:var(--paper-100); border:1px solid var(--ink-100); border-radius:6px;
+  }
 
-  const page = Math.max(1, Number(searchParams.page) || 1);
-  const { people, total, pageCount } = await getPeopleByCategory(params.slug, page, PEOPLE_PER_PAGE);
+  footer{border-top:1px solid var(--ink-100); background:var(--paper-100); padding:32px 0; margin-top:40px;}
+  .footer-text{font-size:0.8rem; color:var(--ink-400); text-align:center;}
+</style>
+</head>
+<body>
 
-  const breadcrumbItems = [
-    { name: "Home", href: "/" },
-    { name: "Categories", href: "/category" },
-    { name: category.name, href: `/category/${category.slug}` }
-  ];
+<header>
+  <div class="container nav">
+    <a href="../index.html" class="logo">
+      <span class="logo-mark">Z</span> Zivo
+    </a>
+    <nav class="nav-links">
+      <a href="../categories.html">Categories</a>
+      <a href="../search.html">Search</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
 
-  return (
-    <div className="container-page py-10">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd(breadcrumbItems))
-        }}
-      />
-      <Breadcrumbs items={breadcrumbItems} />
-      <h1 className="font-display text-3xl font-semibold text-ink-900">{category.name}</h1>
-      {category.description && <p className="mt-2 max-w-2xl text-ink-500">{category.description}</p>}
-      <p className="eyebrow mt-2">{total} {total === 1 ? "profile" : "profiles"}</p>
+<main class="container">
+  <div class="page-head">
+    <p class="eyebrow">Category</p>
+    <h1>YouTubers</h1>
+    <p class="page-desc">Biographies, careers and publicly reported net worth for notable content creators. Figures marked as estimates and sourced where available.</p>
+  </div>
 
-      {people.length === 0 ? (
-        <div className="card-index mt-8 p-10 text-center">
-          <p className="text-ink-500">No published biographies in this category yet.</p>
-        </div>
-      ) : (
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {people.map((p) => (
-            <PersonCard key={p.id} person={p} />
-          ))}
-        </div>
-      )}
+  <!-- 
+    Replace the sample cards below with real, sourced profiles.
+    Each card links to a full biography page (e.g. ../people/creator-name.html)
+  -->
+  <div class="grid">
 
-      {pageCount > 1 && (
-        <nav aria-label="Pagination" className="mt-10 flex items-center justify-center gap-2">
-          {Array.from({ length: pageCount }, (_, i) => i + 1).map((p) => (
-            <Link
-              key={p}
-              href={`/category/${category.slug}?page=${p}`}
-              aria-current={p === page ? "page" : undefined}
-              className={`h-9 min-w-9 rounded border px-3 text-sm leading-9 ${
-                p === page ? "border-ink-800 bg-ink-800 text-paper-50" : "border-ink-200 text-ink-600"
-              }`}
-            >
-              {p}
-            </Link>
-          ))}
-        </nav>
-      )}
-    </div>
-  );
-}
+    <a class="card" href="../people/sample-youtuber.html">
+      <div class="card-img">
+        <span class="stamp">Sample</span>
+        <img src="../assets/sample-avatar.jpg" alt="Photo of Sample Creator" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <h3>Sample Creator</h3>
+        <p class="card-meta">YouTuber · Country</p>
+        <p class="card-desc">Short one-line description of this creator's channel and focus.</p>
+      </div>
+    </a>
+
+    <!-- Duplicate the <a class="card">...</a> block above for each real profile -->
+
+  </div>
+
+  <!-- Show this instead of the grid when there are no profiles yet -->
+  <!--
+  <div class="empty-state">
+    <p>No published YouTuber biographies yet.</p>
+  </div>
+  -->
+</main>
+
+<footer>
+  <div class="container footer-text">
+    © 2026 Zivo. Biographical facts are sourced and cited where available. Estimates are estimates, not certified figures.
+  </div>
+</footer>
+
+</body>
+</html>
