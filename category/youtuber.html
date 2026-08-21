@@ -1,0 +1,90 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import PersonCard from "@/components/PersonCard";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { getCategoryBySlug, getPeopleByCategory, getAllCategories } from "@/lib/queries";
+import { PEOPLE_PER_PAGE } from "@/lib/constants";
+
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const categories = await getAllCategories();
+  return categories.map((c) => ({ slug: c.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const category = await getCategoryBySlug(params.slug);
+  if (!category) return {};
+  return buildMetadata({
+    title: `${category.name} — Biographies & Net Worth`,
+    description:
+      category.description ||
+      `Explore biographies, careers and publicly reported net worth for notable ${category.name.toLowerCase()}.`,
+    path: `/category/${category.slug}`
+  });
+}
+
+export default async function CategoryPage({
+  params,
+  searchParams
+}: {
+  params: { slug: string };
+  searchParams: { page?: string };
+}) {
+  const category = await getCategoryBySlug(params.slug);
+  if (!category) notFound();
+
+  const page = Math.max(1, Number(searchParams.page) || 1);
+  const { people, total, pageCount } = await getPeopleByCategory(params.slug, page, PEOPLE_PER_PAGE);
+
+  const breadcrumbItems = [
+    { name: "Home", href: "/" },
+    { name: "Categories", href: "/category" },
+    { name: category.name, href: `/category/${category.slug}` }
+  ];
+
+  return (
+    <div className="container-page py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd(breadcrumbItems))
+        }}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
+      <h1 className="font-display text-3xl font-semibold text-ink-900">{category.name}</h1>
+      {category.description && <p className="mt-2 max-w-2xl text-ink-500">{category.description}</p>}
+      <p className="eyebrow mt-2">{total} {total === 1 ? "profile" : "profiles"}</p>
+
+      {people.length === 0 ? (
+        <div className="card-index mt-8 p-10 text-center">
+          <p className="text-ink-500">No published biographies in this category yet.</p>
+        </div>
+      ) : (
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {people.map((p) => (
+            <PersonCard key={p.id} person={p} />
+          ))}
+        </div>
+      )}
+
+      {pageCount > 1 && (
+        <nav aria-label="Pagination" className="mt-10 flex items-center justify-center gap-2">
+          {Array.from({ length: pageCount }, (_, i) => i + 1).map((p) => (
+            <Link
+              key={p}
+              href={`/category/${category.slug}?page=${p}`}
+              aria-current={p === page ? "page" : undefined}
+              className={`h-9 min-w-9 rounded border px-3 text-sm leading-9 ${
+                p === page ? "border-ink-800 bg-ink-800 text-paper-50" : "border-ink-200 text-ink-600"
+              }`}
+            >
+              {p}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </div>
+  );
+}
