@@ -1,4 +1,178 @@
-User-agent: *
-Allow: /
+cat > /home/claude/ziva/src/app/robots.ts << 'ROBOTS_EOF'
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/constants";
 
-Sitemap: https://http-01.github.io/Zivo.com/sitemap.xml
+// =============================================================================
+// Ziva — robots.txt generator
+// =============================================================================
+// This file is served automatically by Next.js at /robots.txt (App Router
+// "metadata route" convention). There is no separate static robots.txt file
+// to maintain — everything crawlers see comes from this single source of
+// truth, so the rules can never drift out of sync with the actual site.
+//
+// Design goals for this configuration:
+//   1. Every real, public, indexable page (home, search, categories,
+//      biography pages, legal/trust pages) stays crawlable.
+//   2. Admin, auth, and API routes are never crawlable or indexable.
+//   3. Noisy duplicate-content URL patterns (pagination, filter combos,
+//      tracking parameters) are blocked so crawl budget isn't wasted on
+//      thousands of near-duplicate query-string variants of /search.
+//   4. Search-engine bots (Google, Bing, DuckDuckGo, Yandex) get the same
+//      generous, standard ruleset.
+//   5. AI-training / scraping crawlers are handled as an explicit,
+//      separate, clearly-labeled block so the policy is visible and can be
+//      revisited deliberately rather than accidentally.
+//   6. The dynamic sitemap.xml is always advertised.
+// =============================================================================
+
+// ---------------------------------------------------------------------------
+// 1. Paths that must never be crawled, for ANY bot.
+// ---------------------------------------------------------------------------
+// These cover: the entire admin dashboard, NextAuth's internal routes, all
+// JSON/API endpoints, and Next.js's own internal asset/data paths.
+const DISALLOW_ADMIN: string[] = [
+  "/admin",
+  "/admin/",
+  "/admin/*",
+  "/admin/login",
+  "/admin/people",
+  "/admin/people/*"
+];
+
+const DISALLOW_AUTH: string[] = [
+  "/api/auth",
+  "/api/auth/",
+  "/api/auth/*",
+  "/api/auth/signin",
+  "/api/auth/signout",
+  "/api/auth/session",
+  "/api/auth/csrf",
+  "/api/auth/callback",
+  "/api/auth/callback/*"
+];
+
+const DISALLOW_API: string[] = [
+  "/api",
+  "/api/",
+  "/api/*",
+  "/api/search",
+  "/api/search/",
+  "/api/search/*"
+];
+
+// Next.js internals — prefetch data, build manifests, source maps. These
+// are not meaningful pages and should never appear in a search index.
+const DISALLOW_NEXT_INTERNALS: string[] = [
+  "/_next",
+  "/_next/",
+  "/_next/*",
+  "/_next/static/*.map",
+  "/_next/data/*"
+];
+
+// ---------------------------------------------------------------------------
+// 2. Low-value / duplicate-content URL *patterns* to keep out of the index.
+// ---------------------------------------------------------------------------
+// Search and category pages are useful to a human with a query, but a
+// crawler that walks every page=/filter combination just burns crawl
+// budget on near-duplicate content. We keep the base /search and
+// /category/[slug] pages crawlable, but block the parameterized variants.
+const DISALLOW_QUERY_NOISE: string[] = [
+  "/search?*",              // any filtered/paginated search results
+  "/category/*?page=*",     // paginated category pages beyond page 1
+  "/*?utm_*",                // marketing/tracking parameters
+  "/*?ref=*",
+  "/*?fbclid=*",
+  "/*?gclid=*",
+  "/*?sort=*",
+  "/*?*&*&*"                 // any URL stacking 3+ query parameters
+];
+
+// ---------------------------------------------------------------------------
+// 3. Standard search-engine crawlers.
+// ---------------------------------------------------------------------------
+// Same generous ruleset for every mainstream, well-behaved search engine.
+const SEARCH_ENGINE_BOTS = [
+  "Googlebot",
+  "Googlebot-Image",
+  "Googlebot-News",
+  "Bingbot",
+  "DuckDuckBot",
+  "Slurp",       // Yahoo
+  "Baiduspider",
+  "YandexBot",
+  "Applebot"
+];
+
+const searchEngineRules: MetadataRoute.Robots["rules"] = SEARCH_ENGINE_BOTS.map((agent) => ({
+  userAgent: agent,
+  allow: "/",
+  disallow: [
+    ...DISALLOW_ADMIN,
+    ...DISALLOW_AUTH,
+    ...DISALLOW_API,
+    ...DISALLOW_NEXT_INTERNALS,
+    ...DISALLOW_QUERY_NOISE
+  ]
+}));
+
+// ---------------------------------------------------------------------------
+// 4. AI training / data-scraping crawlers — explicit, reviewable policy.
+// ---------------------------------------------------------------------------
+// Ziva's content is sourced, cited biographical work. Whether to allow bulk
+// AI-training crawlers is a genuine editorial/business decision, not a
+// technical default — so it lives here as its own clearly labeled block
+// rather than being silently bundled into the generic "*" rule.
+//
+// Current policy: disallowed by default. To permit a specific crawler,
+// move its user-agent string out of this list and into
+// `searchEngineRules` (or give it its own `allow: "/"` rule below).
+const AI_TRAINING_BOTS = [
+  "GPTBot",              // OpenAI
+  "ChatGPT-User",
+  "Google-Extended",     // Google's Gemini/Bard training crawler
+  "CCBot",               // Common Crawl (widely reused for LLM training)
+  "anthropic-ai",
+  "Claude-Web",
+  "ClaudeBot",
+  "Bytespider",          // ByteDance
+  "Diffbot",
+  "PerplexityBot",
+  "Omgilibot",
+  "FacebookBot"
+];
+
+const aiTrainingRules: MetadataRoute.Robots["rules"] = AI_TRAINING_BOTS.map((agent) => ({
+  userAgent: agent,
+  disallow: ["/"]
+}));
+
+// ---------------------------------------------------------------------------
+// 5. Fallback rule for every other, unnamed bot.
+// ---------------------------------------------------------------------------
+const defaultRule: MetadataRoute.Robots["rules"] = [
+  {
+    userAgent: "*",
+    allow: "/",
+    disallow: [
+      ...DISALLOW_ADMIN,
+      ...DISALLOW_AUTH,
+      ...DISALLOW_API,
+      ...DISALLOW_NEXT_INTERNALS,
+      ...DISALLOW_QUERY_NOISE
+    ]
+  }
+];
+
+// ---------------------------------------------------------------------------
+// 6. Assemble and export.
+// ---------------------------------------------------------------------------
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [...searchEngineRules, ...aiTrainingRules, ...defaultRule],
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL
+  };
+}
+ROBOTS_EOF
+echo "line count:"; wc -l /home/claude/ziva/src/app/robots.ts
