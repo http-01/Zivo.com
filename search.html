@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Celebrities | ZIVO</title>
+<meta name="description" content="Search the ZIVO archive for actors, singers, athletes, creators, and entrepreneurs by name.">
+<meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
+<link rel="canonical" href="https://http-01.github.io/Zivo.com/search.html">
+<meta property="og:title" content="Search Celebrities | ZIVO">
+<meta property="og:description" content="Search the ZIVO archive for actors, singers, athletes, creators, and entrepreneurs by name.">
+<meta property="og:url" content="https://http-01.github.io/Zivo.com/search.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZIVO">
+<meta name="theme-color" content="#1C2B3A">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
+    <nav class="site-nav" aria-label="Primary"><a href="categories/actors.html" class="site-nav__link">Actors</a><a href="categories/singers.html" class="site-nav__link">Singers</a><a href="categories/athletes.html" class="site-nav__link">Athletes</a><a href="categories/creators.html" class="site-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a><a href="about.html" class="site-nav__link">About</a><a href="contact.html" class="site-nav__link">Contact</a></nav>
+    <div class="site-header__actions">
+      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+  <div class="header-search">
+    <div class="container header-search__inner">
+      <form action="search.html" method="GET" style="flex:1;display:flex;">
+        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
+      </form>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav__top">
+    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
+    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="mobile-nav__list" aria-label="Mobile">
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="categories/actors.html" class="mobile-nav__link">Actors</a><a href="categories/singers.html" class="mobile-nav__link">Singers</a><a href="categories/athletes.html" class="mobile-nav__link">Athletes</a><a href="categories/creators.html" class="mobile-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="mobile-nav__link">Entrepreneurs</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+  </nav>
+  <form class="mobile-nav__search" action="search.html" method="GET">
+    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
+  </form>
+</div>
+<main id="main">
+  <section class="page-hero page-hero--tight">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumbs__sep">/</span><span aria-current="page">Search</span></nav>
+      <span class="eyebrow eyebrow--light">Search the Archive</span>
+      <h1 class="page-hero__title">Find a celebrity</h1>
+      <div class="search-panel u-mt-lg" style="max-width:100%;">
+        <form class="search-form" id="searchPageForm" data-search-autocomplete autocomplete="off">
+          <span class="search-form__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+          <input class="search-form__input" type="search" id="searchPageInput" name="q" placeholder="Search famous people..." aria-label="Search famous people">
+          <button type="submit" class="search-form__submit">Search</button>
+          <div class="search-suggestions" role="listbox"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p class="search-meta" id="searchMeta">Enter a name above to search the archive.</p>
+      <div class="file-grid" id="resultsGrid"></div>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <h2 class="empty-state__title">No matches found</h2>
+        <p class="empty-state__desc">Try a different spelling, or browse by category from the navigation above.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
+        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Categories</p>
+        <a href="categories/actors.html" class="footer__link">Actors</a><a href="categories/singers.html" class="footer__link">Singers</a><a href="categories/athletes.html" class="footer__link">Athletes</a><a href="categories/creators.html" class="footer__link">Creators</a><a href="categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a>
+      </div>
+      <div>
+        <p class="footer__col-title">Company</p>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+        <a href="search.html" class="footer__link">Search</a>
+      </div>
+      <div>
+        <p class="footer__col-title">Legal</p>
+        <a href="privacy.html" class="footer__link">Privacy Policy</a>
+        <a href="disclaimer.html" class="footer__link">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
+      <span>Made for the endlessly curious.</span>
+    </div>
+    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
