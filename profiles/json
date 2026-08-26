@@ -1,0 +1,1806 @@
+{
+  "version": "1.0.0",
+  "schema": "ZIVO Profiles Schema v1 - Enhanced",
+  "totalProfiles": 24,
+  "categories": [
+    "actors",
+    "singers",
+    "athletes",
+    "creators",
+    "entrepreneurs"
+  ],
+  "imageGuidelines": {
+    "source": "Use high-resolution images from Google Images or Pinterest",
+    "resolution": "1200x1500px minimum",
+    "format": "JPG or WebP",
+    "quality": "Professional, well-lit headshots or iconic images",
+    "placement": "/images/ directory",
+    "rights": "Ensure right to use or use Creative Commons licensed images"
+  },
+  "profiles": [
+    {
+      "id": "001-tom-holland",
+      "name": "Tom Holland",
+      "slug": "tom-holland",
+      "url": "/profiles/tom-holland.html",
+      "category": "actors",
+      "role": "British Actor",
+      "shortDescription": "British actor best known for playing Spider-Man in the Marvel Cinematic Universe.",
+      "image": "/images/tom-holland.jpg",
+      "initials": "TH",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Thomas Stanley Holland was born on June 1, 1996, in Kingston upon Thames, London, England. He is the eldest of four children born to comedian and author Dominic Holland and photographer Nicola Frost Holland. Growing up in a creative household profoundly influenced his early interest in performing arts. His childhood was filled with exposure to entertainment and storytelling, which shaped his passion for acting from an early age.",
+        "education": "Holland attended Donhead, a Roman Catholic preparatory school. At just 12 years old, he began his performance training at a local dance school in Kingston. His early passion for dance led him to join the Nifty Feet Dance School, where he developed exceptional dancing skills. This training foundation became instrumental in his later success, as he performed in Billy Elliot the Musical at the Victoria Palace Theatre in London, playing the role of Michael - a breakthrough moment that launched his professional entertainment career.",
+        "career": "After his phenomenal success in Billy Elliot the Musical, Holland transitioned to film and television. He appeared in various British television programs including 'The Impossible' (2012) and gained international recognition when cast as Peter Parker / Spider-Man in 'Captain America: Civil War' (2016). This role catapulted him to global stardom and established him as one of Hollywood's most bankable young actors. He has since starred in multiple MCU films, including the Spider-Man trilogy, Avengers: Infinity War, and Avengers: Endgame, becoming the face of Marvel's new generation of heroes.",
+        "majorFilms": [
+          "Billy Elliot the Musical (2008) - Stage",
+          "The Impossible (2012)",
+          "Captain America: Civil War (2016)",
+          "Spider-Man: Homecoming (2017)",
+          "Avengers: Infinity War (2018)",
+          "Avengers: Endgame (2019)",
+          "Spider-Man: Far From Home (2019)",
+          "Cherry (2021)",
+          "Uncharted (2022)",
+          "Spider-Man: No Way Home (2021)"
+        ],
+        "achievements": "Holland has become one of the most successful actors of his generation, leading multiple blockbuster franchises. He successfully brought the beloved Spider-Man character to a new generation of audiences, earning critical acclaim for his portrayal. His ability to balance big-budget action with genuine emotional depth has made him a fan favorite and industry darling.",
+        "awards": [
+          "MTV Movie Award - Best Villain",
+          "Teen Choice Award - Choice Breakout Actor",
+          "Kids' Choice Award - Favorite Actor",
+          "BAFTA Rising Star nomination"
+        ],
+        "interestingFacts": [
+          "Holland is famous for accidentally spoiling Marvel films in interviews and on social media",
+          "He trained extensively in acrobatics and martial arts for his Spider-Man role",
+          "He is an accomplished dancer with professional training",
+          "He is known for his love of video games and streaming",
+          "He supports various charitable organizations including The Brothers Trust foundation",
+          "He is fluent in Spanish",
+          "He has worked with some of cinema's most renowned directors"
+        ],
+        "personalLife": "Holland is known for his down-to-earth personality despite his massive fame. He actively engages with fans on social media and is known for his humility and work ethic. He supports environmental causes and uses his platform for charitable work.",
+        "influence": "Tom Holland represents the new generation of global movie stars. His success in the MCU has made him one of the most recognizable faces in cinema. He has inspired millions of young actors and continues to shape the entertainment industry."
+      },
+      "metadata": {
+        "birthDate": "1996-06-01",
+        "birthPlace": "Kingston upon Thames, England",
+        "nationality": "British",
+        "age": 28,
+        "notableTitles": ["Spider-Man", "MCU Star", "Actor"]
+      },
+      "seo": {
+        "title": "Tom Holland - British Actor | Spider-Man Star | Biography - ZIVO",
+        "description": "Discover Tom Holland's complete biography. Learn about his early life, education, career with Spider-Man and MCU films, awards, and achievements as a British actor.",
+        "keywords": ["Tom Holland", "British actor", "Spider-Man", "MCU", "Marvel Cinematic Universe", "biography", "actor profile"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/tom-holland.html",
+        "ogImage": "/images/tom-holland.jpg",
+        "ogTitle": "Tom Holland - British Actor | Spider-Man Star",
+        "ogDescription": "Complete biography of Tom Holland, including his early life, career journey, major achievements, awards, and interesting facts."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "imdb": "nm5291101"
+      },
+      "relatedProfiles": [
+        "002-dwayne-johnson",
+        "003-leonardo-dicaprio",
+        "005-zendaya"
+      ]
+    },
+    {
+      "id": "002-dwayne-johnson",
+      "name": "Dwayne Johnson",
+      "slug": "dwayne-johnson",
+      "url": "/profiles/dwayne-johnson.html",
+      "category": "actors",
+      "role": "American Actor",
+      "shortDescription": "Known as 'The Rock,' Dwayne Johnson is one of the most popular actors in Hollywood.",
+      "image": "/images/dwayne-johnson.jpg",
+      "initials": "DJ",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Dwayne Douglas Johnson was born on May 2, 1972, in Hayward, California. His father, Rocky Johnson, was a professional wrestler, and his mother, Ata Johnson, was a former professional wrestler and actress. Growing up in a sports and entertainment-driven family, Dwayne was exposed to the world of professional wrestling from an early age. His childhood was marked by frequent relocations as his father traveled for wrestling events.",
+        "education": "Johnson attended Freedom High School in Bethlehem, Pennsylvania, where he became a standout football player. He earned a scholarship to play football at the University of Miami, where he studied criminology and physiology. His college football career was cut short by injuries, which led him to pursue professional wrestling instead - a decision that would change his life.",
+        "career": "After college, Johnson signed with the WWE and began his professional wrestling career in 1996. He quickly rose to stardom, becoming one of the most charismatic and popular wrestlers of all time. His catchphrase 'If you smell what The Rock is cooking' became iconic. He won multiple WWE Championships and became a household name. Transitioning to film in 2001, Johnson has become one of Hollywood's most bankable action stars, starring in blockbuster franchises including Fast & Furious, Jumanji, Black Adam, and many others.",
+        "majorFilms": [
+          "The Scorpion King (2002)",
+          "The Mummy Returns (2001)",
+          "Walking Tall (2004)",
+          "Gridiron Gang (2006)",
+          "Fast Five (2011)",
+          "Faster (2010)",
+          "Skyscraper (2018)",
+          "Jumanji: Welcome to the Jungle (2017)",
+          "Rampage (2018)",
+          "Hobbs & Shaw (2019)",
+          "Black Adam (2022)"
+        ],
+        "achievements": "Johnson has successfully transitioned from being a wrestling legend to becoming one of the most bankable movie stars in the world. He is known for his incredible work ethic, charisma, and ability to carry large-budget action films. His consistent box office success has made him indispensable to the entertainment industry.",
+        "awards": [
+          "People's Choice Award - Favorite Action Movie Star",
+          "MTV Movie Award - Best Fight",
+          "Teen Choice Award - Choice Action Movie Actor",
+          "Multiple Golden Globe nominations"
+        ],
+        "interestingFacts": [
+          "Johnson famously wakes up at 4 AM every day to work out",
+          "He maintains an incredibly strict diet and exercise regimen",
+          "He often pays homage to his wrestling career in his films",
+          "Johnson is known for his philanthropy and charitable work",
+          "He produced many of his films through his production company, Seven Bucks Productions",
+          "He has a playful social media presence with millions of followers",
+          "He supports veterans and military causes",
+          "Johnson learned to manage his anger through sports and discipline"
+        ],
+        "personalLife": "Johnson is known for being exceptionally warm, engaging, and approachable despite his massive star status. He credits his father, Rocky Johnson, as his greatest influence. He is dedicated to fitness and maintains one of the most impressive physiques in Hollywood. He actively supports various charitable causes and is involved in numerous philanthropic efforts.",
+        "influence": "Dwayne Johnson represents the ultimate success story of reinvention and hard work. He has transitioned from professional wrestling to becoming a legitimate A-list movie star, proving that dedication and charisma can overcome any obstacle. He continues to inspire millions through his work ethic and positive attitude."
+      },
+      "metadata": {
+        "birthDate": "1972-05-02",
+        "birthPlace": "Hayward, California",
+        "nationality": "American",
+        "age": 52,
+        "notableTitles": ["The Rock", "Actor", "Wrestler"]
+      },
+      "seo": {
+        "title": "Dwayne Johnson - The Rock | American Actor | Biography - ZIVO",
+        "description": "Explore Dwayne Johnson's complete biography. From professional wrestling to Hollywood stardom, discover his career journey, films, achievements, and impact.",
+        "keywords": ["Dwayne Johnson", "The Rock", "American actor", "wrestler", "Hollywood", "biography", "action star"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/dwayne-johnson.html",
+        "ogImage": "/images/dwayne-johnson.jpg",
+        "ogTitle": "Dwayne Johnson - The Rock | American Actor",
+        "ogDescription": "Complete biography of Dwayne Johnson, from his wrestling career to Hollywood success."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "imdb": null
+      },
+      "relatedProfiles": [
+        "001-tom-holland",
+        "003-leonardo-dicaprio",
+        "004-shah-rukh-khan"
+      ]
+    },
+    {
+      "id": "003-leonardo-dicaprio",
+      "name": "Leonardo DiCaprio",
+      "slug": "leonardo-dicaprio",
+      "url": "/profiles/leonardo-dicaprio.html",
+      "category": "actors",
+      "role": "American Actor",
+      "shortDescription": "Academy Award-winning actor known for collaborations with director Martin Scorsese and iconic roles.",
+      "image": "/images/leonardo-dicaprio.jpg",
+      "initials": "LD",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Leonardo Wilhelm DiCaprio was born on November 11, 1974, in Los Angeles, California. His mother, Irmelin, is a former legal secretary, and his father, George DiCaprio, is a comics publisher and former actor. Growing up in Hollywood during a vibrant time in cinema, Leonardo was naturally drawn to acting. He attended Seeds Elementary School and later went to John Marshall High School.",
+        "education": "DiCaprio did not pursue formal higher education, instead focusing on his acting career from an early age. He began his career as a child actor, appearing in television shows like 'Growing Pains' and 'The Outsiders.' His early education came through on-set mentorship and working with experienced actors and directors.",
+        "career": "Leonardo DiCaprio burst onto the scene with roles in 'What's Eating Gilbert Grape' (1993) and 'The Basketball Diaries' (1995). His breakthrough came with 'Titanic' (1997), which became a global phenomenon. He has since become one of the most acclaimed and versatile actors in cinema, known for collaborating extensively with director Martin Scorsese. Films like 'The Aviator,' 'The Wolf of Wall Street,' and 'The Revenant' showcase his range and commitment to complex characters. His recent films continue to demonstrate his ability to take on challenging, nuanced roles.",
+        "majorFilms": [
+          "What's Eating Gilbert Grape (1993)",
+          "The Basketball Diaries (1995)",
+          "Titanic (1997)",
+          "Catch Me If You Can (2002)",
+          "The Aviator (2004)",
+          "The Wolf of Wall Street (2013)",
+          "The Revenant (2015)",
+          "Once Upon a Time in Hollywood (2019)",
+          "Inception (2010)",
+          "The Departed (2006)"
+        ],
+        "achievements": "DiCaprio has become one of the most respected and acclaimed actors of his generation. He has built a career on taking on challenging, complex roles that push the boundaries of cinema. His collaborations with world-class directors have resulted in some of cinema's most memorable performances.",
+        "awards": [
+          "Academy Award - Best Actor (The Revenant, 2016)",
+          "Golden Globe Awards - Multiple wins and nominations",
+          "BAFTA Awards - Multiple wins and nominations",
+          "Screen Actors Guild Awards - Multiple wins and nominations",
+          "Cannes Film Festival - Palme d'Or nomination"
+        ],
+        "interestingFacts": [
+          "DiCaprio famously did not win an Oscar until 2016, despite multiple nominations",
+          "He is an environmental activist and founded the Leonardo DiCaprio Foundation",
+          "He is known for performing many of his own stunts",
+          "He has worked with some of cinema's greatest directors including Scorsese, Tarantino, and Nolan",
+          "DiCaprio maintains meticulous attention to detail in preparing for roles",
+          "He is one of the most selective actors in Hollywood, carefully choosing projects",
+          "He is a passionate collector of art and has invested in environmental causes",
+          "He performed the famous 'I'm flying' scene in Titanic with a real ocean breeze"
+        ],
+        "personalLife": "DiCaprio is known for his dedication to environmental causes and sustainability. He co-founded the Leonardo DiCaprio Foundation in 1998 to focus on environmental issues. He is notoriously private about his personal life and is known for maintaining meaningful friendships with many actors.",
+        "influence": "Leonardo DiCaprio is one of cinema's greatest living actors. He has influenced a generation of actors through his commitment to craft, his selective choice of roles, and his willingness to take on challenging material. He represents the pinnacle of acting excellence and artistic integrity in Hollywood."
+      },
+      "metadata": {
+        "birthDate": "1974-11-11",
+        "birthPlace": "Los Angeles, California",
+        "nationality": "American",
+        "age": 49,
+        "notableTitles": ["Oscar Winner", "Actor", "Environmentalist"]
+      },
+      "seo": {
+        "title": "Leonardo DiCaprio - Oscar-Winning Actor | Biography - ZIVO",
+        "description": "Discover Leonardo DiCaprio's biography. Academy Award winner, known for Titanic, Inception, and Scorsese collaborations. Learn about his career and achievements.",
+        "keywords": ["Leonardo DiCaprio", "actor", "Oscar", "Titanic", "Inception", "biography", "Academy Award"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/leonardo-dicaprio.html",
+        "ogImage": "/images/leonardo-dicaprio.jpg",
+        "ogTitle": "Leonardo DiCaprio - Oscar-Winning Actor",
+        "ogDescription": "Complete biography of Leonardo DiCaprio, Academy Award winner and acclaimed actor."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "imdb": null
+      },
+      "relatedProfiles": [
+        "001-tom-holland",
+        "002-dwayne-johnson",
+        "004-shah-rukh-khan",
+        "005-zendaya"
+      ]
+    },
+    {
+      "id": "004-shah-rukh-khan",
+      "name": "Shah Rukh Khan",
+      "slug": "shah-rukh-khan",
+      "url": "/profiles/shah-rukh-khan.html",
+      "category": "actors",
+      "role": "Indian Actor",
+      "shortDescription": "Bollywood superstar known as the 'King of Bollywood' with a massive international following.",
+      "image": "/images/shah-rukh-khan.jpg",
+      "initials": "SK",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Shahrukh Khan was born on November 2, 1965, in New Delhi, India. His father, Mir Taj-ud-Din Khan, was a freedom fighter and businessman, while his mother, Laxmi Narayan, was a Hyderabadi-Sindhi-Muslim woman and social activist. Growing up in a progressive, educated household, Shahrukh was exposed to diverse cultures and worldviews. His childhood was marked by tragedy when his mother passed away in 1991, which deeply affected him.",
+        "education": "Shah Rukh Khan attended St. Columba's School in New Delhi, where he was an active participant in school plays and debates. He later attended Delhi University and completed his degree in English. During his university years, he developed a passion for theatre and began performing in college productions. He then pursued a degree in economics but remained more passionate about acting and theatre.",
+        "career": "Shah Rukh Khan began his career in television, appearing in various TV shows in the late 1980s. His breakthrough in Bollywood came with 'Deewana' (1992), which was a massive success. He quickly became one of the most demanded actors in Hindi cinema. Throughout the 1990s and 2000s, Khan delivered numerous hits including romantic dramas and action-packed thrillers. His charm, expressive acting, and romantic hero persona made him the quintessential Bollywood leading man. He has successfully expanded his presence internationally and continues to be a major box office draw.",
+        "majorFilms": [
+          "Deewana (1992)",
+          "Darr (1993)",
+          "Dilwale Dulhania Le Jayenge (1995)",
+          "Kuch Kuch Hota Hai (1998)",
+          "Mohabbatein (2000)",
+          "Veer-Zaara (2004)",
+          "Rab Ne Bana Di Jodi (2008)",
+          "My Name Is Khan (2010)",
+          "Don 2 (2011)",
+          "Chennai Express (2013)"
+        ],
+        "achievements": "Shah Rukh Khan is the most commercially successful actor in Indian cinema history. He has built an empire in entertainment, producing films and shows through his production company Red Chillies Entertainment. His films have consistently broken box office records both in India and internationally.",
+        "awards": [
+          "National Film Award - Best Popular Film (Dilwale Dulhania Le Jayenge)",
+          "Filmfare Awards - Multiple wins including Best Actor",
+          "International Indian Film Academy Awards - Multiple wins",
+          "Star Screen Awards - Multiple wins",
+          "IIFA Awards - Multiple wins and nominations"
+        ],
+        "interestingFacts": [
+          "Shah Rukh Khan is the owner of IPL cricket team Kolkata Knight Riders",
+          "He is known for his wit and charm in interviews",
+          "He produced his own films through Red Chillies Entertainment",
+          "He has expanded his brand globally through various ventures",
+          "He is fluent in Hindi, Urdu, English, and other languages",
+          "He is known for his charitable work and philanthropy",
+          "He has hosted numerous award shows with exceptional comic timing",
+          "He continues to be one of the highest-paid actors in Indian cinema"
+        ],
+        "personalLife": "Shah Rukh Khan is married to filmmaker Gauri Khan and has three children. He is known for being a devoted family man and a supportive father. He actively supports various social causes including education and healthcare. He is beloved not just as an actor but as a personality who has shaped Indian cinema.",
+        "influence": "Shah Rukh Khan is often referred to as the 'King of Bollywood' for his unparalleled success and influence on Indian cinema. He has helped popularize Hindi cinema globally and has inspired generations of actors. His films have become cultural touchstones in Indian popular culture, and his romantic hero persona has defined an era of cinema."
+      },
+      "metadata": {
+        "birthDate": "1965-11-02",
+        "birthPlace": "New Delhi, India",
+        "nationality": "Indian",
+        "age": 58,
+        "notableTitles": ["King of Bollywood", "Actor", "Producer"]
+      },
+      "seo": {
+        "title": "Shah Rukh Khan - King of Bollywood | Indian Actor | Biography - ZIVO",
+        "description": "Explore Shah Rukh Khan's complete biography. Bollywood's most successful actor, his career, iconic films, international success, and personal life.",
+        "keywords": ["Shah Rukh Khan", "Bollywood", "Indian actor", "King of Bollywood", "biography", "Hindi cinema"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/shah-rukh-khan.html",
+        "ogImage": "/images/shah-rukh-khan.jpg",
+        "ogTitle": "Shah Rukh Khan - King of Bollywood",
+        "ogDescription": "Complete biography of Shah Rukh Khan, Bollywood's most iconic and successful actor."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "imdb": null
+      },
+      "relatedProfiles": [
+        "001-tom-holland",
+        "002-dwayne-johnson",
+        "005-zendaya"
+      ]
+    },
+    {
+      "id": "005-zendaya",
+      "name": "Zendaya",
+      "slug": "zendaya",
+      "url": "/profiles/zendaya.html",
+      "category": "actors",
+      "role": "American Actress",
+      "shortDescription": "Emmy Award-winning actress famous for her role in HBO's Euphoria and fashion icon.",
+      "image": "/images/zendaya.jpg",
+      "initials": "ZM",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Zendaya Maree Stoermer Coleman was born on September 1, 1996, in Oakland, California. Her father, Kazembe Ajamu Coleman, is a civil rights activist, and her mother, Claire Stoermer, is a teacher. Zendaya grew up in a progressive household that encouraged education and activism. She was exposed to the arts from an early age through her mother's involvement in community theatre.",
+        "education": "Zendaya attended Oakland School for the Arts, a public charter school known for its rigorous arts program. She received formal training in acting, dance, and other performing arts. Her education at the school provided her with a solid foundation in the craft of acting and helped her develop her skills before entering the entertainment industry professionally.",
+        "career": "Zendaya began her career as a backup dancer before transitioning to acting. She appeared in the Disney Channel series 'Shake It Up!' from 2010 to 2013, which became her breakthrough role. She also starred in 'K.C. Undercover' and appeared in films. However, her major career breakthrough came when she was cast as Rue Bennett in HBO's 'Euphoria' (2019), a role that earned her critical acclaim and an Emmy Award nomination at age 24, making her the youngest nominee in that category at the time. Her subsequent Emmy win for the same role made her the youngest woman to win an Emmy for Outstanding Supporting Actress in a Drama Series.",
+        "majorFilms": [
+          "Shake It Up! (2010-2013) - Disney Channel",
+          "K.C. Undercover (2015-2018) - Disney Channel",
+          "The Greatest Showman (2017)",
+          "Spider-Man: Homecoming (2017)",
+          "Euphoria (2019-Present) - HBO",
+          "Spider-Man: Far From Home (2019)",
+          "Dune (2021)",
+          "Spider-Man: No Way Home (2021)",
+          "Dune: Part Two (2024)"
+        ],
+        "achievements": "Zendaya has become one of Hollywood's most bankable young stars. Her role in 'Euphoria' is considered one of the most powerful performances in modern television. She has successfully transitioned from Disney Channel star to serious actress and has become a cultural icon representing Gen Z.",
+        "awards": [
+          "Emmy Award - Outstanding Supporting Actress in a Drama Series (Euphoria, 2022)",
+          "Golden Globe nomination - Best Performance by an Actress in a Supporting Role",
+          "MTV Movie Award - Best Actor",
+          "Teen Choice Award - Choice TV Movie Star",
+          "NAACP Image Award"
+        ],
+        "interestingFacts": [
+          "Zendaya is the youngest woman to win an Emmy for Outstanding Supporting Actress in a Drama Series",
+          "She is a fashion icon and has walked in major fashion shows",
+          "She is known for her maturity and intelligence in interviews",
+          "She is an advocate for various social causes including racial justice",
+          "She maintains a relatively private personal life despite her massive fame",
+          "She is fluent in Japanese",
+          "She has worked with Denis Villeneuve on the Dune films",
+          "She has been nominated for major awards including Golden Globes and BAFTAs"
+        ],
+        "personalLife": "Zendaya is known for being exceptionally private about her personal life despite her public prominence. She is devoted to her family and is close with her parents. She is an intelligent, articulate spokesperson who uses her platform for social advocacy. She represents a new generation of young performers who combine talent with genuine substance.",
+        "influence": "Zendaya represents the new generation of young actors who bring both artistic depth and social consciousness to their work. Her role in 'Euphoria' has been praised for its raw authenticity and emotional power. She has influenced young people through her representation of important social issues and her advocacy for justice and equality."
+      },
+      "metadata": {
+        "birthDate": "1996-09-01",
+        "birthPlace": "Oakland, California",
+        "nationality": "American",
+        "age": 27,
+        "notableTitles": ["Emmy Winner", "Actress", "Fashion Icon"]
+      },
+      "seo": {
+        "title": "Zendaya - Emmy Award-Winning Actress | Biography - ZIVO",
+        "description": "Discover Zendaya's biography. Emmy-winning actress, Euphoria star, fashion influencer, and rising Hollywood talent. Complete profile and achievements.",
+        "keywords": ["Zendaya", "Emmy Award", "actress", "Euphoria", "HBO", "biography", "Spider-Man"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/zendaya.html",
+        "ogImage": "/images/zendaya.jpg",
+        "ogTitle": "Zendaya - Emmy Award-Winning Actress",
+        "ogDescription": "Complete biography of Zendaya, Emmy Award winner and star of HBO's Euphoria."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "imdb": null
+      },
+      "relatedProfiles": [
+        "001-tom-holland",
+        "003-leonardo-dicaprio",
+        "004-shah-rukh-khan"
+      ]
+    },
+    {
+      "id": "006-taylor-swift",
+      "name": "Taylor Swift",
+      "slug": "taylor-swift",
+      "url": "/profiles/taylor-swift.html",
+      "category": "singers",
+      "role": "Singer-Songwriter",
+      "shortDescription": "American singer-songwriter with 13 Grammy Awards, known for narrative songwriting style.",
+      "image": "/images/taylor-swift.jpg",
+      "initials": "TS",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Taylor Alison Swift was born on December 13, 1989, in Reading, Pennsylvania. Her father, Scott Kingsley Swift, is a financial advisor, and her mother, Andrea Gardiner, is a former marketing executive. Taylor grew up in a supportive household that encouraged her musical pursuits. She was named after Taylor, the famous saxophonist, and grew up listening to various genres of music from her parents' collection.",
+        "education": "Swift began learning guitar at age 12 and started writing songs almost immediately. She attended Hendersonville High School in Tennessee. However, she pursued her music career with intense dedication, homeschooling at times to accommodate her recording and touring schedule. Her education was heavily focused on developing her musical and songwriting talents.",
+        "career": "Taylor Swift signed with Big Machine Records at age 15 and released her debut single 'Tim McGraw' in 2006. Her debut album became a massive success, launching her into stardom. She has since released multiple albums spanning different eras, each showcasing her evolution as an artist. From country to pop, her music has consistently topped charts and broken records. She is known for her narrative songwriting style, often incorporating personal experiences into her songs. Her ability to reinvent herself musically while maintaining artistic integrity has made her one of the most successful recording artists of all time.",
+        "majorAlbums": [
+          "Taylor Swift (2006)",
+          "Fearless (2008)",
+          "Speak Now (2010)",
+          "Red (2012)",
+          "1989 (2014)",
+          "Reputation (2017)",
+          "Lover (2019)",
+          "Folklore (2020)",
+          "Evermore (2020)",
+          "Midnights (2022)",
+          "Speak Now (Taylor's Version) - Re-recorded albums in progress"
+        ],
+        "achievements": "Swift has become the most commercially successful female artist in music history. She has broken numerous records including most Grammy Awards won by a woman. She is the first artist to have three albums debut at number one on the Billboard 200. She has sold millions of albums worldwide and her tours have become cultural phenomena.",
+        "awards": [
+          "13 Grammy Awards - Multiple categories",
+          "American Music Awards - Multiple wins including Artist of the Year",
+          "Billboard Music Awards - Multiple wins",
+          "MTV Video Music Awards - Multiple wins",
+          "Golden Globe nomination - Best Original Song"
+        ],
+        "interestingFacts": [
+          "Swift is known for writing or co-writing all of her songs",
+          "She is re-recording her earlier albums as 'Taylor's Version' to own her master recordings",
+          "She has a famous group of close friendships with other celebrities",
+          "She is known for her meticulous attention to detail in her music videos",
+          "She has used her platform to advocate for artists' rights",
+          "She has donated significantly to various causes including education and disaster relief",
+          "She has written and produced content that goes beyond music",
+          "She maintains an active songwriting relationship with top producers and writers"
+        ],
+        "personalLife": "Swift is known for being protective of her private life while maintaining public engagement with fans. She has a close relationship with her family and is known for supporting her friends publicly. She is a cat lover and animal welfare advocate.",
+        "influence": "Taylor Swift is one of the most influential artists of her generation. She has shaped popular music across multiple genres and inspired countless artists. Her narrative songwriting style and willingness to reinvent herself have made her a model for artistic evolution. She is also respected for her advocacy for artists' rights and equality in the music industry."
+      },
+      "metadata": {
+        "birthDate": "1989-12-13",
+        "birthPlace": "West Reading, Pennsylvania",
+        "nationality": "American",
+        "age": 34,
+        "notableTitles": ["Grammy Winner", "Singer", "Songwriter"]
+      },
+      "seo": {
+        "title": "Taylor Swift - 13x Grammy Award Winner | Singer-Songwriter | Biography - ZIVO",
+        "description": "Explore Taylor Swift's complete biography. 13x Grammy Award winner, iconic singer-songwriter, and global phenomenon. Learn about her music career and achievements.",
+        "keywords": ["Taylor Swift", "singer-songwriter", "Grammy Awards", "music", "biography", "pop artist"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/taylor-swift.html",
+        "ogImage": "/images/taylor-swift.jpg",
+        "ogTitle": "Taylor Swift - 13x Grammy Award Winner",
+        "ogDescription": "Complete biography of Taylor Swift, one of music's biggest stars with 13 Grammy Awards."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "spotify": null
+      },
+      "relatedProfiles": [
+        "007-ed-sheeran",
+        "008-arijit-singh",
+        "009-beyonce",
+        "010-the-weeknd"
+      ]
+    },
+    {
+      "id": "007-ed-sheeran",
+      "name": "Ed Sheeran",
+      "slug": "ed-sheeran",
+      "url": "/profiles/ed-sheeran.html",
+      "category": "singers",
+      "role": "British Singer-Songwriter",
+      "shortDescription": "MBE award recipient and British singer-songwriter known for global chart success.",
+      "image": "/images/ed-sheeran.jpg",
+      "initials": "ES",
+      "featured": false,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Edward Christopher Sheeran was born on February 17, 1991, in Halifax, North Yorkshire, England. His parents are John Sheeran, a former art curator, and Imogen Sheeran, a psychotherapist. Ed grew up in a culturally rich household with exposure to classical music. His father is of Irish descent, which influenced his musical heritage. He demonstrated musical talent from an early age.",
+        "education": "Sheeran attended Thomas Mills High School in Suffolk. He received his initial musical training at school and later studied at the Academy of Contemporary Music in Guildford. He learned multiple instruments including guitar, piano, and drums, developing a comprehensive understanding of music theory and composition. His education was instrumental in developing his skills as both a musician and songwriter.",
+        "career": "Ed Sheeran began his music career by writing and recording songs in his bedroom. His first major release was the EP 'No. 5 Collaborations Project' (2011), which gained significant attention online. His debut album '+' (2011) was a commercial and critical success, establishing him as a talented singer-songwriter. His subsequent albums '×' (2014), '÷' (2017), and '=' (2021) have all achieved massive global success. He is known for his introspective lyrics, folk-influenced melodies, and energetic performances. His music has achieved unprecedented commercial success, with his songs dominating global charts.",
+        "majorAlbums": [
+          "No. 5 Collaborations Project (2011) - EP",
+          "Plus (2011)",
+          "Multiply (2014)",
+          "Divide (2017)",
+          "Equals (2021)",
+          "Subtract (2023)"
+        ],
+        "achievements": "Sheeran has become one of the most commercially successful artists in music history. His albums have consistently topped charts across the globe. He has broken numerous streaming records and sold millions of albums worldwide. His tours have been among the highest-grossing tours in music history.",
+        "awards": [
+          "Grammy Awards - Multiple nominations and wins",
+          "Brit Awards - Multiple wins including Best British Male Solo Artist",
+          "MTV Europe Music Awards - Multiple wins",
+          "iHeartRadio Music Awards - Multiple wins",
+          "Order of the British Empire (MBE) - 2015"
+        ],
+        "interestingFacts": [
+          "Sheeran was honored with an MBE (Member of the Order of the British Empire) in 2015",
+          "He writes and produces a significant portion of his own music",
+          "He is known for his collaboration with various artists across genres",
+          "He has been open about his struggles with mental health and body image",
+          "He is a skilled multi-instrumentalist",
+          "He performs dynamic, energetic live shows with minimal backing tracks",
+          "He has collaborated with artists including Taylor Swift, Beyoncé, and Bruno Mars",
+          "He is known for his humility and down-to-earth personality"
+        ],
+        "personalLife": "Sheeran is known for being relatively private despite his massive fame. He is married and has children. He maintains close ties to his hometown in Suffolk. He is involved in various charitable causes and supports organizations focused on music education.",
+        "influence": "Ed Sheeran represents a new generation of singer-songwriters who combine traditional songwriting with modern production. His success has demonstrated the enduring appeal of acoustic-influenced music in the contemporary pop landscape. He has influenced countless young musicians and continues to shape the direction of popular music."
+      },
+      "metadata": {
+        "birthDate": "1991-02-17",
+        "birthPlace": "Halifax, England",
+        "nationality": "British",
+        "age": 32,
+        "notableTitles": ["MBE", "Singer-Songwriter", "Musician"]
+      },
+      "seo": {
+        "title": "Ed Sheeran - MBE British Singer-Songwriter | Biography - ZIVO",
+        "description": "Discover Ed Sheeran's biography. MBE award recipient, British singer-songwriter, and global music phenomenon. Learn about his career and musical achievements.",
+        "keywords": ["Ed Sheeran", "British singer", "MBE", "songwriter", "music", "biography", "Divide"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/ed-sheeran.html",
+        "ogImage": "/images/ed-sheeran.jpg",
+        "ogTitle": "Ed Sheeran - MBE British Singer-Songwriter",
+        "ogDescription": "Complete biography of Ed Sheeran, MBE-honored British singer-songwriter."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "spotify": null
+      },
+      "relatedProfiles": [
+        "006-taylor-swift",
+        "008-arijit-singh",
+        "009-beyonce",
+        "010-the-weeknd"
+      ]
+    },
+    {
+      "id": "008-arijit-singh",
+      "name": "Arijit Singh",
+      "slug": "arijit-singh",
+      "url": "/profiles/arijit-singh.html",
+      "category": "singers",
+      "role": "Indian Playback Singer",
+      "shortDescription": "Indian playback singer known for his soulful voice and numerous Bollywood hits.",
+      "image": "/images/arijit-singh.jpg",
+      "initials": "AS",
+      "featured": false,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Arijit Singh was born on April 25, 1987, in Murshidabad, West Bengal, India. He grew up in a musically inclined family, with his father being a Hindustani classical musician. Arijit showed exceptional musical talent from an early age, developing a deep appreciation for both classical Indian music and contemporary genres. His childhood was marked by intensive music training and exposure to various musical traditions.",
+        "education": "Singh received formal training in Hindustani classical music from a young age. He studied under accomplished musicians and developed his distinctive vocal style. He also learned various instruments and absorbed influences from multiple musical traditions, both Indian and Western. His musical education was comprehensive and rigorous, shaping his artistic sensibilities.",
+        "career": "Arijit Singh began his professional career as a playback singer in Bollywood films. He gained prominence through his soulful renditions in Hindi and Bengali films. His breakthrough came with the song 'Raabta' from the film 'Agent Vinod' (2012), which became a massive hit. Since then, he has delivered numerous chart-topping songs for Bollywood films and has become one of the most sought-after playback singers in the industry. His distinctive voice, characterized by depth, emotion, and technical precision, has made him a favorite among music directors and audiences alike.",
+        "majorSongs": [
+          "Raabta (Agent Vinod, 2012)",
+          "Tum Ho (Aashiqui 2, 2013)",
+          "Chaleya (Chahatt Aaj Bhi, 2009)",
+          "Khwajaa Mere (Crook: It's So Simple, 2010)",
+          "Bedam Karam (Shab, 2017)",
+          "Title Track (Margarita With A Straw, 2014)",
+          "Naina (Dangal, 2016)",
+          "Bezubaan (Dangal, 2016)"
+        ],
+        "achievements": "Singh has become one of the most accomplished playback singers in Indian cinema. His songs have achieved massive commercial and critical success. He has contributed significantly to the resurgence of soulful, meaningful music in Hindi cinema. His albums and collaborations have further established his reputation as a versatile and talented musician.",
+        "awards": [
+          "Filmfare Award - Best Playback Singer",
+          "IIFA Award - Best Playback Singer",
+          "Star Screen Award - Best Playback Singer",
+          "Mirchi Music Award - Multiple wins",
+          "Times Music Awards - Multiple wins"
+        ],
+        "interestingFacts": [
+          "Singh is known for his meticulous approach to singing and music production",
+          "He has maintained a relatively private personal life despite his fame",
+          "He is a perfectionist who spends considerable time on each rendition",
+          "He has collaborated with major Bollywood music directors",
+          "He combines classical training with contemporary sensibilities",
+          "He is respected for his musical integrity and artistic choices",
+          "He has performed in concerts and live shows across India and internationally",
+          "He continues to expand his musical horizons with diverse projects"
+        ],
+        "personalLife": "Singh is known for being humble and grounded despite his significant success. He is dedicated to his craft and maintains strong connections to his musical roots. He values his privacy and family relationships.",
+        "influence": "Arijit Singh has reinvigorated the tradition of soulful, meaningful playback singing in Bollywood. His success has demonstrated that authentic, emotionally resonant music continues to find audiences. He has influenced a generation of singers and continues to set high standards for artistic excellence in Indian cinema music."
+      },
+      "metadata": {
+        "birthDate": "1987-04-25",
+        "birthPlace": "Murshidabad, India",
+        "nationality": "Indian",
+        "age": 36,
+        "notableTitles": ["Playback Singer", "Bollywood", "Singer"]
+      },
+      "seo": {
+        "title": "Arijit Singh - Indian Playback Singer | Bollywood | Biography - ZIVO",
+        "description": "Explore Arijit Singh's biography. Indian playback singer with a soulful voice, Bollywood legend, and musical achievements. Complete profile and career history.",
+        "keywords": ["Arijit Singh", "Indian singer", "playback singer", "Bollywood", "biography", "soulful"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/arijit-singh.html",
+        "ogImage": "/images/arijit-singh.jpg",
+        "ogTitle": "Arijit Singh - Indian Playback Singer",
+        "ogDescription": "Complete biography of Arijit Singh, renowned Indian playback singer."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "spotify": null
+      },
+      "relatedProfiles": [
+        "006-taylor-swift",
+        "007-ed-sheeran",
+        "009-beyonce",
+        "010-the-weeknd"
+      ]
+    },
+    {
+      "id": "009-beyonce",
+      "name": "Beyoncé",
+      "slug": "beyonce",
+      "url": "/profiles/beyonce.html",
+      "category": "singers",
+      "role": "Singer & Dancer",
+      "shortDescription": "American singer, songwriter, and dancer with 32 Grammy Awards, one of music's biggest stars.",
+      "image": "/images/beyonce.jpg",
+      "initials": "BK",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Beyoncé Giselle Knowles-Carter was born on September 4, 1981, in Houston, Texas. Her mother, Tina Knowles, is a businesswoman and fashion designer, while her father, Mathew Knowles, is a music manager. Beyoncé grew up in a household deeply connected to the entertainment industry. Her parents recognized her exceptional talent early on and encouraged her musical pursuits.",
+        "education": "Beyoncé attended various schools in Houston and later studied at the High School for the Performing and Visual Arts in Houston. She received comprehensive training in singing, dancing, and performing arts. Her education was intensive, focusing on developing her skills as a multifaceted performer. She began performing in talent competitions and local productions from a young age.",
+        "career": "Beyoncé's career began with the girl group Destiny's Child, which became one of the best-selling girl groups of all time. The group achieved massive commercial and critical success with albums like 'Dangerously in Love' and 'The Writing's on the Wall.' As a solo artist, Beyoncé has achieved unprecedented success. Her albums have consistently topped charts and broken records. She is known for her powerful vocals, dynamic choreography, and innovative music videos. Her live performances are legendary, known for their energy, precision, and artistry. She has also ventured into acting and has become a cultural icon representing empowerment and excellence.",
+        "majorAlbums": [
+          "Dangerously in Love (2003)",
+          "B'Day (2006)",
+          "I Am... Yours (2008)",
+          "4 (2011)",
+          "Beyoncé (2013)",
+          "Lemonade (2016)",
+          "Renaissance (2022)",
+          "Cowboy Carter (2024)"
+        ],
+        "achievements": "Beyoncé has become one of the most successful recording artists in music history. She has won more Grammy Awards than any other artist in history. She has broken numerous records in album sales, streaming, and touring revenue. Her albums have achieved critical acclaim and cultural significance.",
+        "awards": [
+          "32 Grammy Awards - Most Grammy Awards won by any artist",
+          "MTV Video Music Award - Video of the Year",
+          "BET Awards - Multiple wins including Humanitarian Award",
+          "Billboard Music Awards - Multiple wins",
+          "American Music Awards - Multiple wins"
+        ],
+        "interestingFacts": [
+          "Beyoncé holds the record for most Grammy Awards won by any artist with 32",
+          "She is known for her meticulous attention to detail in her productions",
+          "She has created iconic music videos that are often referenced in pop culture",
+          "She released a visual album 'Lemonade' that sparked significant cultural conversations",
+          "She is a businesswoman with various ventures including Ivy Park",
+          "She is known for her work ethic and perfectionism",
+          "She performs complex choreography while singing live with full vocal control",
+          "She is an advocate for various social and humanitarian causes"
+        ],
+        "personalLife": "Beyoncé is married to Jay-Z, another iconic figure in the music industry. She has three children and is known for balancing her family life with her career. She maintains a relatively private personal life while maintaining an active public presence. She is devoted to her family and is known for her philanthropic work.",
+        "influence": "Beyoncé is one of the most influential artists of the 21st century. She has shaped popular music across multiple genres and inspired countless artists. Her commitment to artistic excellence, visual innovation, and empowerment has made her a role model for millions. She represents the pinnacle of achievement in the music industry and continues to push boundaries and challenge conventions."
+      },
+      "metadata": {
+        "birthDate": "1981-09-04",
+        "birthPlace": "Houston, Texas",
+        "nationality": "American",
+        "age": 42,
+        "notableTitles": ["Grammy Winner", "Singer", "Dancer"]
+      },
+      "seo": {
+        "title": "Beyoncé - 32x Grammy Award Winner | Singer & Dancer | Biography - ZIVO",
+        "description": "Explore Beyoncé's complete biography. 32x Grammy Award winner, iconic singer, dancer, and cultural phenomenon. Learn about her music career and achievements.",
+        "keywords": ["Beyoncé", "singer", "Grammy Awards", "dancer", "music", "biography", "Lemonade"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/beyonce.html",
+        "ogImage": "/images/beyonce.jpg",
+        "ogTitle": "Beyoncé - 32x Grammy Award Winner",
+        "ogDescription": "Complete biography of Beyoncé, one of music's most successful and influential artists."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "spotify": null
+      },
+      "relatedProfiles": [
+        "006-taylor-swift",
+        "007-ed-sheeran",
+        "008-arijit-singh",
+        "010-the-weeknd"
+      ]
+    },
+    {
+      "id": "010-the-weeknd",
+      "name": "The Weeknd",
+      "slug": "the-weeknd",
+      "url": "/profiles/the-weeknd.html",
+      "category": "singers",
+      "role": "Canadian Rapper & Singer",
+      "shortDescription": "Canadian rapper and singer known for Super Bowl LV halftime performance and global hits.",
+      "image": "/images/the-weeknd.jpg",
+      "initials": "TW",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Abel Makkonen Tesfaye, known professionally as The Weeknd, was born on February 16, 1990, in Toronto, Canada. He was born to Ethiopian immigrant parents who separated when he was young. He was raised primarily by his mother and grandmother. Despite the challenges of his childhood, The Weeknd developed a deep passion for music from an early age, influenced by various artists and genres.",
+        "education": "The Weeknd attended Northern Secondary School in Toronto. He dropped out of high school to pursue his music career full-time. His education came primarily through his own musical exploration, studying production, songwriting, and various musical influences. He taught himself music production and developed his distinctive sound through experimentation.",
+        "career": "The Weeknd began his career by posting music anonymously on YouTube in 2010. His mysterious persona and innovative sound quickly gained attention. He released several mixtapes before signing with Republic Records. His debut album 'Kiss Land' introduced his dark, atmospheric sound to a wider audience. Subsequent albums 'Beauty Behind the Madness,' 'Starboy,' and 'After Hours' achieved massive commercial success. He is known for his distinctive falsetto vocals, innovative production, and conceptual music videos. His performance at the Super Bowl LV halftime show in 2021 was watched by over 100 million viewers and is considered one of the best halftime performances in Super Bowl history.",
+        "majorAlbums": [
+          "House of Balloons (2011) - Mixtape",
+          "Thursday (2011) - Mixtape",
+          "Echoes of Silence (2011) - Mixtape",
+          "Kiss Land (2013)",
+          "Beauty Behind the Madness (2015)",
+          "Starboy (2016)",
+          "After Hours (2020)",
+          "Dawn FM (2022)"
+        ],
+        "achievements": "The Weeknd has become one of the most commercially successful artists in music history. His albums have achieved massive global success and have broken numerous streaming records. His Super Bowl halftime performance was a career-defining moment that showcased his artistry to a global audience. He continues to evolve as an artist and push creative boundaries.",
+        "awards": [
+          "Grammy Awards - Multiple wins and nominations",
+          "American Music Awards - Multiple wins",
+          "MTV Video Music Awards - Multiple wins",
+          "Billboard Music Awards - Multiple wins",
+          "Juno Awards - Multiple wins"
+        ],
+        "interestingFacts": [
+          "The Weeknd initially performed anonymously before revealing his identity",
+          "He is known for his innovative and sometimes dark aesthetic",
+          "He has had a significant influence on modern hip-hop and R&B",
+          "He performs high-energy, dynamic live shows",
+          "He has collaborated with major artists across multiple genres",
+          "His Super Bowl halftime performance was critically acclaimed",
+          "He is known for his meticulous attention to visual presentation",
+          "He has ventured into acting and television production"
+        ],
+        "personalLife": "The Weeknd is known for being relatively private about his personal relationships while maintaining an active public presence. He has been involved in various charitable causes and humanitarian efforts. He maintains strong connections to his Canadian roots despite his international success.",
+        "influence": "The Weeknd has become one of the most influential artists of the 2010s and 2020s. His innovative approach to music production and visual presentation has influenced countless artists. He has helped shape the direction of contemporary hip-hop and R&B. His artistry represents a blend of genres and a willingness to take risks, making him a trendsetter in the music industry."
+      },
+      "metadata": {
+        "birthDate": "1990-02-16",
+        "birthPlace": "Toronto, Canada",
+        "nationality": "Canadian",
+        "age": 33,
+        "notableTitles": ["Rapper", "Singer", "Super Bowl Performer"]
+      },
+      "seo": {
+        "title": "The Weeknd - Canadian Rapper & Singer | Biography - ZIVO",
+        "description": "Explore The Weeknd's complete biography. Canadian rapper and singer, Super Bowl LV performer, global music sensation. Learn about his career and achievements.",
+        "keywords": ["The Weeknd", "Canadian rapper", "singer", "Super Bowl", "music", "biography", "After Hours"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/the-weeknd.html",
+        "ogImage": "/images/the-weeknd.jpg",
+        "ogTitle": "The Weeknd - Canadian Rapper & Singer",
+        "ogDescription": "Complete biography of The Weeknd, global music sensation and Super Bowl performer."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "spotify": null
+      },
+      "relatedProfiles": [
+        "006-taylor-swift",
+        "007-ed-sheeran",
+        "008-arijit-singh",
+        "009-beyonce"
+      ]
+    },
+    {
+      "id": "011-lionel-messi",
+      "name": "Lionel Messi",
+      "slug": "lionel-messi",
+      "url": "/profiles/lionel-messi.html",
+      "category": "athletes",
+      "role": "Footballer",
+      "shortDescription": "Argentine footballer widely regarded as one of the greatest players of all time. 8x Ballon d'Or winner.",
+      "image": "/images/lionel-messi.jpg",
+      "initials": "LM",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Lionel Andrés Messi Cuccittini was born on June 24, 1987, in Rosario, Argentina. His father, Jorge Rafael Messi, worked in a steel factory, and his mother, Celia María Cuccittini, was a cleaner. Growing up in Rosario, a city known for producing footballers, Messi showed exceptional talent from an early age. Despite being smaller than most players his age, his technical skill and vision were undeniable.",
+        "education": "Messi attended school in Rosario while simultaneously developing his football skills. Football became his primary focus from childhood, and he dedicated himself to the sport with single-minded determination. His education in the technical and tactical aspects of football came through years of practice and training with local clubs.",
+        "career": "Messi's professional career began with FC Barcelona at age 13. He rose through their youth academy, La Masia, and made his debut for the senior team at 16. Playing primarily as a forward or left winger, Messi became the focal point of Barcelona's attack. His combination of speed, agility, ball control, and finishing ability revolutionized how the position was played. He was instrumental in Barcelona's success during the 2000s and 2010s, winning multiple La Liga titles and Champions League titles. In 2021, he transferred to Paris Saint-Germain, and later to Inter Miami. His career culminated in winning the FIFA World Cup with Argentina in 2022, cementing his legacy as one of football's greatest ever.",
+        "majorClubs": [
+          "FC Barcelona (2004-2021) - 17 seasons",
+          "Paris Saint-Germain (2021-2023)",
+          "Inter Miami CF (2023-present)"
+        ],
+        "achievements": "Messi has won numerous individual and team accolades. He has won more Ballon d'Or awards than any other player in history (8). He has won multiple La Liga titles, Copa del Rey titles, and Champions League titles. Most significantly, he led Argentina to victory in the 2022 FIFA World Cup, achieving the one major trophy that had eluded him.",
+        "awards": [
+          "Ballon d'Or - 8 times (Most of any player)",
+          "FIFA World Player of the Year - Multiple times",
+          "UEFA Champions League Best Forward - Multiple times",
+          "La Liga Best Player - Multiple times",
+          "Copa America Best Player - 2021"
+        ],
+        "interestingFacts": [
+          "Messi overcame a growth hormone deficiency in his youth through treatment",
+          "He is known for his humility and down-to-earth personality",
+          "He has been Barcelona's primary penalty taker for much of his career",
+          "He wears number 10, which he inherited from Ronaldinho",
+          "His left foot is extremely dominant, making him more dangerous from that side",
+          "He has scored over 800 goals in his professional career",
+          "He won the World Cup in 2022, fulfilling his lifelong dream",
+          "He is known for his close friendship with fellow athletes and celebrities"
+        ],
+        "personalLife": "Messi is married to Antonela Roccuzzo, whom he has known since childhood. They have two sons together. He is known for being devoted to his family and maintaining close ties to his Argentine roots. Despite his massive fame, he is known for being humble and avoiding the spotlight.",
+        "influence": "Lionel Messi is widely considered one of the greatest footballers of all time. His technical ability, vision, and goal-scoring prowess have revolutionized modern football. He has inspired a generation of players and has become a symbol of excellence in sports. His achievements, particularly winning the World Cup in 2022, have cemented his legendary status."
+      },
+      "metadata": {
+        "birthDate": "1987-06-24",
+        "birthPlace": "Rosario, Argentina",
+        "nationality": "Argentine",
+        "age": 36,
+        "notableTitles": ["Ballon d'Or Winner", "Footballer", "World Cup Champion"]
+      },
+      "seo": {
+        "title": "Lionel Messi - 8x Ballon d'Or Winner | Argentine Footballer | Biography - ZIVO",
+        "description": "Discover Lionel Messi's complete biography. 8x Ballon d'Or winner, 2022 World Cup champion, and widely regarded as one of the greatest footballers ever.",
+        "keywords": ["Lionel Messi", "footballer", "Ballon d'Or", "Argentina", "World Cup", "biography", "football legend"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/lionel-messi.html",
+        "ogImage": "/images/lionel-messi.jpg",
+        "ogTitle": "Lionel Messi - 8x Ballon d'Or Winner",
+        "ogDescription": "Complete biography of Lionel Messi, one of football's greatest legends."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "012-cristiano-ronaldo",
+        "013-virat-kohli",
+        "014-lebron-james",
+        "015-serena-williams"
+      ]
+    },
+    {
+      "id": "012-cristiano-ronaldo",
+      "name": "Cristiano Ronaldo",
+      "slug": "cristiano-ronaldo",
+      "url": "/profiles/cristiano-ronaldo.html",
+      "category": "athletes",
+      "role": "Footballer",
+      "shortDescription": "Portuguese footballer with 5 Ballon d'Or awards and 900+ career goals. One of football's greatest.",
+      "image": "/images/cristiano-ronaldo.jpg",
+      "initials": "CR",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Cristiano Ronaldo dos Santos Aveiro was born on February 5, 1985, in Funchal, Madeira, Portugal. His father, José Dinis Ventura, was a groundskeeper and part-time gardener, and his mother, Maria Dolores dos Santos, was a cook. Despite growing up in modest circumstances, Cristiano showed exceptional footballing talent from an early age. He played for local youth teams and eventually earned the chance to move to mainland Portugal for better training opportunities.",
+        "education": "Ronaldo attended school in Madeira while simultaneously developing his football skills. At age 12, he moved to Lisbon to pursue professional football development, leaving his family behind. His formal education was limited as he focused entirely on his footballing career. His education came through the rigorous training programs of Portuguese football academies.",
+        "career": "Cristiano's professional career began with Portuguese club Sporting CP. He signed with Manchester United at 18 after impressing in a friendly match. At Manchester, he developed into one of the world's best players, winning multiple Premier League titles and Champions League titles. He then transferred to Real Madrid, where he became a global superstar and won numerous trophies including La Liga titles and multiple Champions League titles. He has also played for Juventus and Manchester United again. Known for his athleticism, power, goal-scoring ability, and competitive drive, he has become one of the most successful footballers in history. He has consistently broken goal-scoring records throughout his career.",
+        "majorClubs": [
+          "Sporting CP (2002-2003)",
+          "Manchester United (2003-2009)",
+          "Real Madrid (2009-2018)",
+          "Juventus (2018-2021)",
+          "Manchester United (2021-2022)",
+          "Al Nassr (2022-present)"
+        ],
+        "achievements": "Ronaldo has won numerous individual and team accolades throughout his career. He has won 5 Ballon d'Or awards, multiple UEFA Awards, and numerous domestic and international titles. He has scored over 900 goals in his professional career, one of the highest totals in football history. He has led Portugal to victory in the 2016 European Championship.",
+        "awards": [
+          "Ballon d'Or - 5 times",
+          "UEFA Best Player - Multiple times",
+          "Premier League Player of the Year - Multiple times",
+          "La Liga Best Forward - Multiple times",
+          "UEFA Champions League Best Forward - Multiple times"
+        ],
+        "interestingFacts": [
+          "Ronaldo is famous for his intense work ethic and dedication to fitness",
+          "He follows an extremely strict diet and training regimen",
+          "He is one of the most marketable athletes in the world",
+          "He has built a significant commercial empire off the football field",
+          "He is known for his iconic celebration, the 'Siuuu' celebration",
+          "He has scored in multiple FIFA World Cups",
+          "He is one of the most followed athletes on social media",
+          "He has won the European Championship with Portugal"
+        ],
+        "personalLife": "Ronaldo is a father of four children. He is known for being intensely competitive and driven. He maintains an extremely disciplined lifestyle focused on peak athletic performance. He is involved in various business ventures and charitable work.",
+        "influence": "Cristiano Ronaldo is considered one of the greatest footballers of all time. His athleticism, goal-scoring ability, and competitive drive have set new standards in professional football. He has inspired millions of athletes worldwide and represents the pinnacle of athletic achievement and dedication. His rivalry with Messi has defined an era of modern football."
+      },
+      "metadata": {
+        "birthDate": "1985-02-05",
+        "birthPlace": "Funchal, Madeira, Portugal",
+        "nationality": "Portuguese",
+        "age": 38,
+        "notableTitles": ["Ballon d'Or Winner", "Footballer", "Goal Scorer"]
+      },
+      "seo": {
+        "title": "Cristiano Ronaldo - 5x Ballon d'Or Winner | Portuguese Footballer | Biography - ZIVO",
+        "description": "Explore Cristiano Ronaldo's complete biography. 5x Ballon d'Or winner with 900+ career goals. One of football's greatest players and global icon.",
+        "keywords": ["Cristiano Ronaldo", "footballer", "Ballon d'Or", "Portugal", "goals", "biography", "football legend"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/cristiano-ronaldo.html",
+        "ogImage": "/images/cristiano-ronaldo.jpg",
+        "ogTitle": "Cristiano Ronaldo - 5x Ballon d'Or Winner",
+        "ogDescription": "Complete biography of Cristiano Ronaldo, one of football's most successful players."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "011-lionel-messi",
+        "013-virat-kohli",
+        "014-lebron-james",
+        "015-serena-williams"
+      ]
+    },
+    {
+      "id": "013-virat-kohli",
+      "name": "Virat Kohli",
+      "slug": "virat-kohli",
+      "url": "/profiles/virat-kohli.html",
+      "category": "athletes",
+      "role": "Cricketer",
+      "shortDescription": "Indian cricketer, Test and ODI captain, one of the greatest batsmen in cricket history.",
+      "image": "/images/virat-kohli.jpg",
+      "initials": "VK",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Virat Kohli was born on November 5, 1988, in Delhi, India. His father, Rajpal Kohli, was a successful criminal lawyer, and his mother, Saroj Kohli, is a homemaker. Growing up in Delhi, Virat showed exceptional talent for cricket from an early age. His childhood was marked by dedication to the sport and support from his family. He attended Delhi Public School, where he developed his cricket skills.",
+        "education": "Kohli attended Delhi Public School, one of India's premier educational institutions. While pursuing his education, he simultaneously focused on cricket development. His formal education ended in high school as he committed fully to a cricket career. His cricket education came through the Youth Cricket Association of Delhi and later through the Indian cricket system.",
+        "career": "Virat Kohli's international cricket career began with India's youth teams. He represented India at the 2008 U-19 Cricket World Cup, where he captained the team to victory. His senior international debut came in 2008. He quickly established himself as one of the most talented batsmen in international cricket. Known for his aggressive batting style, technical proficiency, and consistency, he has scored centuries across all formats of cricket. He became captain of the Indian Test team in 2014 and has led India to numerous victories. He is one of the most prolific run-scorers in international cricket history.",
+        "majorAccomplishments": [
+          "Test centuries - 47 (as of 2024)",
+          "ODI centuries - 46 (as of 2024)",
+          "T20I half-centuries - 15+",
+          "ICC U-19 Cricket World Cup - Captain (2008)",
+          "Multiple Test series victories as captain",
+          "Multiple ODI series victories as captain"
+        ],
+        "achievements": "Kohli is one of the most decorated cricketers of his generation. He has broken numerous cricket records and has been consistently ranked among the top batsmen in the world. His century-scoring rate is among the highest in cricket history. He has led India to victories in both home and away Test series.",
+        "awards": [
+          "ICC Cricketer of the Year - 2011",
+          "ICC Test Team of the Year - Multiple times",
+          "ICC ODI Team of the Year - Multiple times",
+          "Arjuna Award - 2021",
+          "Rajiv Gandhi Khel Ratna Award - 2021"
+        ],
+        "interestingFacts": [
+          "Kohli is known for his intense competitive nature and aggressive approach to batting",
+          "He is one of the fittest athletes in international cricket",
+          "He is known for his involvement in environmental and social causes",
+          "He has a massive fan following across India and worldwide",
+          "He is married to Bollywood actress Anushka Sharma",
+          "He maintains meticulous dietary and fitness regimens",
+          "He is known for his celebrations and on-field passion",
+          "He continues to break cricket records consistently"
+        ],
+        "personalLife": "Kohli is married to Bollywood actress Anushka Sharma. They have two children together. He is known for being devoted to his family while maintaining his commitment to cricket. He is active in various charitable and social causes.",
+        "influence": "Virat Kohli is considered one of the greatest batsmen in cricket history. His aggressive batting style has influenced how modern cricket is played. He has inspired a generation of Indian cricketers and has become a global icon for the sport. His consistency and record-breaking performances have cemented his place among cricket's all-time greats."
+      },
+      "metadata": {
+        "birthDate": "1988-11-05",
+        "birthPlace": "Delhi, India",
+        "nationality": "Indian",
+        "age": 35,
+        "notableTitles": ["Cricketer", "Captain", "Batsman"]
+      },
+      "seo": {
+        "title": "Virat Kohli - Indian Cricketer & Captain | Biography - ZIVO",
+        "description": "Discover Virat Kohli's complete biography. Indian cricket's greatest batsman, Test and ODI captain. Learn about his career, records, and achievements.",
+        "keywords": ["Virat Kohli", "cricketer", "India", "captain", "batsman", "biography", "cricket legend"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/virat-kohli.html",
+        "ogImage": "/images/virat-kohli.jpg",
+        "ogTitle": "Virat Kohli - Indian Cricketer & Captain",
+        "ogDescription": "Complete biography of Virat Kohli, one of cricket's greatest batsmen and Indian captain."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "011-lionel-messi",
+        "012-cristiano-ronaldo",
+        "014-lebron-james",
+        "015-serena-williams"
+      ]
+    },
+    {
+      "id": "014-lebron-james",
+      "name": "LeBron James",
+      "slug": "lebron-james",
+      "url": "/profiles/lebron-james.html",
+      "category": "athletes",
+      "role": "Basketball Player",
+      "shortDescription": "American basketball player, 4x NBA Champion, widely considered one of the greatest athletes of all time.",
+      "image": "/images/lebron-james.jpg",
+      "initials": "LJ",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "LeBron Raymone James was born on December 30, 1984, in Akron, Ohio. His mother, Gloria James, gave birth to him at age 16. Growing up in poverty, LeBron faced significant hardships, including housing instability. Despite these challenges, he developed a passion for basketball and used it as a means to improve his circumstances. He attended St. Vincent-St. Mary High School, one of the top basketball programs in Ohio.",
+        "education": "LeBron attended St. Vincent-St. Mary High School in Akron, where he became a basketball phenomenon. His high school basketball games were televised nationally, making him one of the most famous high school players in history. He did not attend college, instead going directly to the NBA after high school in 2003.",
+        "career": "LeBron was drafted 1st overall by the Cleveland Cavaliers in 2003. He immediately made an impact, winning the Rookie of the Year award. Over his career, he has played for the Cavaliers, Miami Heat, Cleveland Cavaliers again, and Los Angeles Lakers. He has won 4 NBA championships and has been selected to the NBA All-Star team numerous times. Known for his combination of size, athleticism, versatility, and basketball IQ, he has been able to play multiple positions effectively. He is widely considered one of the greatest basketball players of all time. His impact extends beyond basketball into business, social activism, and education.",
+        "majorAccomplishments": [
+          "4 NBA Championships (2012, 2013, 2016, 2020)",
+          "4 NBA MVP Awards",
+          "17 NBA All-Star selections",
+          "All-Time NBA scoring leader (2023)",
+          "Multiple All-NBA selections",
+          "Olympic gold medals"
+        ],
+        "achievements": "LeBron has achieved unprecedented success in the NBA. He has won multiple MVP awards, led his teams to championships, and broken numerous records. He recently became the NBA's all-time leading scorer, surpassing Kareem Abdul-Jabbar's long-standing record.",
+        "awards": [
+          "NBA MVP - 4 times",
+          "NBA Scoring Title - Multiple times",
+          "NBA Finals MVP - 4 times",
+          "NBA All-Star - 17 times",
+          "All-NBA Team - 13 times"
+        ],
+        "interestingFacts": [
+          "LeBron is known for his incredible athleticism and longevity in the NBA",
+          "He is one of the most marketable athletes in the world",
+          "He has built a significant business empire, particularly through Sprinter School Media",
+          "He founded the I PROMISE School in Akron to support underprivileged students",
+          "He is an advocate for various social causes and uses his platform for activism",
+          "He has transitioned to different positions throughout his career",
+          "He maintains an extremely strict diet and training regimen",
+          "He is known for his professionalism and leadership on and off the court"
+        ],
+        "personalLife": "LeBron is married to Savannah Brinson and has three children. He is devoted to his family and often speaks about their importance in his life. He is actively involved in philanthropic work, particularly in education. He maintains strong ties to his hometown of Akron.",
+        "influence": "LeBron James is considered one of the greatest athletes of all time. His combination of talent, work ethic, longevity, and social consciousness has made him an icon beyond basketball. He has influenced a generation of athletes through his example and continues to be one of the most important figures in sports."
+      },
+      "metadata": {
+        "birthDate": "1984-12-30",
+        "birthPlace": "Akron, Ohio",
+        "nationality": "American",
+        "age": 39,
+        "notableTitles": ["NBA Champion", "Basketball Player", "Athlete"]
+      },
+      "seo": {
+        "title": "LeBron James - 4x NBA Champion | American Basketball Player | Biography - ZIVO",
+        "description": "Explore LeBron James's complete biography. 4x NBA Champion, basketball legend, and one of the greatest athletes ever. Learn about his career and achievements.",
+        "keywords": ["LeBron James", "basketball", "NBA", "champion", "athlete", "biography", "basketball legend"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/lebron-james.html",
+        "ogImage": "/images/lebron-james.jpg",
+        "ogTitle": "LeBron James - 4x NBA Champion",
+        "ogDescription": "Complete biography of LeBron James, one of basketball's greatest players."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "011-lionel-messi",
+        "012-cristiano-ronaldo",
+        "013-virat-kohli",
+        "015-serena-williams"
+      ]
+    },
+    {
+      "id": "015-serena-williams",
+      "name": "Serena Williams",
+      "slug": "serena-williams",
+      "url": "/profiles/serena-williams.html",
+      "category": "athletes",
+      "role": "Tennis Player",
+      "shortDescription": "American tennis legend with 23 Grand Slam titles. Retired 2022 after an illustrious career.",
+      "image": "/images/serena-williams.jpg",
+      "initials": "SW",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Serena Jameka Williams was born on September 26, 1981, in Saginaw, Michigan. She was born to Richard Williams and Oracene Price. Her older sister, Venus Williams, is also a legendary tennis player. The sisters were introduced to tennis by their father, who learned the game from a video. Growing up in Compton, California, Serena and Venus practiced on public courts and quickly developed into tennis prodigies.",
+        "education": "Serena received her early education in Compton, California, attending public schools while simultaneously focusing on tennis development. She did not attend college, instead pursuing a professional tennis career from an early age. Her education came primarily through tennis training and life experience on the professional tour.",
+        "career": "Serena turned professional at age 14 and quickly rose to prominence. She has won 23 Grand Slam singles titles, second only to Margaret Court's 24. She has dominated women's tennis for nearly two decades, winning Wimbledon, the US Open, the Australian Open, and the French Open multiple times. Known for her powerful serve, athletic ability, and competitive spirit, she revolutionized women's tennis. She formed a legendary doubles partnership with her sister Venus, winning numerous Grand Slam doubles titles. She retired in 2022, leaving an unparalleled legacy in the sport.",
+        "majorAccomplishments": [
+          "23 Grand Slam singles titles",
+          "14 Grand Slam doubles titles (with Venus)",
+          "2 Olympic gold medals",
+          "4 Olympic gold medals (combined singles and doubles)",
+          "Wimbledon champion - 7 times",
+          "US Open champion - 6 times",
+          "Australian Open champion - 7 times",
+          "French Open champion - 3 times"
+        ],
+        "achievements": "Serena has the second-most Grand Slam singles titles in tennis history. She has been ranked World No. 1 in tennis for 319 weeks and was the oldest player to win a Grand Slam singles title at age 35. She has won more than 800 matches in her professional career.",
+        "awards": [
+          "WTA Tour Player of the Year - Multiple times",
+          "WTA Most Improved Player of the Year",
+          "Associated Press Female Athlete of the Year - Multiple times",
+          "ESPN ESPY Award - Multiple wins",
+          "BBC Sports Personality of the Year - Multiple nominations"
+        ],
+        "interestingFacts": [
+          "Serena and Venus are the only two women to have won all four Grand Slam titles in the same calendar year (Serena in 2015)",
+          "She is known for her powerful serve and aggressive playing style",
+          "She has overcome numerous health challenges and injuries throughout her career",
+          "She is an advocate for equality and has spoken out on important social issues",
+          "She founded her own investment firm, Serena Ventures",
+          "She has ventured into acting and various business ventures",
+          "She has maintained a rivalry with her sister Venus that is considered one of sports' greatest",
+          "She is married to Alexis Ohanian, co-founder of Reddit"
+        ],
+        "personalLife": "Serena is married to Alexis Ohanian and has one daughter. She is devoted to her family and has spoken about balancing motherhood with her tennis career. She is involved in various business ventures and philanthropic work. She is an advocate for women's rights and equality.",
+        "influence": "Serena Williams is considered one of the greatest tennis players of all time and one of the greatest athletes ever. She has revolutionized women's tennis through her powerful playing style and competitive excellence. She has inspired generations of tennis players and athletes worldwide. Her impact extends beyond sports into business, activism, and social justice."
+      },
+      "metadata": {
+        "birthDate": "1981-09-26",
+        "birthPlace": "Saginaw, Michigan",
+        "nationality": "American",
+        "age": 42,
+        "notableTitles": ["Tennis Player", "Grand Slam Winner", "Legend"]
+      },
+      "seo": {
+        "title": "Serena Williams - 23x Grand Slam Winner | Tennis Legend | Biography - ZIVO",
+        "description": "Discover Serena Williams's complete biography. 23x Grand Slam winner, tennis legend, retired 2022. Learn about her career, records, and legacy.",
+        "keywords": ["Serena Williams", "tennis", "Grand Slam", "champion", "athlete", "biography", "tennis legend"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/serena-williams.html",
+        "ogImage": "/images/serena-williams.jpg",
+        "ogTitle": "Serena Williams - 23x Grand Slam Winner",
+        "ogDescription": "Complete biography of Serena Williams, one of tennis's greatest champions."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "011-lionel-messi",
+        "012-cristiano-ronaldo",
+        "013-virat-kohli",
+        "014-lebron-james"
+      ]
+    },
+    {
+      "id": "016-mrbeast",
+      "name": "MrBeast",
+      "slug": "mrbeast",
+      "url": "/profiles/mrbeast.html",
+      "category": "creators",
+      "role": "Content Creator",
+      "shortDescription": "American YouTuber known for high-production-value entertainment videos with massive philanthropic impact.",
+      "image": "/images/mrbeast.jpg",
+      "initials": "MB",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Jimmy Donaldson, known professionally as MrBeast, was born on May 7, 1998, in Greenville, North Carolina. He grew up in a middle-class family with supportive parents who encouraged his interests. From an early age, Jimmy showed an entrepreneurial spirit and passion for creating content. He was fascinated by YouTube and studied successful creators intensively during his teenage years.",
+        "education": "MrBeast attended Greenville Christian Academy and later studied business at Montclair State University for a short time before dropping out to pursue YouTube full-time. His real education came through studying YouTube's algorithm, viewer psychology, and content strategy. He spent thousands of hours analyzing what makes content go viral.",
+        "career": "MrBeast started creating YouTube content in 2012 but didn't achieve significant success until around 2017. He spent years perfecting his craft, studying the YouTube algorithm, and experimenting with different content formats. His breakthrough came with high-concept challenge videos that combined entertainment with large-scale giveaways and philanthropy. His videos, often costing significant sums to produce, feature engaging challenges, impressive production quality, and genuine generosity. He has revolutionized YouTube by demonstrating that high production values and authentic altruism can create massively popular content. His success has made him one of the most subscribed YouTubers globally.",
+        "majorContent": [
+          "Challenge series with large cash prizes",
+          "Philanthropic giving videos",
+          "Survival and experiential challenges",
+          "Collaboration videos with other creators",
+          "Gaming and tech-focused videos",
+          "Feastables line of products",
+          "Beast Games production"
+        ],
+        "achievements": "MrBeast has become the most successful individual YouTuber, accumulating over 300 million subscribers. He has created some of the most watched YouTube videos of all time. His content has generated billions of views and has influenced how modern YouTube content is created. He has donated millions of dollars to various causes through his content.",
+        "awards": [
+          "YouTube Silver Play Button - Multiple levels",
+          "YouTube Gold Play Button",
+          "YouTube Diamond Play Button",
+          "Streamy Awards - Multiple wins",
+          "Shorty Awards - Multiple nominations"
+        ],
+        "interestingFacts": [
+          "MrBeast famously spent $100,000 to create a single YouTube video early in his career",
+          "He is known for his data-driven approach to content creation",
+          "He has donated millions of dollars throughout his career",
+          "He is the founder of Feastables, a snack food company",
+          "He reinvests almost all of his YouTube earnings into producing better content",
+          "He is known for his intense work ethic and perfectionism",
+          "He has created a production company with a team of talented creators",
+          "He is one of the most generous content creators on the platform"
+        ],
+        "personalLife": "MrBeast is known for being relatively private about his personal life while maintaining an active public presence. He is focused on his career and content creation. He is devoted to his team and the various projects he undertakes.",
+        "influence": "MrBeast has revolutionized YouTube content creation through his high-production-value videos and philanthropic approach. He has demonstrated that creating genuinely engaging, high-quality content while being generous with resources can lead to unprecedented success. He has influenced countless creators and has redefined what is possible on the platform."
+      },
+      "metadata": {
+        "birthDate": "1998-05-07",
+        "birthPlace": "Greenville, North Carolina",
+        "nationality": "American",
+        "realName": "Jimmy Donaldson",
+        "age": 25,
+        "notableTitles": ["YouTuber", "Content Creator", "Philanthropist"]
+      },
+      "seo": {
+        "title": "MrBeast - YouTube's Biggest Creator | Jimmy Donaldson | Biography - ZIVO",
+        "description": "Explore MrBeast's complete biography. American YouTuber with 300M+ subscribers, known for viral videos and philanthropy. Learn about his rise to fame.",
+        "keywords": ["MrBeast", "Jimmy Donaldson", "YouTuber", "content creator", "YouTube", "biography", "viral"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/mrbeast.html",
+        "ogImage": "/images/mrbeast.jpg",
+        "ogTitle": "MrBeast - YouTube's Biggest Creator",
+        "ogDescription": "Complete biography of MrBeast, one of YouTube's most successful creators."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "youtube": null
+      },
+      "relatedProfiles": [
+        "017-marques-brownlee",
+        "018-emma-chamberlain",
+        "019-pewdiepie",
+        "020-oprah-winfrey"
+      ]
+    },
+    {
+      "id": "017-marques-brownlee",
+      "name": "Marques Brownlee",
+      "slug": "marques-brownlee",
+      "url": "/profiles/marques-brownlee.html",
+      "category": "creators",
+      "role": "Tech Reviewer",
+      "shortDescription": "Tech reviewer and YouTuber known as MKBHD, one of the most influential tech voices globally.",
+      "image": "/images/marques-brownlee.jpg",
+      "initials": "MB",
+      "featured": false,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Marques Brownlee was born on August 14, 1993. He grew up with a passion for technology and entrepreneurship. From an early age, he was fascinated by gadgets and how they work. His childhood interests in technology would eventually shape his career path and lead him to become one of the world's most influential tech reviewers.",
+        "education": "Brownlee attended Rutgers University, where he studied information technology. During his college years, he continued his passion for technology and began creating content about tech products. His education in IT provided him with a strong technical foundation that would enhance his credibility as a tech reviewer.",
+        "career": "Marques started his YouTube channel MKBHD (Marques Brownlee High Definition) while in college, initially focusing on smartphone reviews. His meticulous approach to reviewing technology, combined with his clear communication style and high production quality, quickly gained him a large following. He has become one of the most trusted voices in tech reviewing, covering everything from smartphones and laptops to cameras and emerging technologies. His reviews are known for their depth, accuracy, and entertaining presentation. He has built one of the most influential tech channels on YouTube with millions of subscribers.",
+        "majorContent": [
+          "Smartphone reviews",
+          "Laptop reviews",
+          "Camera reviews",
+          "Gadget reviews",
+          "Tech news coverage",
+          "Product comparison videos",
+          "Future technology analysis"
+        ],
+        "achievements": "Brownlee has become the gold standard for tech reviewing on YouTube. His reviews are cited by industry professionals and consumers alike. He has partnered with major tech companies and has significantly influenced purchasing decisions across the tech industry. His channel has become one of the most subscribed tech channels on YouTube.",
+        "awards": [
+          "Streamy Awards - Technology Category",
+          "YouTube Silver Play Button",
+          "YouTube Gold Play Button",
+          "Influencer recognition from various tech brands"
+        ],
+        "interestingFacts": [
+          "Marques is known for his meticulous attention to detail in reviews",
+          "He maintains independence and has turned down major sponsorships to preserve his credibility",
+          "He is known for his clear, accessible explanations of complex technology",
+          "He has visited major tech companies and been involved in product development discussions",
+          "He maintains high production quality in all his videos",
+          "He is respected by both consumers and tech industry professionals",
+          "He has expanded beyond YouTube into podcasts and other media",
+          "He is known for his objectivity and fairness in reviews"
+        ],
+        "personalLife": "Brownlee is known for maintaining a relatively private personal life while maintaining a strong professional presence. He is focused on his work and continues to invest in improving his content quality.",
+        "influence": "Marques Brownlee is one of the most influential tech voices in the world. His reviews shape consumer purchasing decisions and influence tech industry direction. He has demonstrated the power of credibility and expertise in content creation and has become a model for aspiring tech reviewers."
+      },
+      "metadata": {
+        "birthDate": "1993-08-14",
+        "birthPlace": null,
+        "nationality": "American",
+        "channelName": "MKBHD",
+        "age": 30,
+        "notableTitles": ["Tech Reviewer", "YouTuber", "Influencer"]
+      },
+      "seo": {
+        "title": "Marques Brownlee - MKBHD | Tech Reviewer | Biography - ZIVO",
+        "description": "Discover Marques Brownlee's biography. Tech reviewer MKBHD, one of YouTube's most influential creators. Learn about his career and impact on tech reviews.",
+        "keywords": ["Marques Brownlee", "MKBHD", "tech reviewer", "YouTuber", "technology", "biography", "tech"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/marques-brownlee.html",
+        "ogImage": "/images/marques-brownlee.jpg",
+        "ogTitle": "Marques Brownlee - MKBHD Tech Reviewer",
+        "ogDescription": "Complete biography of Marques Brownlee, the tech industry's most trusted reviewer."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "youtube": null
+      },
+      "relatedProfiles": [
+        "016-mrbeast",
+        "018-emma-chamberlain",
+        "019-pewdiepie",
+        "020-oprah-winfrey"
+      ]
+    },
+    {
+      "id": "018-emma-chamberlain",
+      "name": "Emma Chamberlain",
+      "slug": "emma-chamberlain",
+      "url": "/profiles/emma-chamberlain.html",
+      "category": "creators",
+      "role": "Content Creator",
+      "shortDescription": "American content creator and entrepreneur, founder of Chamberlain Coffee, lifestyle influencer.",
+      "image": "/images/emma-chamberlain.jpg",
+      "initials": "EC",
+      "featured": false,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Emma Rose Chamberlain was born on May 22, 2001, in San Bruno, California. She grew up in the San Francisco Bay Area with exposure to technology and online culture. From an early age, she demonstrated creativity and an entrepreneurial spirit. She was interested in storytelling and sharing her life experiences with others.",
+        "education": "Chamberlain attended Notre Dame High School in Belmont, California. She began creating YouTube content while in high school, initially focusing on vlogs documenting her daily life. Her education was balanced between traditional schooling and her growing content creation career. She later attended the University of Southern California but eventually left to pursue her career full-time.",
+        "career": "Emma started her YouTube channel while in high school, creating vlogs in a distinctive, fast-paced, humor-driven style. Her authentic, relatable content quickly gained her millions of subscribers. She became famous for her lifestyle vlogs, fashion content, and genuine personality. Beyond YouTube, she has expanded into entrepreneurship with the launch of Chamberlain Coffee, a coffee brand that reflects her lifestyle brand. She has also acted in films and television, further expanding her influence. She represents a new generation of content creators who have leveraged social media success into broader business ventures.",
+        "majorContent": [
+          "Lifestyle vlogs",
+          "Fashion content",
+          "Travel videos",
+          "Daily life documentation",
+          "Behind-the-scenes content",
+          "Chamberlain Coffee promotion",
+          "Collaboration videos"
+        ],
+        "achievements": "Emma has become one of the most successful young content creators, amassing millions of subscribers and followers across platforms. Chamberlain Coffee has become a successful business venture, demonstrating her ability to build brands beyond content creation. She has successfully transitioned into acting and various business endeavors.",
+        "awards": [
+          "Teen Choice Award - Choice YouTuber",
+          "Streamy Awards - Multiple nominations",
+          "YouTube Silver Play Button",
+          "YouTube Gold Play Button"
+        ],
+        "interestingFacts": [
+          "Emma started her YouTube channel at age 14",
+          "She is known for her fast-paced, humorous editing style",
+          "She founded Chamberlain Coffee while still a college student",
+          "She is one of the few creators to successfully transition into acting",
+          "She is known for her authenticity and willingness to be vulnerable",
+          "She has become a fashion influencer with millions of followers",
+          "She is involved in various entrepreneurial ventures",
+          "She maintains a close connection with her audience"
+        ],
+        "personalLife": "Chamberlain is known for being open and authentic about her personal life with her audience while maintaining healthy boundaries. She is focused on building her business empire while continuing to create content. She is known for her close friendships with other creators.",
+        "influence": "Emma Chamberlain represents a new generation of young entrepreneurs who have built successful brands through authentic content creation. She has demonstrated how to leverage social media success into legitimate business ventures. She has influenced millions of young people and has become a model for aspiring creators and entrepreneurs."
+      },
+      "metadata": {
+        "birthDate": "2001-05-22",
+        "birthPlace": "San Bruno, California",
+        "nationality": "American",
+        "age": 22,
+        "notableTitles": ["Content Creator", "Entrepreneur", "Influencer"]
+      },
+      "seo": {
+        "title": "Emma Chamberlain - Content Creator & Entrepreneur | Biography - ZIVO",
+        "description": "Explore Emma Chamberlain's complete biography. Content creator, founder of Chamberlain Coffee, lifestyle influencer. Learn about her career and success.",
+        "keywords": ["Emma Chamberlain", "content creator", "Chamberlain Coffee", "influencer", "entrepreneur", "biography", "lifestyle"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/emma-chamberlain.html",
+        "ogImage": "/images/emma-chamberlain.jpg",
+        "ogTitle": "Emma Chamberlain - Content Creator & Entrepreneur",
+        "ogDescription": "Complete biography of Emma Chamberlain, lifestyle influencer and Chamberlain Coffee founder."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "youtube": null
+      },
+      "relatedProfiles": [
+        "016-mrbeast",
+        "017-marques-brownlee",
+        "019-pewdiepie",
+        "020-oprah-winfrey"
+      ]
+    },
+    {
+      "id": "019-pewdiepie",
+      "name": "PewDiePie",
+      "slug": "pewdiepie",
+      "url": "/profiles/pewdiepie.html",
+      "category": "creators",
+      "role": "YouTuber",
+      "shortDescription": "Swedish YouTuber with 111M+ subscribers. Gaming and entertainment content creator.",
+      "image": "/images/pewdiepie.jpg",
+      "initials": "PW",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Felix Arvid Ulf Kjellberg, known professionally as PewDiePie, was born on October 27, 1989, in Gothenburg, Sweden. He grew up in Sweden with his parents and was exposed to video games and pop culture from an early age. His childhood passion for gaming would eventually lead him to become a content creator.",
+        "education": "Kjellberg attended Göta Högskola in Gothenburg, where he studied English. During his university years, he began creating content on YouTube as a hobby. He eventually dropped out of university to pursue content creation full-time, a decision that would prove to be enormously successful.",
+        "career": "Felix started his YouTube channel PewDiePie in 2010, initially focusing on video game commentary and reviews. His energetic personality, humor, and genuine enthusiasm for gaming quickly attracted a massive following. His channel grew to become one of the most subscribed channels on YouTube. Over the years, he has diversified his content to include various challenges, vlogs, and social commentary while maintaining his core audience of dedicated subscribers. His impact on YouTube culture has been significant, and he has been a major influencer in shaping online entertainment.",
+        "majorContent": [
+          "Gaming commentary and reviews",
+          "Challenge videos",
+          "Vlogs and lifestyle content",
+          "Comedy sketches",
+          "Social commentary",
+          "Collaboration videos",
+          "Music and original content"
+        ],
+        "achievements": "PewDiePie has become the most subscribed individual YouTuber with over 111 million subscribers. He has created some of the most watched YouTube videos of all time. His channel has generated billions of views and has significantly influenced YouTube culture. He has also ventured into music and has released multiple songs.",
+        "awards": [
+          "YouTube Silver Play Button - Multiple levels",
+          "YouTube Gold Play Button",
+          "YouTube Diamond Play Button",
+          "Streamy Awards - Multiple nominations and wins",
+          "E! People's Choice Awards - Multiple nominations"
+        ],
+        "interestingFacts": [
+          "PewDiePie briefly lost the title of most subscribed YouTuber during 2019 but regained it",
+          "He is known for his loud, energetic personality and unique humor",
+          "He has faced various controversies during his career which he has addressed publicly",
+          "He has successfully transitioned from gaming to diverse content types",
+          "He is involved in music production and has released original songs",
+          "He has built a successful merchandise and business empire",
+          "He maintains strong engagement with his audience",
+          "He is one of the most recognizable content creators globally"
+        ],
+        "personalLife": "PewDiePie is married to fellow content creator Marzia Bisognin. They have maintained a relatively private personal life while remaining active on social media. He is known for his authentic personality and willingness to evolve as a creator.",
+        "influence": "Felix Kjellberg, as PewDiePie, has become one of the most influential content creators in the world. He has shaped YouTube culture significantly and has demonstrated the power of consistent, authentic content creation. He has inspired millions of aspiring creators and continues to be a major figure in online entertainment."
+      },
+      "metadata": {
+        "birthDate": "1989-10-27",
+        "birthPlace": "Gothenburg, Sweden",
+        "nationality": "Swedish",
+        "realName": "Felix Kjellberg",
+        "age": 34,
+        "notableTitles": ["YouTuber", "Gamer", "Content Creator"]
+      },
+      "seo": {
+        "title": "PewDiePie - Felix Kjellberg | 111M+ Subscribers | Biography - ZIVO",
+        "description": "Discover PewDiePie's complete biography. Swedish YouTuber Felix Kjellberg with 111M+ subscribers. Learn about his gaming career and YouTube success.",
+        "keywords": ["PewDiePie", "Felix Kjellberg", "YouTuber", "gamer", "gaming", "biography", "YouTube"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/pewdiepie.html",
+        "ogImage": "/images/pewdiepie.jpg",
+        "ogTitle": "PewDiePie - Felix Kjellberg",
+        "ogDescription": "Complete biography of PewDiePie, YouTube's most subscribed individual creator."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "youtube": null
+      },
+      "relatedProfiles": [
+        "016-mrbeast",
+        "017-marques-brownlee",
+        "018-emma-chamberlain",
+        "020-oprah-winfrey"
+      ]
+    },
+    {
+      "id": "020-oprah-winfrey",
+      "name": "Oprah Winfrey",
+      "slug": "oprah-winfrey",
+      "url": "/profiles/oprah-winfrey.html",
+      "category": "creators",
+      "role": "Media Executive",
+      "shortDescription": "American media mogul, first Black female billionaire, founder of OWN network.",
+      "image": "/images/oprah-winfrey.jpg",
+      "initials": "OW",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Oprah Gail Winfrey was born on January 29, 1954, in Kosciusko, Mississippi. She was born to unmarried parents Vernon Winfrey, a barber, and Vernita Lee, a housemaid. She grew up in poverty and faced significant hardships in her early life, including racism and abuse. Despite these challenges, she was a bright student who excelled in school and received a scholarship to attend college. Her resilience and determination to overcome adversity became defining characteristics of her personality.",
+        "education": "Oprah attended Nashville public schools and was an excellent student. She received a full scholarship to attend Tennessee State University, where she studied communication and public speaking. Her education was supplemented by her involvement in speech competitions and her early work in radio. She was one of the first Black female reporters at Nashville's WLAC-TV while still in college.",
+        "career": "Oprah began her broadcasting career as a radio host and news reporter while still in college. She moved through various markets including Nashville, Baltimore, and Chicago. In 1984, she started hosting 'AM Chicago,' a local morning talk show that quickly became successful. In 1986, her talk show was renamed 'The Oprah Winfrey Show' and was syndicated nationally. The show became a cultural phenomenon and ran for 25 years, making her one of the most famous and influential people in the world. She transitioned from television to founding her own media company, Harpo Productions, and later the OWN (Oprah Winfrey Network). She has also acted in films, produced content, and built a vast business empire.",
+        "majorAccomplishments": [
+          "The Oprah Winfrey Show - 25 years, 4,561 episodes",
+          "OWN Network - Founded 2011, major media platform",
+          "Oprah's Book Club - Influenced book publishing for decades",
+          "Multiple films and television shows produced",
+          "Major business ventures and investments",
+          "Philanthropic contributions totaling over $100 million"
+        ],
+        "achievements": "Oprah has become the first Black female billionaire in the United States. She built a media empire from her talk show success. She is one of the most influential media figures of all time. Her impact extends beyond entertainment into philanthropy, education, and social justice.",
+        "awards": [
+          "Emmy Awards - Multiple wins",
+          "Golden Globe Award - Cecil B. DeMille Award",
+          "National Book Award",
+          "NAACP Image Awards - Multiple wins",
+          "Peabody Awards - Multiple wins",
+          "Inducted into the Television Academy Hall of Fame"
+        ],
+        "interestingFacts": [
+          "Oprah is the only Black billionaire who made her wealth through media and entertainment",
+          "She has been candid about her personal struggles and triumphs",
+          "She created one of the most successful book clubs in history",
+          "She has interviewed virtually every major public figure",
+          "She is a major philanthropist focused on education",
+          "She has overcome significant personal hardships and built an empire",
+          "She maintains high production standards across all her projects",
+          "She is known for her authenticity and connection with audiences"
+        ],
+        "personalLife": "Oprah is single and has focused primarily on her career and philanthropic work. She has maintained close relationships with family and friends. She is known for her generosity and commitment to various causes, particularly education.",
+        "influence": "Oprah Winfrey is one of the most influential media figures in history. She has shaped television, publishing, and popular culture for decades. She has become a symbol of success and perseverance for millions of people. Her impact extends far beyond entertainment, making her one of the most important cultural figures of the 21st century."
+      },
+      "metadata": {
+        "birthDate": "1954-01-29",
+        "birthPlace": "Kosciusko, Mississippi",
+        "nationality": "American",
+        "age": 69,
+        "notableTitles": ["Media Executive", "Billionaire", "Philanthropist"]
+      },
+      "seo": {
+        "title": "Oprah Winfrey - Media Mogul & Billionaire | Biography - ZIVO",
+        "description": "Explore Oprah Winfrey's complete biography. First Black female billionaire, OWN founder, media icon. Learn about her career and impact.",
+        "keywords": ["Oprah Winfrey", "media", "billionaire", "OWN", "mogul", "biography", "television"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/oprah-winfrey.html",
+        "ogImage": "/images/oprah-winfrey.jpg",
+        "ogTitle": "Oprah Winfrey - Media Mogul & Billionaire",
+        "ogDescription": "Complete biography of Oprah Winfrey, first Black female billionaire and media icon."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "016-mrbeast",
+        "017-marques-brownlee",
+        "018-emma-chamberlain",
+        "019-pewdiepie"
+      ]
+    },
+    {
+      "id": "021-elon-musk",
+      "name": "Elon Musk",
+      "slug": "elon-musk",
+      "url": "/profiles/elon-musk.html",
+      "category": "entrepreneurs",
+      "role": "Entrepreneur",
+      "shortDescription": "South African-born entrepreneur, CEO of Tesla and SpaceX, visionary innovator.",
+      "image": "/images/elon-musk.jpg",
+      "initials": "EM",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Elon Reeve Musk was born on June 28, 1971, in Pretoria, South Africa. His father, Errol Musk, is a South African engineer and entrepreneur, and his mother, Maye Musk, is a Canadian-South African model and dietitian. Growing up in South Africa during apartheid, Elon was exposed to engineering and technology from an early age through his father's work. He showed exceptional aptitude in mathematics and science from childhood.",
+        "education": "Elon attended The Waterkloof House Preparatory School and later Queen's School in Johannesburg. He moved to Canada at age 17 to attend Queen's University. After two years, he transferred to the University of Pennsylvania, where he studied economics and physics. He graduated with degrees in both fields. After briefly being admitted to Stanford for a Ph.D. in energy physics, he dropped out after two days to pursue entrepreneurship during the dot-com boom.",
+        "career": "Elon's entrepreneurial journey began with Zip2, a web software company providing business directories and maps for newspapers, which he co-founded with his brother. After Compaq acquired Zip2, he co-founded X.com, an online financial services company that merged with Confinity to form PayPal. eBay's acquisition of PayPal made Elon a multimillionaire. He then founded SpaceX in 2002 with the goal of reducing space transportation costs and enabling Mars colonization. In 2004, he became the lead investor in Tesla, eventually becoming CEO. Under his leadership, Tesla has become the world's most valuable automaker and has accelerated the adoption of electric vehicles. He has also been involved with various other ventures including Neuralink, The Boring Company, and more recently, acquired Twitter (now X). His vision extends to making humanity multiplanetary and sustainable.",
+        "majorVentures": [
+          "Zip2 - Web software for newspapers",
+          "X.com/PayPal - Online financial services",
+          "SpaceX - Rocket company and space exploration",
+          "Tesla - Electric vehicles and energy storage",
+          "Neuralink - Brain-computer interface",
+          "The Boring Company - Tunnel boring",
+          "Twitter/X - Social media platform"
+        ],
+        "achievements": "Elon has transformed multiple industries including electric vehicles, renewable energy, and space exploration. Tesla has become the most valuable automaker in the world. SpaceX has achieved numerous milestones including commercial space travel and cargo missions. He has become one of the world's wealthiest individuals.",
+        "awards": [
+          "Heinlein Prize for Advances in Space Commercialization",
+          "Royal Aeronautical Society Gold Medal",
+          "Time Magazine Person of the Year - 2023",
+          "Various entrepreneurship and innovation awards"
+        ],
+        "interestingFacts": [
+          "Elon is known for working extremely long hours and sleeping at factories",
+          "He is known for making bold, sometimes controversial statements",
+          "He has actively engaged with social media and cultivates a unique public persona",
+          "He has stated his goal to make humanity multiplanetary",
+          "He acquired Twitter in 2022 and has dramatically transformed it",
+          "He is interested in artificial intelligence and its implications",
+          "He has demonstrated a willingness to take on established industries",
+          "He is known for his ambitious timeline goals for his companies"
+        ],
+        "personalLife": "Elon has been married multiple times and has several children. He is known for balancing family with his intense focus on work. He maintains an active social media presence and is known for his candid, sometimes irreverent communication style.",
+        "influence": "Elon Musk has become one of the most influential entrepreneurs of the 21st century. His work in electric vehicles, space exploration, and renewable energy has had profound impacts on multiple industries. He represents a new type of entrepreneur willing to challenge established industries and pursue bold visions. His influence extends beyond business into popular culture and technology discourse."
+      },
+      "metadata": {
+        "birthDate": "1971-06-28",
+        "birthPlace": "Pretoria, South Africa",
+        "nationality": "South African-American",
+        "age": 52,
+        "notableTitles": ["Entrepreneur", "CEO", "Innovator"]
+      },
+      "seo": {
+        "title": "Elon Musk - Entrepreneur | Tesla & SpaceX | Biography - ZIVO",
+        "description": "Discover Elon Musk's complete biography. Entrepreneur and CEO of Tesla and SpaceX. Learn about his innovations, ventures, and impact on technology.",
+        "keywords": ["Elon Musk", "entrepreneur", "Tesla", "SpaceX", "billionaire", "biography", "innovation"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/elon-musk.html",
+        "ogImage": "/images/elon-musk.jpg",
+        "ogTitle": "Elon Musk - Entrepreneur & Innovator",
+        "ogDescription": "Complete biography of Elon Musk, visionary entrepreneur behind Tesla and SpaceX."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "022-bill-gates",
+        "023-mark-zuckerberg",
+        "024-jeff-bezos"
+      ]
+    },
+    {
+      "id": "022-bill-gates",
+      "name": "Bill Gates",
+      "slug": "bill-gates",
+      "url": "/profiles/bill-gates.html",
+      "category": "entrepreneurs",
+      "role": "Business Magnate",
+      "shortDescription": "American business magnate, Microsoft founder, philanthropist, and global health advocate.",
+      "image": "/images/bill-gates.jpg",
+      "initials": "BG",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "William Henry Gates III was born on October 28, 1955, in Seattle, Washington. His father, William H. Gates Sr., was an attorney, and his mother, Mary Maxwell Gates, was a businesswoman and director of United Way International. Growing up in an affluent household, Bill was exposed to business and entrepreneurship from an early age. He attended The Lakeside School, where he first encountered computers and began programming.",
+        "education": "Gates attended Lakeside School and developed a passion for computing. He learned BASIC programming and developed his first software program. He attended Harvard University, where he studied mathematics and computer science. During his time at Harvard, he met Steve Ballmer, who would later become Microsoft's CEO. In 1975, Gates left Harvard to start Microsoft with his childhood friend Paul Allen.",
+        "career": "Bill Gates co-founded Microsoft in 1975 with Paul Allen. The company became the world's leading software company, developing operating systems and applications that revolutionized personal computing. Windows became the dominant operating system for personal computers worldwide. Under Gates' leadership as CEO, Microsoft became one of the world's most valuable companies. He stepped down as CEO in 2000 to focus on philanthropy, though he maintained a role at the company. Since then, he has dedicated himself primarily to the Bill & Melinda Gates Foundation, focused on global health, development, and education.",
+        "majorAccomplishments": [
+          "Microsoft - Founded 1975, world's leading software company",
+          "Windows operating system - Revolutionized personal computing",
+          "Office suite - Dominant productivity software",
+          "Bill & Melinda Gates Foundation - Founded 1997, major global philanthropy",
+          "Global Health initiatives - Focused on disease eradication and healthcare",
+          "Educational initiatives - Supporting education globally"
+        ],
+        "achievements": "Gates has become one of the world's wealthiest individuals. Microsoft revolutionized the computer industry. Through the Gates Foundation, he has become one of the world's most influential philanthropists, contributing significantly to global health and education initiatives.",
+        "awards": [
+          "Honorary Knighthood - 2005",
+          "Presidential Medal of Freedom - 2016",
+          "Various humanitarian awards",
+          "Numerous honorary doctorates from universities worldwide"
+        ],
+        "interestingFacts": [
+          "Gates has been the world's richest person for many years",
+          "He has a famous betting agreement with Warren Buffett",
+          "He is known for his voracious reading habits",
+          "He has become increasingly focused on global health issues",
+          "He has committed to giving most of his wealth to the Gates Foundation",
+          "He is involved in various technology initiatives through his foundation",
+          "He has taken a public stance on various global issues",
+          "He remains involved with Microsoft's strategic direction"
+        ],
+        "personalLife": "Gates is married to Melinda French Gates (though they separated in 2021). He has three children with Melinda. He maintains an active role in the Gates Foundation. He is known for his philanthropic work and commitment to global causes.",
+        "influence": "Bill Gates is one of the most influential figures in business and philanthropy. His work with Microsoft revolutionized computing and technology. His philanthropic work has significantly impacted global health and development. He represents the power of business success channeled into global good."
+      },
+      "metadata": {
+        "birthDate": "1955-10-28",
+        "birthPlace": "Seattle, Washington",
+        "nationality": "American",
+        "age": 68,
+        "notableTitles": ["Business Magnate", "Founder", "Philanthropist"]
+      },
+      "seo": {
+        "title": "Bill Gates - Microsoft Founder | Business Magnate | Biography - ZIVO",
+        "description": "Explore Bill Gates's complete biography. Microsoft founder, billionaire, philanthropist. Learn about his career, philanthropy, and global impact.",
+        "keywords": ["Bill Gates", "Microsoft", "founder", "billionaire", "philanthropist", "biography", "technology"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/bill-gates.html",
+        "ogImage": "/images/bill-gates.jpg",
+        "ogTitle": "Bill Gates - Microsoft Founder",
+        "ogDescription": "Complete biography of Bill Gates, Microsoft founder and global philanthropist."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "021-elon-musk",
+        "023-mark-zuckerberg",
+        "024-jeff-bezos"
+      ]
+    },
+    {
+      "id": "023-mark-zuckerberg",
+      "name": "Mark Zuckerberg",
+      "slug": "mark-zuckerberg",
+      "url": "/profiles/mark-zuckerberg.html",
+      "category": "entrepreneurs",
+      "role": "Technology Entrepreneur",
+      "shortDescription": "American technology entrepreneur, founder and CEO of Meta Platforms (Facebook).",
+      "image": "/images/mark-zuckerberg.jpg",
+      "initials": "MZ",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Mark Elliot Zuckerberg was born on May 14, 1984, in White Plains, New York. His father, Edward Zuckerberg, is a psychiatrist, and his mother, Karen Kempner, is a psychologist. Growing up in a highly educated household, Mark was exposed to intellectual pursuits from an early age. He showed early aptitude in computer programming and mathematics.",
+        "education": "Zuckerberg attended Phillips Exeter Academy, a prestigious preparatory school. At Exeter, he developed his programming skills and created early versions of social software. He attended Harvard University, where he studied psychology and computer science. During his sophomore year at Harvard, in 2004, he launched 'TheFacebook' from his dorm room with the goal of connecting college students. The platform quickly expanded to other universities and eventually became open to anyone.",
+        "career": "Mark Zuckerberg founded Facebook (later Meta Platforms) in 2004, which has become the world's largest social media platform. Facebook revolutionized how people connect and communicate globally. Under his leadership, Facebook acquired Instagram, WhatsApp, and other companies, becoming a tech conglomerate. In 2021, he rebranded Facebook to Meta and announced a pivot toward building the 'metaverse.' He remains CEO of Meta Platforms. His company has become one of the world's most valuable and influential technology companies.",
+        "majorVentures": [
+          "Facebook - Social media platform (2004)",
+          "Instagram - Photo sharing app (acquired 2012)",
+          "WhatsApp - Messaging app (acquired 2014)",
+          "Oculus - Virtual reality company (acquired 2014)",
+          "Meta Platforms - Rebranded company focused on metaverse"
+        ],
+        "achievements": "Zuckerberg has created one of the world's most influential social media platforms. Facebook has billions of users globally. He has become one of the world's youngest billionaires. Meta has become a major player in virtual reality and emerging technologies.",
+        "awards": [
+          "Time Magazine Person of the Year - 2010",
+          "Various entrepreneurship awards",
+          "Ranked among world's most influential people"
+        ],
+        "interestingFacts": [
+          "Zuckerberg is one of the youngest self-made billionaires",
+          "He is known for his distinctive casual attire of gray t-shirts",
+          "He co-founded Chan Zuckerberg Initiative with his wife for philanthropy",
+          "He has been involved in various controversies related to privacy and content moderation",
+          "He has testified before Congress on multiple occasions",
+          "He has invested heavily in virtual reality technology",
+          "He maintains majority voting control of Meta through special share classes",
+          "He is focused on building the metaverse as the future of technology"
+        ],
+        "personalLife": "Mark is married to Priscilla Chan, a pediatrician and philanthropist. They have three children. Together, they have committed to giving 99% of their Meta shares to the Chan Zuckerberg Initiative, focused on education, science, and other causes.",
+        "influence": "Mark Zuckerberg has become one of the most influential entrepreneurs of the 21st century. Facebook has fundamentally changed how people communicate and share information globally. His company's dominance has raised important questions about privacy, content moderation, and the role of technology in society. He represents the new generation of tech entrepreneurs shaping the digital world."
+      },
+      "metadata": {
+        "birthDate": "1984-05-14",
+        "birthPlace": "White Plains, New York",
+        "nationality": "American",
+        "age": 39,
+        "notableTitles": ["Technology Entrepreneur", "Founder", "CEO"]
+      },
+      "seo": {
+        "title": "Mark Zuckerberg - Meta & Facebook Founder | Biography - ZIVO",
+        "description": "Discover Mark Zuckerberg's complete biography. Facebook and Meta founder, technology entrepreneur, billionaire. Learn about his career and impact.",
+        "keywords": ["Mark Zuckerberg", "Meta", "Facebook", "founder", "technology", "biography", "social media"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/mark-zuckerberg.html",
+        "ogImage": "/images/mark-zuckerberg.jpg",
+        "ogTitle": "Mark Zuckerberg - Meta & Facebook Founder",
+        "ogDescription": "Complete biography of Mark Zuckerberg, Facebook and Meta founder."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "021-elon-musk",
+        "022-bill-gates",
+        "024-jeff-bezos"
+      ]
+    },
+    {
+      "id": "024-jeff-bezos",
+      "name": "Jeff Bezos",
+      "slug": "jeff-bezos",
+      "url": "/profiles/jeff-bezos.html",
+      "category": "entrepreneurs",
+      "role": "Entrepreneur",
+      "shortDescription": "American entrepreneur, founder of Amazon and Blue Origin, e-commerce pioneer.",
+      "image": "/images/jeff-bezos.jpg",
+      "initials": "JB",
+      "featured": true,
+      "searchable": true,
+      "biography": {
+        "earlyLife": "Jeffrey Preston Jorgensen was born on January 12, 1964, in Albuquerque, New Mexico. His mother, Jackie Jorgensen, was a school secretary who later married Miguel Bezos, a Cuban immigrant and mechanical engineer. Jeff adopted the Bezos surname from his stepfather. Growing up as the oldest of four children, Jeff showed exceptional aptitude in science and mathematics from an early age. His family moved frequently due to his father's work with Standard Oil.",
+        "education": "Bezos attended Princeton University, where he earned degrees in electrical engineering and computer science. During his time at Princeton, he was initiated into Phi Beta Kappa for his academic excellence. His education provided him with the technical foundation and business acumen that would later fuel his entrepreneurial ventures. After graduation, he initially pursued a career in technology and finance.",
+        "career": "After Princeton, Jeff worked for several technology companies including Fitel and D.E. Shaw, a hedge fund. In 1994, inspired by the growth of the internet, he founded Amazon.com with the initial goal of selling books online. The company started from his garage in Seattle and quickly expanded to become the world's largest online retailer, selling virtually everything. Amazon revolutionized e-commerce and transformed how people shop globally. Bezos also founded Blue Origin, an aerospace manufacturer focused on space tourism and commercial space flights. Under his leadership, Amazon has become one of the world's most valuable companies, fundamentally changing retail and cloud computing through AWS (Amazon Web Services).",
+        "majorVentures": [
+          "Amazon - E-commerce platform (1994)",
+          "Amazon Web Services (AWS) - Cloud computing (2006)",
+          "Blue Origin - Aerospace company (2000)",
+          "The Washington Post - Newspaper acquisition (2013)",
+          "Day 1 Fund - Philanthropy initiative"
+        ],
+        "achievements": "Bezos has built Amazon into one of the world's most valuable and influential companies. AWS has become a dominant cloud computing provider. He has pioneered e-commerce and transformed retail globally. He has become one of the world's wealthiest individuals.",
+        "awards": [
+          "Heinlein Prize for Advances in Space Commercialization",
+          "Various entrepreneurship and innovation awards",
+          "Ranked among the world's most influential people"
+        ],
+        "interestingFacts": [
+          "Bezos is famous for his focus on customer satisfaction and long-term thinking",
+          "He emphasized 'Day 1' mentality at Amazon, maintaining startup culture",
+          "He is known for his high-stakes business decisions and calculated risks",
+          "He acquired The Washington Post in 2013, showing interest in media",
+          "He has been involved in various space exploration initiatives",
+          "He stepped down as Amazon CEO in 2021 but remains involved with the company",
+          "He is one of the few people to make successful ventures in multiple industries",
+          "He is known for his customer-centric philosophy and data-driven decision making"
+        ],
+        "personalLife": "Bezos is father of four children. He was previously married to MacKenzie Bezos for 25 years until their divorce in 2019. He is now married to Lauren Sánchez, a former television journalist and producer. He is involved in various philanthropic and commercial ventures.",
+        "influence": "Jeff Bezos has become one of the most influential entrepreneurs of the 21st century. Amazon has fundamentally transformed retail and e-commerce globally. AWS has enabled countless businesses to scale through cloud computing. He represents the new generation of tech entrepreneurs building global-scale businesses. His impact on commerce, technology, and space exploration continues to shape the future."
+      },
+      "metadata": {
+        "birthDate": "1964-01-12",
+        "birthPlace": "Albuquerque, New Mexico",
+        "nationality": "American",
+        "age": 59,
+        "notableTitles": ["Entrepreneur", "Founder", "Innovator"]
+      },
+      "seo": {
+        "title": "Jeff Bezos - Amazon Founder | Entrepreneur | Biography - ZIVO",
+        "description": "Explore Jeff Bezos's complete biography. Amazon founder, entrepreneur, innovator. Learn about his career, business empire, and global impact.",
+        "keywords": ["Jeff Bezos", "Amazon", "founder", "entrepreneur", "e-commerce", "biography", "Blue Origin"],
+        "canonical": "https://http-01.github.io/Zivo.com/profiles/jeff-bezos.html",
+        "ogImage": "/images/jeff-bezos.jpg",
+        "ogTitle": "Jeff Bezos - Amazon Founder",
+        "ogDescription": "Complete biography of Jeff Bezos, Amazon founder and e-commerce pioneer."
+      },
+      "social": {
+        "twitter": null,
+        "instagram": null,
+        "facebook": null
+      },
+      "relatedProfiles": [
+        "021-elon-musk",
+        "022-bill-gates",
+        "023-mark-zuckerberg"
+      ]
+    }
+  ]
+}
