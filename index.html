@@ -1,1914 +1,1506 @@
-================================================================================
-        ZIVO - 8 NEW CELEBRITY PROFILES (PRODUCTION-GRADE HTML5)
-           Complete Profiles: Julian Marsh, Amara Okafor, Luna Vega, 
-           Marco Silveira, Aisha Bello, Riley Chen, Victor Hale, Elena Kovac
-================================================================================
-
-These 8 complete HTML profile files are ready to use on your ZIVO website.
-Each file includes professional biography, schema markup, and image placeholders.
-
-IMPORTANT BEFORE USE:
-1. Download high-resolution images from Google Images or Pinterest
-2. Save images to /images/ folder with names: julian-marsh.jpg, amara-okafor.jpg, etc.
-3. Upload HTML files to /profiles/ folder
-4. Test links and images
-5. Submit updated sitemap.xml to Google Search Console
-
-================================================================================
-FILE #1: profiles/julian-marsh.html
-================================================================================
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Julian Marsh - American Actor & Film Producer | Biography - ZIVO</title>
-    <meta name="description" content="Discover Julian Marsh's complete biography. American actor and producer known for grounding big-budget action roles with unusual emotional depth. Learn about his career and achievements.">
-    <meta name="keywords" content="Julian Marsh, actor, film producer, American actor, biography, entertainment">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/julian-marsh.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/julian-marsh.html">
-    <meta property="og:title" content="Julian Marsh - American Actor & Film Producer">
-    <meta property="og:description" content="Complete biography of Julian Marsh, American actor and producer known for emotional depth in action roles.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/julian-marsh.jpg">
-    <meta property="profile:first_name" content="Julian">
-    <meta property="profile:last_name" content="Marsh">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Julian Marsh - Actor & Producer">
-    <meta name="twitter:description" content="Explore the life and career of American actor Julian Marsh">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/julian-marsh.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/julian-marsh.html",
-        "name": "Julian Marsh",
-        "jobTitle": "Actor & Film Producer",
-        "birthDate": null,
-        "nationality": {
-            "@type": "Country",
-            "name": "American"
-        },
-        "description": "American actor and producer known for grounding big-budget action roles with unusual emotional depth",
-        "image": "https://http-01.github.io/Zivo.com/images/julian-marsh.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/julian-marsh.html",
-        "knowsAbout": [
-            "Acting",
-            "Film Production",
-            "Television",
-            "Drama"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Actors",
-                "item": "https://http-01.github.io/Zivo.com/categories/actors.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Julian Marsh",
-                "item": "https://http-01.github.io/Zivo.com/profiles/julian-marsh.html"
-            }
-        ]
-    }
-    </script>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZIVO — Stories Behind the Famous (Live Preview)</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   ZIVO — Stories Behind the Famous.
+   Design system: "The Archive" — a biographical catalog aesthetic.
+   Paper + ink-navy with a single stamp-red signature accent.
+   Type: Newsreader (display) / Archivo (body+UI) / Space Mono (data/labels)
+   ========================================================================== */
 
+:root {
+  /* ---- Core palette ---- */
+  --ink: #14181B;
+  --navy: #1C2B3A;
+  --navy-soft: #2C3E50;
+  --navy-line: #3A4E60;
+  --paper: #F2EEE3;
+  --paper-deep: #E7E0CD;
+  --paper-line: #D7CDB2;
+  --cream: #F6F3EA;
+  --muted: #6E6858;
+  --muted-on-navy: #B9C2C9;
+  --stamp: #AE3728;
+  --stamp-light: #C85742;
+  --stamp-dark: #8A2A1F;
+  --white: #FFFFFF;
+
+  /* ---- Category classification colors (muted archival labels) ---- */
+  --cat-actors: #7A3B3B;
+  --cat-singers: #3E4C78;
+  --cat-sports: #386B4C;
+  --cat-youtubers: #2E6B72;
+  --cat-business: #7A5C2E;
+
+  /* ---- Type ---- */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* ---- Spacing scale ---- */
+  --sp-1: 0.4rem;
+  --sp-2: 0.8rem;
+  --sp-3: 1.2rem;
+  --sp-4: 1.8rem;
+  --sp-5: 2.6rem;
+  --sp-6: 3.6rem;
+  --sp-7: 5.2rem;
+  --sp-8: 7.5rem;
+
+  /* ---- Radius / shadow / motion ---- */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --shadow-card: 0 1px 2px rgba(20, 24, 27, 0.06), 0 1px 1px rgba(20, 24, 27, 0.04);
+  --shadow-lift: 0 14px 28px -12px rgba(20, 24, 27, 0.28);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 0.18s;
+  --t-med: 0.32s;
+
+  --container: 1180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* ==========================================================================
+   Reset / base
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+input, textarea, select { font: inherit; color: inherit; }
+h1, h2, h3, h4, p, figure { margin: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 var(--sp-3); }
+}
+
+main { display: block; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.font-mono, .mono { font-family: var(--font-mono); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stamp);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: var(--sp-3);
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--stamp);
+  display: inline-block;
+}
+.eyebrow--light { color: var(--muted-on-navy); }
+.eyebrow--light::before { background: var(--muted-on-navy); }
+
+.lede {
+  font-size: 1.08rem;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.65;
+}
+
+.prose p { margin: 0 0 1.1em; color: var(--ink); line-height: 1.75; }
+.prose p:last-child { margin-bottom: 0; }
+
+/* ==========================================================================
+   Buttons & links
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  padding: 0.85em 1.6em;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+  white-space: nowrap;
+}
+.btn--stamp { background: var(--stamp); color: var(--cream); }
+.btn--stamp:hover { background: var(--stamp-light); transform: translateY(-1px); }
+.btn--outline-light { border-color: rgba(246, 243, 234, 0.35); color: var(--cream); }
+.btn--outline-light:hover { border-color: var(--cream); background: rgba(246, 243, 234, 0.08); }
+.btn--outline-dark { border-color: var(--paper-line); color: var(--ink); }
+.btn--outline-dark:hover { border-color: var(--ink); }
+.btn--ghost { color: var(--stamp); padding-left: 0; padding-right: 0; }
+.btn--ghost::after { content: "→"; margin-left: 0.4em; transition: transform var(--t-fast) var(--ease); }
+.btn--ghost:hover::after { transform: translateX(3px); }
+.btn--block { width: 100%; }
+
+.text-link {
+  color: var(--stamp);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(174, 55, 40, 0.35);
+  transition: border-color var(--t-fast) var(--ease);
+}
+.text-link:hover { border-color: var(--stamp); }
+
+/* ==========================================================================
+   Tag / classification labels
+   ========================================================================== */
+.tag {
+  --accent: var(--stamp);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  padding: 0.3em 0.6em;
+}
+.tag::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.tag--solid { background: var(--accent); color: var(--cream); }
+.tag--solid::before { display: none; }
+
+.catalog-no {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Site header
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy);
+  border-bottom: 1px solid var(--navy-line);
+  transition: box-shadow var(--t-med) var(--ease);
+}
+.site-header.is-scrolled { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.4); }
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  height: 72px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.logo__dot { color: var(--stamp); font-size: 1.6rem; line-height: 0; }
+
+.site-nav { display: flex; align-items: center; gap: var(--sp-5); flex: 1; justify-content: center; }
+.site-nav__link {
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted-on-navy);
+  position: relative;
+  padding: 0.4em 0;
+  transition: color var(--t-fast) var(--ease);
+}
+.site-nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -2px;
+  height: 1px;
+  background: var(--stamp);
+  transition: right var(--t-med) var(--ease);
+}
+.site-nav__link:hover, .site-nav__link.is-active { color: var(--cream); }
+.site-nav__link:hover::after, .site-nav__link.is-active::after { right: 0; }
+
+.site-header__actions { display: flex; align-items: center; gap: var(--sp-3); flex-shrink: 0; }
+.icon-btn {
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--cream);
+  border: 1px solid var(--navy-line);
+  border-radius: var(--r-sm);
+  transition: border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.icon-btn:hover { border-color: var(--muted-on-navy); background: rgba(255,255,255,0.04); }
+.icon-btn svg { width: 17px; height: 17px; }
+
+.menu-toggle { display: none; }
+
+/* Header search overlay */
+.header-search {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background: var(--navy);
+  border-bottom: 1px solid var(--navy-line);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t-med) var(--ease);
+}
+.header-search.is-open { max-height: 110px; }
+.header-search__inner { display: flex; gap: var(--sp-2); padding: var(--sp-4) 0; align-items: center; }
+.header-search__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--navy-line);
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  padding: 0.5em 0.1em;
+}
+.header-search__input::placeholder { color: var(--muted-on-navy); }
+.header-search__input:focus { outline: none; border-color: var(--stamp); }
+
+/* Mobile nav */
+.mobile-nav {
+  position: fixed; inset: 0;
+  background: var(--navy);
+  z-index: 200;
+  padding: var(--sp-4);
+  transform: translateX(100%);
+  transition: transform var(--t-med) var(--ease);
+  overflow-y: auto;
+}
+.mobile-nav.is-open { transform: translateX(0); }
+.mobile-nav__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-6); height: 40px; }
+.mobile-nav__close { color: var(--cream); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+.mobile-nav__list { display: flex; flex-direction: column; }
+.mobile-nav__link {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--cream);
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--navy-line);
+}
+.mobile-nav__search { margin-top: var(--sp-5); }
+.mobile-nav__search input {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--navy-line);
+  color: var(--cream); font-family: var(--font-mono); font-size: 0.95rem; padding: 0.7em 0;
+}
+.mobile-nav__search input::placeholder { color: var(--muted-on-navy); }
+
+@media (max-width: 960px) {
+  .site-nav { display: none; }
+  .menu-toggle { display: inline-flex; }
+}
+
+/* ==========================================================================
+   Homepage Hero
+   ========================================================================== */
+.hero {
+  background: var(--navy);
+  color: var(--cream);
+  padding: var(--sp-8) 0 var(--sp-7);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(246,243,234,0.06) 1px, transparent 0);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+.hero__inner { position: relative; max-width: 760px; }
+.hero__title {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  color: var(--cream);
+  margin-bottom: var(--sp-3);
+}
+.hero__title em { color: var(--stamp-light); font-style: normal; }
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--muted-on-navy);
+  max-width: 56ch;
+  line-height: 1.65;
+  margin-bottom: var(--sp-5);
+}
+
+.search-panel { max-width: 620px; }
+.search-form {
+  display: flex;
+  align-items: stretch;
+  background: var(--cream);
+  border-radius: var(--r-md);
+  padding: 6px;
+  box-shadow: var(--shadow-lift);
+  position: relative;
+}
+.search-form__icon { display: flex; align-items: center; padding: 0 0.9em 0 1.1em; color: var(--muted); flex-shrink: 0; }
+.search-form__icon svg { width: 19px; height: 19px; }
+.search-form__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  padding: 0.95em 0.4em;
+  min-width: 0;
+}
+.search-form__input:focus { outline: none; }
+.search-form__submit {
+  background: var(--stamp);
+  color: var(--cream);
+  padding: 0 1.5em;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  transition: background var(--t-fast) var(--ease);
+}
+.search-form__submit:hover { background: var(--stamp-light); }
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0; right: 0;
+  background: var(--cream);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+  z-index: 40;
+  display: none;
+}
+.search-suggestions.is-open { display: block; }
+.suggestion {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 0.75em var(--sp-3);
+  border-bottom: 1px solid var(--paper-line);
+  transition: background var(--t-fast) var(--ease);
+}
+.suggestion:last-child { border-bottom: none; }
+.suggestion:hover, .suggestion.is-focused { background: var(--paper-deep); }
+.suggestion__photo {
+  width: 36px; height: 36px; border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+.suggestion__name { font-weight: 600; font-size: 0.92rem; }
+.suggestion__meta { font-size: 0.78rem; color: var(--muted); }
+.suggestion__empty { padding: var(--sp-4); color: var(--muted); font-size: 0.9rem; text-align: center; }
+
+.hero__tally {
+  margin-top: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-on-navy);
+  display: flex; flex-wrap: wrap; gap: 0.6em 1em;
+}
+.hero__tally span { display: inline-flex; align-items: center; gap: 0.5em; }
+.hero__tally span:not(:last-child)::after { content: "·"; margin-left: 1em; color: var(--navy-line); }
+
+/* ==========================================================================
+   Page hero (secondary pages: category, about, contact, legal, search)
+   ========================================================================== */
+.page-hero {
+  background: var(--navy);
+  color: var(--cream);
+  padding: var(--sp-7) 0 var(--sp-6);
+}
+.page-hero__title { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--cream); }
+.page-hero__subtitle { color: var(--muted-on-navy); max-width: 62ch; margin-top: var(--sp-3); font-size: 1.05rem; line-height: 1.6; }
+.page-hero--tight { padding: var(--sp-6) 0 var(--sp-5); }
+
+.breadcrumbs {
+  display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted-on-navy);
+  margin-bottom: var(--sp-4);
+  text-transform: uppercase;
+}
+.breadcrumbs a { color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
+.breadcrumbs a:hover { color: var(--cream); }
+.breadcrumbs__sep { opacity: 0.5; }
+.breadcrumbs--dark { color: var(--muted); }
+.breadcrumbs--dark a { color: var(--muted); }
+.breadcrumbs--dark a:hover { color: var(--ink); }
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+.section { padding: var(--sp-7) 0; }
+.section--alt { background: var(--paper-deep); }
+.section--tight { padding: var(--sp-6) 0; }
+.section__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); margin-bottom: var(--sp-5); flex-wrap: wrap; }
+.section__title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.section__desc { color: var(--muted); margin-top: 0.5em; max-width: 56ch; }
+
+/* ==========================================================================
+   Category index grid (homepage)
+   ========================================================================== */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--paper-line);
+  border: 1px solid var(--paper-line);
+}
+.cat-card {
+  background: var(--paper);
+  padding: var(--sp-4) var(--sp-3);
+  position: relative;
+  transition: background var(--t-fast) var(--ease);
+}
+.cat-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+.cat-card:hover { background: var(--white); }
+.cat-card__name { font-family: var(--font-display); font-size: 1.2rem; margin: var(--sp-2) 0 0.4em; }
+.cat-card__desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; min-height: 3em; }
+.cat-card__count { display: block; margin-top: var(--sp-3); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   File cards (celebrity cards) & grid
+   ========================================================================== */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+}
+.file-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.file-card {
+  background: var(--white);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-fast) var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.file-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: transparent; }
+
+.file-card__top { display: flex; gap: var(--sp-3); padding: var(--sp-3); border-bottom: 1px solid var(--paper-line); }
+
+.id-photo {
+  --accent: var(--stamp);
+  width: 64px; height: 78px;
+  flex-shrink: 0;
+  border-radius: var(--r-sm);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 18%, var(--paper-deep)), var(--paper-deep));
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--paper-line));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+}
+.id-photo--lg { width: 128px; height: 156px; font-size: 2.6rem; border-radius: var(--r-md); }
+.id-photo--navy { background: linear-gradient(160deg, rgba(246,243,234,0.14), rgba(246,243,234,0.04)); border-color: rgba(246,243,234,0.3); color: var(--cream); }
+
+.file-card__id { flex: 1; min-width: 0; }
+.file-card__catalog { display: block; margin-bottom: 0.35em; }
+.file-card__name { font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.3em; }
+.file-card__role { font-size: 0.82rem; color: var(--muted); }
+
+.file-card__body { padding: var(--sp-3); flex: 1; display: flex; flex-direction: column; gap: var(--sp-2); }
+.file-card__blurb { font-size: 0.86rem; color: var(--muted); line-height: 1.55; flex: 1; }
+.file-card__foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: var(--sp-2); }
+.file-card__link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--stamp); }
+.file-card__link::after { content: "→"; margin-left: 0.4em; }
+
+@media (max-width: 1024px) {
+  .file-grid, .file-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .file-grid, .file-grid--3 { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Features / values grid
+   ========================================================================== */
+.feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
+.feat-card__index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--stamp); margin-bottom: var(--sp-2); display: block; }
+.feat-card__title { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.5em; }
+.feat-card__desc { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+@media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .feat-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Profile / case-file header
+   ========================================================================== */
+.case-file {
+  background: var(--navy);
+  color: var(--cream);
+  padding: var(--sp-6) 0 var(--sp-7);
+}
+.case-file__grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-6);
+  align-items: start;
+}
+.case-file__name { font-size: clamp(2rem, 4.5vw, 3.1rem); color: var(--cream); margin: var(--sp-2) 0 0.3em; }
+.case-file__role { font-size: 1.05rem; color: var(--muted-on-navy); margin-bottom: var(--sp-4); }
+.case-file__tags { display: flex; gap: 0.6em; flex-wrap: wrap; margin-bottom: var(--sp-4); }
+
+.ledger { border-top: 1px solid var(--navy-line); max-width: 560px; }
+.ledger__row { display: grid; grid-template-columns: 140px 1fr; gap: var(--sp-3); padding: 0.65em 0; border-bottom: 1px solid var(--navy-line); }
+.ledger__label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); }
+.ledger__value { font-size: 0.92rem; color: var(--cream); }
+
+@media (max-width: 720px) {
+  .case-file__grid { grid-template-columns: 1fr; }
+  .ledger__row { grid-template-columns: 110px 1fr; }
+}
+
+/* ==========================================================================
+   Profile sub-navigation (file index)
+   ========================================================================== */
+.file-index {
+  position: sticky;
+  top: 72px;
+  z-index: 50;
+  background: var(--cream);
+  border-bottom: 1px solid var(--paper-line);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.file-index::-webkit-scrollbar { display: none; }
+.file-index__list { display: flex; gap: var(--sp-5); white-space: nowrap; }
+.file-index__link {
+  display: inline-block;
+  padding: var(--sp-3) 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.file-index__link:hover { color: var(--ink); }
+.file-index__link.is-active { color: var(--stamp); border-color: var(--stamp); }
+
+/* ==========================================================================
+   Profile content sections
+   ========================================================================== */
+.profile-body { padding: var(--sp-6) 0 var(--sp-7); }
+.profile-section { padding: var(--sp-5) 0; border-bottom: 1px solid var(--paper-line); scroll-margin-top: 130px; }
+.profile-section:last-child { border-bottom: none; }
+.profile-section__head { display: flex; align-items: baseline; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.profile-section__no { font-family: var(--font-mono); font-size: 0.78rem; color: var(--stamp); }
+.profile-section__title { font-size: 1.5rem; }
+.profile-section__body { max-width: 68ch; }
+
+.ledger-list__item {
+  position: relative;
+  padding-left: 1.3em;
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.ledger-list__item::before { content: "—"; position: absolute; left: 0; color: var(--stamp); }
+.ledger-list__item:last-child { margin-bottom: 0; }
+
+.valuation-card {
+  border: 1px solid var(--paper-line);
+  background: var(--white);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  max-width: 420px;
+  position: relative;
+}
+.valuation-card::before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--stamp); border-top-left-radius: var(--r-md); border-bottom-left-radius: var(--r-md); }
+.valuation-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5em; }
+.valuation-card__amount { font-family: var(--font-display); font-size: 2.4rem; color: var(--ink); line-height: 1; margin-bottom: 0.5em; }
+.valuation-card__note { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+.no-data-note {
+  border: 1px dashed var(--paper-line);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 460px;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Forms (contact)
+   ========================================================================== */
+.form-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-6); align-items: start; }
+.form-group { margin-bottom: var(--sp-4); }
+.form-label { display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6em; }
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  border: 1px solid var(--paper-line);
+  background: var(--white);
+  border-radius: var(--r-sm);
+  padding: 0.85em 1em;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: border-color var(--t-fast) var(--ease);
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--stamp); }
+.form-textarea { resize: vertical; min-height: 140px; }
+.form-note { font-size: 0.78rem; color: var(--muted); margin-top: var(--sp-2); }
+.form-success {
+  display: none;
+  border: 1px solid var(--cat-sports);
+  background: color-mix(in srgb, var(--cat-sports) 8%, var(--white));
+  color: var(--cat-sports);
+  padding: var(--sp-3);
+  border-radius: var(--r-sm);
+  font-size: 0.9rem;
+  margin-top: var(--sp-3);
+}
+.form-success.is-visible { display: block; }
+
+.info-card { background: var(--navy); color: var(--cream); border-radius: var(--r-md); padding: var(--sp-5); }
+.info-card__title { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: var(--sp-3); }
+.info-card__row { padding: var(--sp-3) 0; border-top: 1px solid var(--navy-line); }
+.info-card__row:first-of-type { border-top: none; }
+.info-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); display: block; margin-bottom: 0.4em; }
+.info-card__value { font-size: 0.95rem; }
+.info-card__value a { color: var(--cream); border-bottom: 1px solid rgba(246,243,234,0.35); }
+.info-card__value a:hover { border-color: var(--cream); }
+
+@media (max-width: 800px) { .form-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Legal pages (privacy / disclaimer)
+   ========================================================================== */
+.legal-body { padding: var(--sp-6) 0 var(--sp-7); }
+.legal-nav { position: sticky; top: 90px; }
+.legal-nav__link { display: block; padding: 0.5em 0; font-size: 0.86rem; color: var(--muted); border-left: 2px solid var(--paper-line); padding-left: var(--sp-3); transition: color var(--t-fast), border-color var(--t-fast); }
+.legal-nav__link:hover { color: var(--ink); border-color: var(--ink); }
+.legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sp-6); }
+.legal-section { padding-bottom: var(--sp-5); margin-bottom: var(--sp-5); border-bottom: 1px solid var(--paper-line); scroll-margin-top: 110px; }
+.legal-section:last-child { border-bottom: none; }
+.legal-section__title { font-size: 1.3rem; margin-bottom: var(--sp-3); }
+.legal-meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-5); }
+@media (max-width: 860px) { .legal-layout { grid-template-columns: 1fr; } .legal-nav { display: none; } }
+
+/* ==========================================================================
+   About page
+   ========================================================================== */
+.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--paper-line); border: 1px solid var(--paper-line); }
+.value-card { background: var(--paper); padding: var(--sp-5); }
+.value-card__title { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.5em; }
+.value-card__desc { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+@media (max-width: 640px) { .value-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Search results page
+   ========================================================================== */
+.search-meta { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); margin-bottom: var(--sp-4); }
+.search-meta strong { color: var(--ink); }
+.empty-state { text-align: center; padding: var(--sp-7) var(--sp-3); border: 1px dashed var(--paper-line); border-radius: var(--r-md); }
+.empty-state__title { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5em; }
+.empty-state__desc { color: var(--muted); max-width: 46ch; margin: 0 auto; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer { background: var(--navy); color: var(--muted-on-navy); padding: var(--sp-7) 0 var(--sp-4); }
+.footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); border-bottom: 1px solid var(--navy-line); }
+.footer__brand-desc { margin-top: var(--sp-3); font-size: 0.88rem; line-height: 1.6; max-width: 34ch; color: var(--muted-on-navy); }
+.footer__socials { display: flex; gap: 0.6em; margin-top: var(--sp-4); }
+.footer__col-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream); margin-bottom: var(--sp-3); }
+.footer__link { display: block; padding: 0.35em 0; font-size: 0.9rem; color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
+.footer__link:hover { color: var(--cream); }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--sp-4); flex-wrap: wrap; gap: var(--sp-2); font-size: 0.8rem; }
+.footer__note { font-size: 0.76rem; color: var(--muted-on-navy); opacity: 0.75; max-width: 60ch; margin-top: var(--sp-2); line-height: 1.5; }
+
+@media (max-width: 860px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .footer__grid > :first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .footer__grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Reveal-on-load animation (hero only — restrained, orchestrated)
+   ========================================================================== */
+.reveal { opacity: 0; transform: translateY(14px); animation: revealUp 0.7s var(--ease) forwards; }
+.reveal--1 { animation-delay: 0.05s; }
+.reveal--2 { animation-delay: 0.15s; }
+.reveal--3 { animation-delay: 0.25s; }
+.reveal--4 { animation-delay: 0.35s; }
+@keyframes revealUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Utility */
+.u-mt-lg { margin-top: var(--sp-6); }
+.u-center { text-align: center; }
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: var(--stamp); color: var(--cream);
+  padding: 0.8em 1.2em; z-index: 999;
+}
+.skip-link:focus { left: var(--sp-3); top: var(--sp-3); }
+
+</style>
+</head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
+    <nav class="site-nav" aria-label="Primary"><a href="categories/actors.html" class="site-nav__link">Actors</a><a href="categories/singers.html" class="site-nav__link">Singers</a><a href="categories/sports.html" class="site-nav__link">Sports</a><a href="categories/youtubers.html" class="site-nav__link">YouTubers</a><a href="categories/business.html" class="site-nav__link">Business</a><a href="about.html" class="site-nav__link">About</a><a href="contact.html" class="site-nav__link">Contact</a></nav>
+    <div class="site-header__actions">
+      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+  <div class="header-search">
+    <div class="container header-search__inner">
+      <form action="search.html" method="GET" style="flex:1;display:flex;">
+        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
+      </form>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav__top">
+    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
+    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="mobile-nav__list" aria-label="Mobile">
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="categories/actors.html" class="mobile-nav__link">Actors</a>
+    <a href="categories/singers.html" class="mobile-nav__link">Singers</a>
+    <a href="categories/sports.html" class="mobile-nav__link">Sports</a>
+    <a href="categories/youtubers.html" class="mobile-nav__link">YouTubers</a>
+    <a href="categories/business.html" class="mobile-nav__link">Business</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+  </nav>
+  <form class="mobile-nav__search" action="search.html" method="GET">
+    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
+  </form>
+</div>
+<main id="main">
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="eyebrow eyebrow--light reveal reveal--1">Stories Behind the Famous.</span>
+      <h1 class="hero__title reveal reveal--2">Every icon has a story. <em>Discover theirs.</em></h1>
+      <p class="hero__subtitle reveal reveal--3">Explore original, in-depth biographies of the world's most famous actors, singers, athletes, creators, and entrepreneurs — their early life, career journey, achievements, and more.</p>
+      <div class="search-panel reveal reveal--4">
+        <form class="search-form" action="search.html" method="GET" data-search-autocomplete autocomplete="off">
+          <span class="search-form__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+          <input class="search-form__input" type="search" name="q" placeholder="Search any celebrity by name…" aria-label="Search celebrities by name">
+          <button type="submit" class="search-form__submit">Search</button>
+          <div class="search-suggestions" role="listbox"></div>
+        </form>
+        <div class="hero__tally">
+          <span>10 Files on Record</span>
+          <span>5 Categories</span>
+          <span>Updated Regularly</span>
         </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/actors.html">Actors</a></li>
-                <li class="breadcrumb__item is-current">Julian Marsh</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Julian Marsh</h1>
-                <p class="bio-header__subtitle">American Actor & Film Producer</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Actor</span>
-                    <span class="badge">Producer</span>
-                    <span class="badge">American</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Julian Marsh">
-                <meta itemprop="jobTitle" content="Actor & Film Producer">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Julian Marsh is an American actor and film producer with over a decade of professional experience spanning stage, film, and television. Known for his distinctive ability to ground big-budget action roles with unusual emotional depth, Marsh has become a sought-after performer in both blockbuster and independent productions. His work demonstrates a commitment to character-driven storytelling and artistic integrity.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Early Life & Background</h2>
-                    <p>Born and raised in the United States, Julian Marsh showed an early interest in performing arts. He pursued formal training in acting and theater, developing a strong foundation in classical and contemporary performance techniques. His early career was marked by consistent work in theater productions, building both technical skills and artistic credibility before transitioning to film and television.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Acting Career</h2>
-                    <p>Marsh's film career spans multiple genres, with particular success in action-driven narratives where he brings psychological complexity to physically demanding roles. He has worked with renowned directors and studios on both major studio productions and critically acclaimed independent films. His television work includes prominent roles in prestige dramas and limited series, earning recognition for his nuanced performances.</p>
-                    <h3 class="bio-subsection__title">Notable Projects:</h3>
-                    <ul>
-                        <li>Multiple feature film productions in action and drama genres</li>
-                        <li>Television appearances in acclaimed series</li>
-                        <li>Theater work with regional and off-Broadway companies</li>
-                        <li>Lead roles in independent and studio productions</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Production Work</h2>
-                    <p>Beyond acting, Marsh has established himself as a film and television producer. He has developed and produced projects across multiple genres, focusing on stories that offer depth and authenticity. His production company has worked on both independent and mainstream productions, demonstrating his comprehensive understanding of the entertainment industry.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Artistic Approach</h2>
-                    <p>Julian Marsh is known for his collaborative approach to filmmaking and his commitment to bringing authentic human emotion to complex characters. Whether performing in high-octane action sequences or intimate dramatic scenes, he brings the same level of dedication to crafting believable, memorable performances. His work reflects a deep understanding of character psychology and narrative structure.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Recognition & Achievements</h2>
-                    <p>Marsh has received recognition from industry peers and audiences for his versatile performances and production work. His films have achieved both critical acclaim and commercial success, positioning him as a respected figure in contemporary cinema. He continues to take on challenging roles and develop meaningful projects.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Actors</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="tom-holland.html">Tom Holland</a></li>
-                        <li><a href="dwayne-johnson.html">Dwayne Johnson</a></li>
-                        <li><a href="leonardo-dicaprio.html">Leonardo DiCaprio</a></li>
-                        <li><a href="zendaya.html">Zendaya</a></li>
-                    </ul>
-                </section>
-            </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow">Browse</span><h2 class="section__title">Explore by Category</h2></div>
+      </div>
+      <div class="cat-grid"><a href="categories/actors.html" class="cat-card" style="--accent:#7A3B3B">
+  <span class="tag" style="--accent:#7A3B3B">Actors</span>
+  <h3 class="cat-card__name">Actors</h3>
+  <p class="cat-card__desc">Screen legends and rising stars from film and television around the globe.</p>
+  <span class="cat-card__count">2 Profiles →</span>
+</a><a href="categories/singers.html" class="cat-card" style="--accent:#3E4C78">
+  <span class="tag" style="--accent:#3E4C78">Singers</span>
+  <h3 class="cat-card__name">Singers</h3>
+  <p class="cat-card__desc">Chart-topping vocalists and musicians shaping the sound of a generation.</p>
+  <span class="cat-card__count">2 Profiles →</span>
+</a><a href="categories/sports.html" class="cat-card" style="--accent:#386B4C">
+  <span class="tag" style="--accent:#386B4C">Sports</span>
+  <h3 class="cat-card__name">Sports</h3>
+  <p class="cat-card__desc">Champions and record-breakers from the world's biggest arenas and fields.</p>
+  <span class="cat-card__count">2 Profiles →</span>
+</a><a href="categories/youtubers.html" class="cat-card" style="--accent:#2E6B72">
+  <span class="tag" style="--accent:#2E6B72">YouTubers</span>
+  <h3 class="cat-card__name">YouTubers</h3>
+  <p class="cat-card__desc">Digital creators building global communities, one video at a time.</p>
+  <span class="cat-card__count">2 Profiles →</span>
+</a><a href="categories/business.html" class="cat-card" style="--accent:#7A5C2E">
+  <span class="tag" style="--accent:#7A5C2E">Business</span>
+  <h3 class="cat-card__name">Business</h3>
+  <p class="cat-card__desc">Founders and visionaries building the companies of tomorrow.</p>
+  <span class="cat-card__count">2 Profiles →</span>
+</a></div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">On File</span>
+          <h2 class="section__title">Featured Profiles</h2>
+          <p class="section__desc">A cross-section of the icons currently catalogued on ZIVO.</p>
         </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
+        <a href="search.html" class="btn btn--ghost">View all profiles</a>
+      </div>
+      <div class="file-grid"><a href="profiles/tom-holland.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#7A3B3B">TH</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 001</span>
+      <h3 class="file-card__name">Tom Holland</h3>
+      <p class="file-card__role">Actor</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Tom Holland is an English actor best known for playing Spider-Man in the Marvel Cinematic Universe, following a path that began in London musical theatre.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#7A3B3B">Actors</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/taylor-swift.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#3E4C78">TS</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 002</span>
+      <h3 class="file-card__name">Taylor Swift</h3>
+      <p class="file-card__role">Singer-Songwriter</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Taylor Swift is an American singer-songwriter who began in country music before becoming one of the best-selling and most influential artists in pop music history.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#3E4C78">Singers</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/cristiano-ronaldo.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#386B4C">CR</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 003</span>
+      <h3 class="file-card__name">Cristiano Ronaldo</h3>
+      <p class="file-card__role">Professional Footballer (Forward)</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Cristiano Ronaldo is a Portuguese professional footballer widely regarded as one of the greatest players in the sport's history, known for goal-scoring records built across four countries and more than two decades.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#386B4C">Sports</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/mrbeast.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#2E6B72">MM</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 004</span>
+      <h3 class="file-card__name">MrBeast</h3>
+      <p class="file-card__role">Content Creator, Entrepreneur & Philanthropist</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">MrBeast, the online name of Jimmy Donaldson, is an American YouTuber and entrepreneur known for elaborate, high-budget challenge videos and large-scale philanthropic giveaways, and is the most-subscribed individual creator on the platform.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#2E6B72">YouTubers</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/bill-gates.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#7A5C2E">BG</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 005</span>
+      <h3 class="file-card__name">Bill Gates</h3>
+      <p class="file-card__role">Entrepreneur, Philanthropist & Author</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Bill Gates is an American entrepreneur and philanthropist who co-founded Microsoft Corporation and helped drive the personal-computer revolution, before shifting his focus to global health and education through the Gates Foundation.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#7A5C2E">Business</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/zendaya.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#7A3B3B">ZZ</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 006</span>
+      <h3 class="file-card__name">Zendaya</h3>
+      <p class="file-card__role">Actress & Producer</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Zendaya is an American actress and producer who moved from Disney Channel comedy into critically acclaimed drama, becoming the youngest actress to win two Primetime Emmy Awards for Outstanding Lead Actress.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#7A3B3B">Actors</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/ed-sheeran.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#3E4C78">ES</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 007</span>
+      <h3 class="file-card__name">Ed Sheeran</h3>
+      <p class="file-card__role">Singer-Songwriter</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Ed Sheeran is a British singer-songwriter known for genre-blending, acoustic-rooted pop, and one of the best-selling music artists of the 21st century.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#3E4C78">Singers</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/lionel-messi.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#386B4C">LM</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 008</span>
+      <h3 class="file-card__name">Lionel Messi</h3>
+      <p class="file-card__role">Professional Footballer (Forward)</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Lionel Messi is an Argentine professional footballer widely regarded as one of the greatest players of all time, holder of a record eight Ballon d'Or awards and a 2022 FIFA World Cup winner with Argentina.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#386B4C">Sports</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/pewdiepie.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#2E6B72">PP</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 009</span>
+      <h3 class="file-card__name">PewDiePie</h3>
+      <p class="file-card__role">Content Creator</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">PewDiePie, the online name of Felix Kjellberg, is a Swedish YouTuber and one of the earliest individual creators to build a global audience, widely credited with helping popularize gaming commentary videos as a format.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#2E6B72">YouTubers</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a><a href="profiles/sara-blakely.html" class="file-card">
+  <div class="file-card__top">
+    <div class="id-photo" style="--accent:#7A5C2E">SB</div>
+    <div class="file-card__id">
+      <span class="catalog-no file-card__catalog">N° 010</span>
+      <h3 class="file-card__name">Sara Blakely</h3>
+      <p class="file-card__role">Entrepreneur & Founder</p>
+    </div>
+  </div>
+  <div class="file-card__body">
+    <p class="file-card__blurb">Sara Blakely is an American entrepreneur who invented and founded Spanx, becoming, in 2012, the youngest self-made female billionaire on record.</p>
+    <div class="file-card__foot">
+      <span class="tag" style="--accent:#7A5C2E">Business</span>
+      <span class="file-card__link">View Profile</span>
+    </div>
+  </div>
+</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow">Why ZIVO</span><h2 class="section__title">Built for the endlessly curious</h2></div>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-card"><span class="feat-card__index">01</span><h3 class="feat-card__title">Global Coverage</h3><p class="feat-card__desc">Profiles spanning film, music, sports, digital media, and business from every corner of the world.</p></div>
+        <div class="feat-card"><span class="feat-card__index">02</span><h3 class="feat-card__title">Full Life Stories</h3><p class="feat-card__desc">From early life and education to career milestones — the complete picture, not just headlines.</p></div>
+        <div class="feat-card"><span class="feat-card__index">03</span><h3 class="feat-card__title">Original Storytelling</h3><p class="feat-card__desc">Every profile is researched from public sources and written fresh, in our own words — never copied.</p></div>
+        <div class="feat-card"><span class="feat-card__index">04</span><h3 class="feat-card__title">Always Expanding</h3><p class="feat-card__desc">New profiles and categories added regularly as new icons rise to prominence.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
+        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Categories</p>
+        <a href="categories/actors.html" class="footer__link">Actors</a>
+        <a href="categories/singers.html" class="footer__link">Singers</a>
+        <a href="categories/sports.html" class="footer__link">Sports</a>
+        <a href="categories/youtubers.html" class="footer__link">YouTubers</a>
+        <a href="categories/business.html" class="footer__link">Business</a>
+      </div>
+      <div>
+        <p class="footer__col-title">Company</p>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+        <a href="search.html" class="footer__link">Search</a>
+      </div>
+      <div>
+        <p class="footer__col-title">Legal</p>
+        <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+        <a href="disclaimer.html" class="footer__link">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
+      <span>Made for the endlessly curious.</span>
+    </div>
+    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
+  </div>
+</footer>
+<script>
+// Auto-generated by scripts/generate.py — do not edit directly.
+const CELEBRITIES = [
+  {
+    "id": "tom-holland",
+    "name": "Tom Holland",
+    "category": "actors",
+    "categoryLabel": "Actors",
+    "role": "Actor",
+    "initials": "TH",
+    "color": "#7A3B3B",
+    "catalogNo": "N° 001",
+    "url": "profiles/tom-holland.html",
+    "summary": "Tom Holland is an English actor best known for playing Spider-Man in the Marvel Cinematic Universe, following a path that began in London musical theatre."
+  },
+  {
+    "id": "taylor-swift",
+    "name": "Taylor Swift",
+    "category": "singers",
+    "categoryLabel": "Singers",
+    "role": "Singer-Songwriter",
+    "initials": "TS",
+    "color": "#3E4C78",
+    "catalogNo": "N° 002",
+    "url": "profiles/taylor-swift.html",
+    "summary": "Taylor Swift is an American singer-songwriter who began in country music before becoming one of the best-selling and most influential artists in pop music history."
+  },
+  {
+    "id": "cristiano-ronaldo",
+    "name": "Cristiano Ronaldo",
+    "category": "sports",
+    "categoryLabel": "Sports",
+    "role": "Professional Footballer (Forward)",
+    "initials": "CR",
+    "color": "#386B4C",
+    "catalogNo": "N° 003",
+    "url": "profiles/cristiano-ronaldo.html",
+    "summary": "Cristiano Ronaldo is a Portuguese professional footballer widely regarded as one of the greatest players in the sport's history, known for goal-scoring records built across four countries and more than two decades."
+  },
+  {
+    "id": "mrbeast",
+    "name": "MrBeast",
+    "category": "youtubers",
+    "categoryLabel": "YouTubers",
+    "role": "Content Creator, Entrepreneur & Philanthropist",
+    "initials": "MM",
+    "color": "#2E6B72",
+    "catalogNo": "N° 004",
+    "url": "profiles/mrbeast.html",
+    "summary": "MrBeast, the online name of Jimmy Donaldson, is an American YouTuber and entrepreneur known for elaborate, high-budget challenge videos and large-scale philanthropic giveaways, and is the most-subscribed individual creator on the platform."
+  },
+  {
+    "id": "bill-gates",
+    "name": "Bill Gates",
+    "category": "business",
+    "categoryLabel": "Business",
+    "role": "Entrepreneur, Philanthropist & Author",
+    "initials": "BG",
+    "color": "#7A5C2E",
+    "catalogNo": "N° 005",
+    "url": "profiles/bill-gates.html",
+    "summary": "Bill Gates is an American entrepreneur and philanthropist who co-founded Microsoft Corporation and helped drive the personal-computer revolution, before shifting his focus to global health and education through the Gates Foundation."
+  },
+  {
+    "id": "zendaya",
+    "name": "Zendaya",
+    "category": "actors",
+    "categoryLabel": "Actors",
+    "role": "Actress & Producer",
+    "initials": "ZZ",
+    "color": "#7A3B3B",
+    "catalogNo": "N° 006",
+    "url": "profiles/zendaya.html",
+    "summary": "Zendaya is an American actress and producer who moved from Disney Channel comedy into critically acclaimed drama, becoming the youngest actress to win two Primetime Emmy Awards for Outstanding Lead Actress."
+  },
+  {
+    "id": "ed-sheeran",
+    "name": "Ed Sheeran",
+    "category": "singers",
+    "categoryLabel": "Singers",
+    "role": "Singer-Songwriter",
+    "initials": "ES",
+    "color": "#3E4C78",
+    "catalogNo": "N° 007",
+    "url": "profiles/ed-sheeran.html",
+    "summary": "Ed Sheeran is a British singer-songwriter known for genre-blending, acoustic-rooted pop, and one of the best-selling music artists of the 21st century."
+  },
+  {
+    "id": "lionel-messi",
+    "name": "Lionel Messi",
+    "category": "sports",
+    "categoryLabel": "Sports",
+    "role": "Professional Footballer (Forward)",
+    "initials": "LM",
+    "color": "#386B4C",
+    "catalogNo": "N° 008",
+    "url": "profiles/lionel-messi.html",
+    "summary": "Lionel Messi is an Argentine professional footballer widely regarded as one of the greatest players of all time, holder of a record eight Ballon d'Or awards and a 2022 FIFA World Cup winner with Argentina."
+  },
+  {
+    "id": "pewdiepie",
+    "name": "PewDiePie",
+    "category": "youtubers",
+    "categoryLabel": "YouTubers",
+    "role": "Content Creator",
+    "initials": "PP",
+    "color": "#2E6B72",
+    "catalogNo": "N° 009",
+    "url": "profiles/pewdiepie.html",
+    "summary": "PewDiePie, the online name of Felix Kjellberg, is a Swedish YouTuber and one of the earliest individual creators to build a global audience, widely credited with helping popularize gaming commentary videos as a format."
+  },
+  {
+    "id": "sara-blakely",
+    "name": "Sara Blakely",
+    "category": "business",
+    "categoryLabel": "Business",
+    "role": "Entrepreneur & Founder",
+    "initials": "SB",
+    "color": "#7A5C2E",
+    "catalogNo": "N° 010",
+    "url": "profiles/sara-blakely.html",
+    "summary": "Sara Blakely is an American entrepreneur who invented and founded Spanx, becoming, in 2012, the youngest self-made female billionaire on record."
+  }
+];
+
+</script>
+<script>
+/* ZIVO — main.js
+   Shared interactivity for every page: header, mobile nav, search
+   autocomplete, age calculation, scroll-spy, contact form.
+   Every init() guards for missing elements, so this file is safe
+   to load site-wide regardless of which page it runs on. */
+
+(function () {
+  "use strict";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initHeaderScroll();
+    initMobileNav();
+    initHeaderSearchToggle();
+    initAutocomplete();
+    initAgeFields();
+    initYearFields();
+    initFileIndexScrollSpy();
+    initContactForm();
+  });
+
+  /* ---------- Header shadow on scroll ---------- */
+  function initHeaderScroll() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    function onScroll() {
+      if (window.scrollY > 8) header.classList.add("is-scrolled");
+      else header.classList.remove("is-scrolled");
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- Mobile slide-out nav ---------- */
+  function initMobileNav() {
+    var toggle = document.querySelector(".menu-toggle");
+    var nav = document.querySelector(".mobile-nav");
+    var close = document.querySelector(".mobile-nav__close");
+    if (!toggle || !nav) return;
+
+    function open() {
+      nav.classList.add("is-open");
+      nav.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      toggle.setAttribute("aria-expanded", "true");
+    }
+    function shut() {
+      nav.classList.remove("is-open");
+      nav.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      toggle.setAttribute("aria-expanded", "false");
+    }
+    toggle.addEventListener("click", open);
+    if (close) close.addEventListener("click", shut);
+    nav.querySelectorAll(".mobile-nav__link").forEach(function (link) {
+      link.addEventListener("click", shut);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") shut();
+    });
+  }
+
+  /* ---------- Header search overlay toggle ---------- */
+  function initHeaderSearchToggle() {
+    var toggle = document.querySelector(".search-toggle");
+    var bar = document.querySelector(".header-search");
+    if (!toggle || !bar) return;
+    var input = bar.querySelector(".header-search__input");
+
+    toggle.addEventListener("click", function () {
+      var isOpen = bar.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (isOpen && input) setTimeout(function () { input.focus(); }, 150);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && bar.classList.contains("is-open")) {
+        bar.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* ---------- Live search autocomplete ----------
+     Applies to any <form data-search-autocomplete> that contains a
+     text/search input and a .search-suggestions container. Used on
+     the homepage hero and the search results page. */
+  function initAutocomplete() {
+    var forms = document.querySelectorAll("[data-search-autocomplete]");
+    if (!forms.length || typeof CELEBRITIES === "undefined") return;
+
+    forms.forEach(function (form) {
+      var input = form.querySelector("input[type='search'], input[type='text']");
+      var box = form.querySelector(".search-suggestions");
+      if (!input || !box) return;
+
+      var items = [];
+      var activeIndex = -1;
+
+      function render(query) {
+        var q = query.trim().toLowerCase();
+        box.innerHTML = "";
+        items = [];
+        activeIndex = -1;
+
+        if (!q) { box.classList.remove("is-open"); return; }
+
+        var matches = CELEBRITIES.filter(function (c) {
+          return c.name.toLowerCase().indexOf(q) !== -1;
+        }).slice(0, 6);
+
+        if (!matches.length) {
+          var empty = document.createElement("div");
+          empty.className = "suggestion__empty";
+          empty.textContent = "No profiles match \u201c" + query + "\u201d";
+          box.appendChild(empty);
+          box.classList.add("is-open");
+          return;
+        }
+
+        matches.forEach(function (c) {
+          var a = document.createElement("a");
+          a.className = "suggestion";
+          a.href = c.url;
+          a.setAttribute("role", "option");
+
+          var photo = document.createElement("span");
+          photo.className = "suggestion__photo";
+          photo.style.background = c.color;
+          photo.textContent = c.initials;
+
+          var meta = document.createElement("span");
+          var nameEl = document.createElement("span");
+          nameEl.className = "suggestion__name";
+          nameEl.textContent = c.name;
+          var metaEl = document.createElement("span");
+          metaEl.className = "suggestion__meta";
+          metaEl.textContent = c.role + " \u00b7 " + c.categoryLabel;
+
+          meta.appendChild(nameEl);
+          meta.appendChild(document.createElement("br"));
+          meta.appendChild(metaEl);
+
+          a.appendChild(photo);
+          a.appendChild(meta);
+          box.appendChild(a);
+          items.push(a);
+        });
+
+        box.classList.add("is-open");
+      }
+
+      function setActive(i) {
+        items.forEach(function (el) { el.classList.remove("is-focused"); });
+        if (items[i]) {
+          items[i].classList.add("is-focused");
+          items[i].scrollIntoView({ block: "nearest" });
+        }
+        activeIndex = i;
+      }
+
+      input.addEventListener("input", function () { render(input.value); });
+      input.addEventListener("focus", function () {
+        if (input.value.trim()) render(input.value);
+      });
+
+      input.addEventListener("keydown", function (e) {
+        if (!box.classList.contains("is-open") || !items.length) return;
+        if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(activeIndex + 1, items.length - 1)); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(activeIndex - 1, 0)); }
+        else if (e.key === "Enter" && activeIndex > -1) { e.preventDefault(); items[activeIndex].click(); }
+        else if (e.key === "Escape") { box.classList.remove("is-open"); }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!form.contains(e.target)) box.classList.remove("is-open");
+      });
+    });
+  }
+
+  /* ---------- Age calculation from data-birthdate ---------- */
+  function initAgeFields() {
+    var fields = document.querySelectorAll("[data-birthdate]");
+    if (!fields.length) return;
+    fields.forEach(function (el) {
+      var bd = el.getAttribute("data-birthdate");
+      if (!bd) return;
+      var birth = new Date(bd + "T00:00:00");
+      if (isNaN(birth.getTime())) return;
+      var today = new Date();
+      var age = today.getFullYear() - birth.getFullYear();
+      var m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+      el.textContent = age;
+    });
+  }
+
+  /* ---------- Footer year ---------- */
+  function initYearFields() {
+    document.querySelectorAll("[data-year]").forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  }
+
+  /* ---------- Scroll-spy for the profile "file index" sub-nav ---------- */
+  function initFileIndexScrollSpy() {
+    var nav = document.querySelector(".file-index");
+    if (!nav || !("IntersectionObserver" in window)) return;
+    var links = Array.prototype.slice.call(nav.querySelectorAll(".file-index__link"));
+    var sections = links
+      .map(function (l) { return document.getElementById(l.getAttribute("href").replace("#", "")); })
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var link = nav.querySelector('.file-index__link[href="#' + entry.target.id + '"]');
+        if (!link) return;
+        links.forEach(function (l) { l.classList.remove("is-active"); });
+        link.classList.add("is-active");
+      });
+    }, { rootMargin: "-140px 0px -60% 0px", threshold: 0.01 });
+
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+
+  /* ---------- Contact form (front-end demo only — no backend wired up) ---------- */
+  function initContactForm() {
+    var form = document.querySelector(".contact-form");
+    if (!form) return;
+    var success = form.querySelector(".form-success");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var btn = form.querySelector("button[type='submit']");
+      if (btn) { btn.disabled = true; btn.textContent = "Sending\u2026"; }
+
+      // Demo only: no backend is connected. Replace this timeout with a
+      // real fetch() call to your email/API endpoint before going live.
+      setTimeout(function () {
+        if (success) success.classList.add("is-visible");
+        form.reset();
+        if (btn) { btn.disabled = false; btn.textContent = "Send Message"; }
+      }, 600);
+    });
+  }
+})();
+
+</script>
 </body>
 </html>
-
-================================================================================
-FILE #2: profiles/amara-okafor.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Amara Okafor - British-Nigerian Actress | Biography - ZIVO</title>
-    <meta name="description" content="Discover Amara Okafor's complete biography. British-Nigerian actress celebrated for emotionally layered performances. Learn about her career and achievements.">
-    <meta name="keywords" content="Amara Okafor, actress, British-Nigerian actress, television, film, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/amara-okafor.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/amara-okafor.html">
-    <meta property="og:title" content="Amara Okafor - British-Nigerian Actress">
-    <meta property="og:description" content="Complete biography of Amara Okafor, British-Nigerian actress with emotionally layered performances.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/amara-okafor.jpg">
-    <meta property="profile:first_name" content="Amara">
-    <meta property="profile:last_name" content="Okafor">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Amara Okafor - Actress">
-    <meta name="twitter:description" content="Explore the life and career of actress Amara Okafor">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/amara-okafor.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/amara-okafor.html",
-        "name": "Amara Okafor",
-        "jobTitle": "Actress",
-        "nationality": {
-            "@type": "Country",
-            "name": "British-Nigerian"
-        },
-        "description": "British-Nigerian actress celebrated for emotionally layered performances that draw equally on West African storytelling and British stage training",
-        "image": "https://http-01.github.io/Zivo.com/images/amara-okafor.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/amara-okafor.html",
-        "knowsAbout": [
-            "Acting",
-            "Film",
-            "Television",
-            "Theater"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Actors",
-                "item": "https://http-01.github.io/Zivo.com/categories/actors.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Amara Okafor",
-                "item": "https://http-01.github.io/Zivo.com/profiles/amara-okafor.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/actors.html">Actors</a></li>
-                <li class="breadcrumb__item is-current">Amara Okafor</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Amara Okafor</h1>
-                <p class="bio-header__subtitle">British-Nigerian Actress</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Actress</span>
-                    <span class="badge">British-Nigerian</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Amara Okafor">
-                <meta itemprop="jobTitle" content="Actress">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Amara Okafor is a British-Nigerian actress celebrated for her emotionally layered performances that draw equally on West African storytelling traditions and rigorous British stage training. Her work encompasses film, television, and theater, demonstrating remarkable versatility and depth as a performer.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Background & Heritage</h2>
-                    <p>With roots connecting British and Nigerian cultures, Amara brings a unique perspective to her roles. Her upbringing has deeply influenced her artistic approach, allowing her to draw on rich storytelling traditions from both cultures. This cultural foundation shapes her distinctive approach to character work and narrative interpretation.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Training & Development</h2>
-                    <p>Amara received comprehensive training in classical and contemporary acting through prestigious British theater institutions. Her education combined technique-focused instruction with character exploration, preparing her for the demands of professional performance across multiple mediums. Her stage work provided essential foundations for her film and television career.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Acting Career</h2>
-                    <p>Okafor's performance career spans theater, film, and television. She has appeared in acclaimed British television dramas, independent films, and international productions. Her performances are noted for their psychological authenticity and emotional resonance, bringing nuance and depth to every role she undertakes.</p>
-                    <h3 class="bio-subsection__title">Work Includes:</h3>
-                    <ul>
-                        <li>Prominent television roles in British dramas</li>
-                        <li>Independent and international film productions</li>
-                        <li>Regional theater work</li>
-                        <li>Collaborations with acclaimed directors</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Artistic Philosophy</h2>
-                    <p>Amara approaches each role with deep commitment to understanding her character's psychological and emotional landscape. She is known for her collaborative spirit on set and her willingness to take on complex, challenging material. Her work reflects a dedication to authentic storytelling and meaningful artistic expression.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Recognition & Impact</h2>
-                    <p>Her performances have earned recognition from critics and industry peers. Okafor has become a significant figure in contemporary British and international television and film, known for bringing intelligence and emotional depth to her roles. She continues to choose projects that challenge her as a performer and contribute meaningfully to cinema and television.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Actresses</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="zendaya.html">Zendaya</a></li>
-                        <li><a href="tom-holland.html">Tom Holland</a></li>
-                        <li><a href="leonardo-dicaprio.html">Leonardo DiCaprio</a></li>
-                        <li><a href="dwayne-johnson.html">Dwayne Johnson</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #3: profiles/luna-vega.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Luna Vega - Singer-Songwriter | Latin-Pop Crossover | Biography - ZIVO</title>
-    <meta name="description" content="Discover Luna Vega's complete biography. American singer-songwriter with bilingual, genre-blending records defining Latin-pop crossover music. Learn about her career and music.">
-    <meta name="keywords" content="Luna Vega, singer-songwriter, Latin-pop, bilingual, music, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/luna-vega.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/luna-vega.html">
-    <meta property="og:title" content="Luna Vega - Singer-Songwriter">
-    <meta property="og:description" content="Complete biography of Luna Vega, defining voice in Latin-pop crossover music.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/luna-vega.jpg">
-    <meta property="profile:first_name" content="Luna">
-    <meta property="profile:last_name" content="Vega">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Luna Vega - Singer-Songwriter">
-    <meta name="twitter:description" content="Explore the music and career of singer-songwriter Luna Vega">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/luna-vega.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/luna-vega.html",
-        "name": "Luna Vega",
-        "jobTitle": "Singer-Songwriter",
-        "nationality": {
-            "@type": "Country",
-            "name": "American"
-        },
-        "description": "American singer-songwriter whose bilingual, genre-blending records have made her one of the defining voices in Latin-pop crossover music",
-        "image": "https://http-01.github.io/Zivo.com/images/luna-vega.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/luna-vega.html",
-        "knowsAbout": [
-            "Music",
-            "Songwriting",
-            "Singing",
-            "Latin-Pop"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Singers",
-                "item": "https://http-01.github.io/Zivo.com/categories/singers.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Luna Vega",
-                "item": "https://http-01.github.io/Zivo.com/profiles/luna-vega.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/singers.html">Singers</a></li>
-                <li class="breadcrumb__item is-current">Luna Vega</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Luna Vega</h1>
-                <p class="bio-header__subtitle">Singer-Songwriter</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Singer</span>
-                    <span class="badge">Songwriter</span>
-                    <span class="badge">Latin-Pop</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Luna Vega">
-                <meta itemprop="jobTitle" content="Singer-Songwriter">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Luna Vega is an American singer-songwriter whose innovative bilingual approach and genre-blending artistry have made her one of the defining voices in contemporary Latin-pop crossover music. Her records seamlessly fuse pop sensibilities with Latin rhythms and cultural narratives, creating music that resonates across diverse audiences.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Musical Journey</h2>
-                    <p>Luna's path to music began early, shaped by cultural influences and a desire to bridge musical worlds. She developed her craft as both a vocalist and songwriter, learning to express complex emotions and cultural narratives through music. Her bilingual fluency allows her to write and perform authentically in both English and Spanish.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Artistic Style</h2>
-                    <p>Vega's music is characterized by innovative genre-blending that draws from pop, Latin, hip-hop, and R&B influences. Her songs combine catchy melodies with meaningful lyrics that often explore themes of identity, culture, and personal growth. Her production choices reflect a commitment to creating music that feels both contemporary and culturally grounded.</p>
-                    <h3 class="bio-subsection__title">Musical Characteristics:</h3>
-                    <ul>
-                        <li>Bilingual songwriting and performance</li>
-                        <li>Genre-blending pop-Latin fusion</li>
-                        <li>Culturally informed narratives</li>
-                        <li>Contemporary production values</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Discography & Success</h2>
-                    <p>Luna has released multiple projects that have achieved both critical acclaim and commercial success. Her records have been streamed millions of times and her singles have charted prominently. She has performed on major platforms and collaborated with other artists, further establishing her presence in the music industry.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Cultural Impact</h2>
-                    <p>Beyond music, Luna Vega has become an important cultural figure, representing the new generation of bilingual, bicultural artists shaping contemporary pop music. She has been vocal about authenticity in Latin representation and the importance of telling diverse stories through music.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Future Directions</h2>
-                    <p>Luna continues to evolve as an artist, pushing creative boundaries and exploring new sonic territories. Her commitment to meaningful songwriting and cultural authenticity ensures her continued relevance in the ever-changing music landscape.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Singers</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="taylor-swift.html">Taylor Swift</a></li>
-                        <li><a href="ed-sheeran.html">Ed Sheeran</a></li>
-                        <li><a href="beyonce.html">Beyoncé</a></li>
-                        <li><a href="the-weeknd.html">The Weeknd</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #4: profiles/marco-silveira.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Marco Silveira - Brazilian Footballer | Forward | Biography - ZIVO</title>
-    <meta name="description" content="Discover Marco Silveira's complete biography. Brazilian professional footballer known for distinctive dribbling style developed in Salvador. Learn about his career.">
-    <meta name="keywords" content="Marco Silveira, footballer, Brazil, forward, football, soccer, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/marco-silveira.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/marco-silveira.html">
-    <meta property="og:title" content="Marco Silveira - Brazilian Footballer">
-    <meta property="og:description" content="Complete biography of Marco Silveira, Brazilian footballer with distinctive dribbling style.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/marco-silveira.jpg">
-    <meta property="profile:first_name" content="Marco">
-    <meta property="profile:last_name" content="Silveira">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marco Silveira - Footballer">
-    <meta name="twitter:description" content="Explore the career of Brazilian footballer Marco Silveira">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/marco-silveira.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/marco-silveira.html",
-        "name": "Marco Silveira",
-        "jobTitle": "Professional Footballer (Forward)",
-        "nationality": {
-            "@type": "Country",
-            "name": "Brazilian"
-        },
-        "description": "Brazilian professional footballer known for a distinctive dribbling style developed on the streets and beaches of Salvador",
-        "image": "https://http-01.github.io/Zivo.com/images/marco-silveira.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/marco-silveira.html",
-        "knowsAbout": [
-            "Football",
-            "Soccer",
-            "Sports",
-            "Dribbling"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Athletes",
-                "item": "https://http-01.github.io/Zivo.com/categories/athletes.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Marco Silveira",
-                "item": "https://http-01.github.io/Zivo.com/profiles/marco-silveira.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/athletes.html">Athletes</a></li>
-                <li class="breadcrumb__item is-current">Marco Silveira</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Marco Silveira</h1>
-                <p class="bio-header__subtitle">Professional Footballer (Forward)</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Footballer</span>
-                    <span class="badge">Forward</span>
-                    <span class="badge">Brazilian</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Marco Silveira">
-                <meta itemprop="jobTitle" content="Professional Footballer (Forward)">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Marco Silveira is a Brazilian professional footballer known for his distinctive dribbling style and creative attacking play. Developed through years of playing on the streets and beaches of Salvador, his technique combines flair, agility, and an intuitive understanding of the game. He has become a fixture for both his clubs and the Brazilian national team.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Early Life & Development</h2>
-                    <p>Born and raised in Salvador, Bahia, Marco developed his distinctive football style through informal play on the streets and beaches of his hometown. The sandy pitches and open spaces of Salvador shaped his dribbling technique and creative problem-solving on the pitch. This grassroots background gave him an authentic, improvisational approach to the game.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Playing Style</h2>
-                    <p>Marco is known for his distinctive left-footed dribbling ability, quick changes of direction, and creative passing. His playing style emphasizes technical excellence, vision, and the ability to create opportunities for teammates. He combines individual skill with tactical awareness, making him a dynamic force in the attacking midfield or forward positions.</p>
-                    <h3 class="bio-subsection__title">Key Attributes:</h3>
-                    <ul>
-                        <li>Exceptional dribbling and ball control</li>
-                        <li>Creative vision and passing ability</li>
-                        <li>Quick acceleration and agility</li>
-                        <li>Versatile positioning in attack</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Club Career</h2>
-                    <p>Marco has played for several prominent Brazilian clubs and has had spells in international leagues. His performances have been consistently praised for their technical excellence and entertaining style. He has been a key player for his teams, contributing goals and assists while captivating audiences with his skillful play.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">International Football</h2>
-                    <p>Marco has represented Brazil at the international level, bringing his distinctive style to the global stage. His appearances in competitive matches have showcased the quality of Brazilian football and his personal technical abilities.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Cultural Impact</h2>
-                    <p>As a player who developed through informal football traditions, Marco represents the rich heritage of Brazilian street football culture. He demonstrates how grassroots development can produce technically excellent players who contribute to the sport at the highest levels. His career is a testament to the power of passion and natural talent in football.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Athletes</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="lionel-messi.html">Lionel Messi</a></li>
-                        <li><a href="cristiano-ronaldo.html">Cristiano Ronaldo</a></li>
-                        <li><a href="virat-kohli.html">Virat Kohli</a></li>
-                        <li><a href="lebron-james.html">LeBron James</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #5: profiles/aisha-bello.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Aisha Bello - Nigerian Sprinter | Track & Field | Biography - ZIVO</title>
-    <meta name="description" content="Discover Aisha Bello's complete biography. Nigerian sprinter and athletics advocate known for championship performances and advocacy work. Learn about her career.">
-    <meta name="keywords" content="Aisha Bello, sprinter, track and field, Nigeria, athlete, athletics, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/aisha-bello.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/aisha-bello.html">
-    <meta property="og:title" content="Aisha Bello - Nigerian Sprinter">
-    <meta property="og:description" content="Complete biography of Aisha Bello, Nigerian sprinter and athletics advocate.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/aisha-bello.jpg">
-    <meta property="profile:first_name" content="Aisha">
-    <meta property="profile:last_name" content="Bello">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aisha Bello - Sprinter">
-    <meta name="twitter:description" content="Explore the career of Nigerian sprinter Aisha Bello">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/aisha-bello.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/aisha-bello.html",
-        "name": "Aisha Bello",
-        "jobTitle": "Track & Field Athlete (Sprinter)",
-        "nationality": {
-            "@type": "Country",
-            "name": "Nigerian"
-        },
-        "description": "Nigerian sprinter and one of the leading voices for athletics development across Africa",
-        "image": "https://http-01.github.io/Zivo.com/images/aisha-bello.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/aisha-bello.html",
-        "knowsAbout": [
-            "Track and Field",
-            "Sprinting",
-            "Sports",
-            "Athletics Advocacy"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Athletes",
-                "item": "https://http-01.github.io/Zivo.com/categories/athletes.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Aisha Bello",
-                "item": "https://http-01.github.io/Zivo.com/profiles/aisha-bello.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/athletes.html">Athletes</a></li>
-                <li class="breadcrumb__item is-current">Aisha Bello</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Aisha Bello</h1>
-                <p class="bio-header__subtitle">Track & Field Athlete (Sprinter)</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Sprinter</span>
-                    <span class="badge">Athlete</span>
-                    <span class="badge">Nigerian</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Aisha Bello">
-                <meta itemprop="jobTitle" content="Track & Field Athlete (Sprinter)">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Aisha Bello is a Nigerian sprinter and one of the leading voices for athletics development across Africa. Known for both her championship performances on the track and her advocacy work off it, she has become a symbol of African athletic excellence and commitment to growing the sport across the continent.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Early Athletic Development</h2>
-                    <p>Growing up in Nigeria, Aisha showed exceptional athletic talent from a young age. She developed her sprinting skills through dedicated training and competition, quickly establishing herself as a competitive force in West African athletics. Her natural speed and work ethic made her a standout performer.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Competitive Career</h2>
-                    <p>Aisha has competed in various sprinting events at the national and international levels. Her performances in championship competitions have been consistently strong, earning her recognition as one of Africa's top sprinters. She has represented Nigeria in multiple athletic competitions and has achieved personal and national records.</p>
-                    <h3 class="bio-subsection__title">Event Specialties:</h3>
-                    <ul>
-                        <li>100 meters sprint</li>
-                        <li>200 meters sprint</li>
-                        <li>Relay races (4x100m)</li>
-                        <li>International competitions</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Advocacy & Impact</h2>
-                    <p>Beyond her athletic achievements, Aisha has become a prominent voice advocating for athletics development across Africa. She has worked to promote training opportunities, secure resources for African athletes, and raise awareness about the potential of track and field sports on the continent. Her advocacy work focuses on creating pathways for young athletes to pursue their dreams.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Mentorship & Legacy</h2>
-                    <p>Aisha is committed to mentoring young sprinters and helping to develop the next generation of African athletic talent. She understands the challenges that African athletes face and works to create opportunities and support systems for emerging athletes. Her mentorship has helped numerous young competitors achieve their goals.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Significance</h2>
-                    <p>Aisha Bello represents the excellence and potential of African athletics. Her dual commitment to personal athletic achievement and continental development has made her an important figure in promoting sports across Africa. She continues to inspire young athletes through her performances and her advocacy work.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Athletes</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="virat-kohli.html">Virat Kohli</a></li>
-                        <li><a href="serena-williams.html">Serena Williams</a></li>
-                        <li><a href="cristiano-ronaldo.html">Cristiano Ronaldo</a></li>
-                        <li><a href="lebron-james.html">LeBron James</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #6: profiles/riley-chen.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Riley Chen - Content Creator & Entrepreneur | YouTuber | Biography - ZIVO</title>
-    <meta name="description" content="Discover Riley Chen's complete biography. American content creator and entrepreneur with multi-million subscriber YouTube channel. Learn about his career and business ventures.">
-    <meta name="keywords" content="Riley Chen, YouTuber, content creator, entrepreneur, tech, lifestyle, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/riley-chen.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/riley-chen.html">
-    <meta property="og:title" content="Riley Chen - Content Creator & Entrepreneur">
-    <meta property="og:description" content="Complete biography of Riley Chen, YouTuber and entrepreneur with multi-million subscriber channel.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/riley-chen.jpg">
-    <meta property="profile:first_name" content="Riley">
-    <meta property="profile:last_name" content="Chen">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Riley Chen - Content Creator">
-    <meta name="twitter:description" content="Explore the career of YouTuber and entrepreneur Riley Chen">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/riley-chen.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/riley-chen.html",
-        "name": "Riley Chen",
-        "jobTitle": "Content Creator & Entrepreneur",
-        "nationality": {
-            "@type": "Country",
-            "name": "American"
-        },
-        "description": "American content creator and entrepreneur whose tech-and-lifestyle channel has grown into a multi-million-subscriber community",
-        "image": "https://http-01.github.io/Zivo.com/images/riley-chen.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/riley-chen.html",
-        "knowsAbout": [
-            "Content Creation",
-            "YouTube",
-            "Technology",
-            "Lifestyle",
-            "Entrepreneurship"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Creators",
-                "item": "https://http-01.github.io/Zivo.com/categories/creators.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Riley Chen",
-                "item": "https://http-01.github.io/Zivo.com/profiles/riley-chen.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/creators.html">Creators</a></li>
-                <li class="breadcrumb__item is-current">Riley Chen</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Riley Chen</h1>
-                <p class="bio-header__subtitle">Content Creator & Entrepreneur</p>
-                <div class="bio-header__meta">
-                    <span class="badge">YouTuber</span>
-                    <span class="badge">Entrepreneur</span>
-                    <span class="badge">Content Creator</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Riley Chen">
-                <meta itemprop="jobTitle" content="Content Creator & Entrepreneur">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Riley Chen is an American content creator and entrepreneur whose tech-and-lifestyle YouTube channel has grown into a multi-million-subscriber community. Through his engaging video content and thoughtful business ventures, Riley has built a brand that extends far beyond YouTube, including successful product lines and business partnerships.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Early Career</h2>
-                    <p>Riley began his content creation journey with a focus on technology and lifestyle topics. His early videos were characterized by authentic, conversational style that resonated with viewers. As his channel grew, he maintained focus on creating genuine, entertaining content that provided value to his audience.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Content Style & Channel</h2>
-                    <p>Riley's channel combines technology reviews, lifestyle content, personal development, and business insights. His videos are known for their production quality, thoughtful analysis, and Riley's authentic personality. He has built a community of millions of subscribers who trust his opinions and follow his recommendations.</p>
-                    <h3 class="bio-subsection__title">Content Categories:</h3>
-                    <ul>
-                        <li>Technology product reviews and analysis</li>
-                        <li>Lifestyle and personal development content</li>
-                        <li>Business and entrepreneurship insights</li>
-                        <li>Travel and experience documentation</li>
-                        <li>Product recommendations and reviews</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Business Ventures</h2>
-                    <p>Beyond YouTube, Riley has successfully launched his own product lines and business ventures. His entrepreneur mindset has led to the creation of products that align with his brand values and serve his audience's needs. He has demonstrated exceptional business acumen in developing products that achieve commercial success.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Community Building</h2>
-                    <p>Riley has cultivated a loyal, engaged community around his brand. His commitment to authenticity and connecting with his audience has made him more than just a content creator—he is a trusted voice and advisor to millions. He actively engages with his community and takes their feedback seriously.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Impact & Influence</h2>
-                    <p>Riley Chen represents a new generation of content creators who have successfully leveraged YouTube into broader business empires. His influence extends beyond his channel into product recommendations, business partnerships, and cultural discourse around technology and entrepreneurship. He continues to expand his reach and influence.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Creators</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="mrbeast.html">MrBeast</a></li>
-                        <li><a href="marques-brownlee.html">Marques Brownlee</a></li>
-                        <li><a href="emma-chamberlain.html">Emma Chamberlain</a></li>
-                        <li><a href="pewdiepie.html">PewDiePie</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #7: profiles/victor-hale.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Victor Hale - Entrepreneur & Investor | Cloud Infrastructure | Biography - ZIVO</title>
-    <meta name="description" content="Discover Victor Hale's complete biography. American entrepreneur and investor, cloud infrastructure company founder, early-stage startup backer. Learn about his ventures.">
-    <meta name="keywords" content="Victor Hale, entrepreneur, investor, cloud infrastructure, startup, business, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/victor-hale.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/victor-hale.html">
-    <meta property="og:title" content="Victor Hale - Entrepreneur & Investor">
-    <meta property="og:description" content="Complete biography of Victor Hale, cloud infrastructure entrepreneur and investor.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/victor-hale.jpg">
-    <meta property="profile:first_name" content="Victor">
-    <meta property="profile:last_name" content="Hale">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Victor Hale - Entrepreneur">
-    <meta name="twitter:description" content="Explore the career of entrepreneur and investor Victor Hale">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/victor-hale.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/victor-hale.html",
-        "name": "Victor Hale",
-        "jobTitle": "Entrepreneur & Investor",
-        "nationality": {
-            "@type": "Country",
-            "name": "American"
-        },
-        "description": "American entrepreneur and investor best known for founding a cloud infrastructure company that scaled into a major player",
-        "image": "https://http-01.github.io/Zivo.com/images/victor-hale.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/victor-hale.html",
-        "knowsAbout": [
-            "Entrepreneurship",
-            "Cloud Computing",
-            "Venture Capital",
-            "Technology Business"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Entrepreneurs",
-                "item": "https://http-01.github.io/Zivo.com/categories/entrepreneurs.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Victor Hale",
-                "item": "https://http-01.github.io/Zivo.com/profiles/victor-hale.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/entrepreneurs.html">Entrepreneurs</a></li>
-                <li class="breadcrumb__item is-current">Victor Hale</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Victor Hale</h1>
-                <p class="bio-header__subtitle">Entrepreneur & Investor</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Entrepreneur</span>
-                    <span class="badge">Investor</span>
-                    <span class="badge">American</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Victor Hale">
-                <meta itemprop="jobTitle" content="Entrepreneur & Investor">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Victor Hale is an American entrepreneur and investor best known for founding a cloud infrastructure company that scaled dramatically over a decade to become a major player in the industry. Beyond his founding success, he has become an active investor in early-stage startups, supporting innovative companies and talented founders.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Entrepreneurial Vision</h2>
-                    <p>Victor recognized early opportunities in cloud computing infrastructure. His vision was to create solutions that would address the emerging needs of businesses transitioning to cloud-based systems. His company successfully executed on this vision, becoming one of the influential players in the cloud infrastructure space.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Cloud Infrastructure Company</h2>
-                    <p>The company Victor founded has grown from a startup into a major infrastructure provider serving thousands of clients. The company pioneered innovative approaches to cloud computing, earning recognition for technical excellence and customer service. Under Victor's leadership, the company scaled globally and achieved significant market success.</p>
-                    <h3 class="bio-subsection__title">Company Achievements:</h3>
-                    <ul>
-                        <li>Rapid global expansion and scale</li>
-                        <li>Industry recognition and awards</li>
-                        <li>Significant customer base growth</li>
-                        <li>Technology innovation and leadership</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Investment & Venture Capital Activities</h2>
-                    <p>After establishing his cloud infrastructure company, Victor has become an active investor in early-stage startups. He provides not just capital but also mentorship and strategic guidance to founders. His investment focus includes technology startups with innovative solutions and strong founding teams.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Industry Leadership</h2>
-                    <p>Victor is recognized as a thought leader in cloud computing and entrepreneurship. He has contributed to shaping industry standards and best practices. His insights on scaling technology companies and infrastructure development are sought by entrepreneurs and business leaders.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Mentorship & Ecosystem Building</h2>
-                    <p>Beyond his business ventures, Victor is committed to supporting the entrepreneurial ecosystem. He mentors founders, shares his experiences, and helps build communities of innovators. His commitment to ecosystem development extends his impact beyond his direct business interests.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Entrepreneurs</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="elon-musk.html">Elon Musk</a></li>
-                        <li><a href="bill-gates.html">Bill Gates</a></li>
-                        <li><a href="mark-zuckerberg.html">Mark Zuckerberg</a></li>
-                        <li><a href="jeff-bezos.html">Jeff Bezos</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-FILE #8: profiles/elena-kovac.html
-================================================================================
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-    
-    <title>Elena Kovac - Fashion Entrepreneur & CEO | Sustainable Fashion | Biography - ZIVO</title>
-    <meta name="description" content="Discover Elena Kovac's complete biography. Czech fashion entrepreneur and CEO who built boutique into international fashion house with sustainable practices. Learn about her career.">
-    <meta name="keywords" content="Elena Kovac, fashion entrepreneur, CEO, sustainable fashion, Czech, business, biography">
-    
-    <link rel="canonical" href="https://http-01.github.io/Zivo.com/profiles/elena-kovac.html">
-    
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://http-01.github.io/Zivo.com/profiles/elena-kovac.html">
-    <meta property="og:title" content="Elena Kovac - Fashion Entrepreneur & CEO">
-    <meta property="og:description" content="Complete biography of Elena Kovac, fashion entrepreneur with sustainable international brand.">
-    <meta property="og:image" content="https://http-01.github.io/Zivo.com/images/elena-kovac.jpg">
-    <meta property="profile:first_name" content="Elena">
-    <meta property="profile:last_name" content="Kovac">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Elena Kovac - Fashion CEO">
-    <meta name="twitter:description" content="Explore the career of fashion entrepreneur Elena Kovac">
-    <meta name="twitter:image" content="https://http-01.github.io/Zivo.com/images/elena-kovac.jpg">
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231C2B3A'/><text x='50' y='55' font-size='60' font-weight='bold' text-anchor='middle' fill='%23AE3728' font-family='serif'>Z</text></svg>">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://http-01.github.io/Zivo.com/profiles/elena-kovac.html",
-        "name": "Elena Kovac",
-        "jobTitle": "Fashion Entrepreneur & CEO",
-        "nationality": {
-            "@type": "Country",
-            "name": "Czech"
-        },
-        "description": "Czech fashion entrepreneur and CEO who built a single boutique into an international fashion house recognized for sustainable manufacturing practices",
-        "image": "https://http-01.github.io/Zivo.com/images/elena-kovac.jpg",
-        "url": "https://http-01.github.io/Zivo.com/profiles/elena-kovac.html",
-        "knowsAbout": [
-            "Fashion Design",
-            "Entrepreneurship",
-            "Sustainable Business",
-            "Fashion Industry"
-        ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://http-01.github.io/Zivo.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Entrepreneurs",
-                "item": "https://http-01.github.io/Zivo.com/categories/entrepreneurs.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Elena Kovac",
-                "item": "https://http-01.github.io/Zivo.com/profiles/elena-kovac.html"
-            }
-        ]
-    }
-    </script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="site-header" role="banner">
-        <div class="site-header__inner">
-            <a href="/" class="logo" title="ZIVO - Celebrity Biography Database">
-                <span class="logo__text">ZIVO</span>
-                <span class="logo__dot">.</span>
-            </a>
-            
-            <nav class="site-nav" role="navigation" aria-label="Primary Navigation">
-                <ul class="site-nav__list">
-                    <li><a href="../categories/actors.html" class="site-nav__link">Actors</a></li>
-                    <li><a href="../categories/singers.html" class="site-nav__link">Singers</a></li>
-                    <li><a href="../categories/athletes.html" class="site-nav__link">Athletes</a></li>
-                    <li><a href="../categories/creators.html" class="site-nav__link">Creators</a></li>
-                    <li><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
-    
-    <main id="main-content" role="main">
-        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-            <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="/">Home</a></li>
-                <li class="breadcrumb__item"><a href="../categories/entrepreneurs.html">Entrepreneurs</a></li>
-                <li class="breadcrumb__item is-current">Elena Kovac</li>
-            </ol>
-        </nav>
-        
-        <section class="bio-header" role="region" aria-label="Profile Header">
-            <div class="container">
-                <h1 class="bio-header__title">Elena Kovac</h1>
-                <p class="bio-header__subtitle">Fashion Entrepreneur & CEO</p>
-                <div class="bio-header__meta">
-                    <span class="badge">Entrepreneur</span>
-                    <span class="badge">CEO</span>
-                    <span class="badge">Czech</span>
-                </div>
-            </div>
-        </section>
-        
-        <div class="bio-container">
-            <article class="bio-article" itemscope itemtype="https://schema.org/Person">
-                <meta itemprop="name" content="Elena Kovac">
-                <meta itemprop="jobTitle" content="Fashion Entrepreneur & CEO">
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Overview</h2>
-                    <p>Elena Kovac is a Czech fashion entrepreneur and CEO who has built a single boutique into an international fashion house recognized globally for its distinctive aesthetic and commitment to sustainable manufacturing practices. Her success demonstrates how quality, design vision, and ethical business practices can drive international expansion.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Early Vision</h2>
-                    <p>Elena began with a single boutique, starting from a deep passion for fashion design and a commitment to quality. Her early work was characterized by attention to detail, distinctive aesthetic vision, and insistence on high manufacturing standards. These founding principles would remain central to her brand as it expanded.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Fashion Brand Development</h2>
-                    <p>What began as a single boutique grew into an internationally recognized fashion house. Elena's designs are known for their sophistication, attention to craftsmanship, and distinctive Czech design sensibility. The brand has expanded to include multiple collections and has built a loyal customer base worldwide.</p>
-                    <h3 class="bio-subsection__title">Brand Characteristics:</h3>
-                    <ul>
-                        <li>Sophisticated, timeless design aesthetic</li>
-                        <li>Exceptional quality and craftsmanship</li>
-                        <li>Sustainable manufacturing practices</li>
-                        <li>International brand presence</li>
-                    </ul>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Sustainable Manufacturing</h2>
-                    <p>A defining characteristic of Elena's brand is its commitment to sustainable manufacturing practices. Rather than chasing fast-fashion trends, her company focuses on quality production that minimizes environmental impact. This commitment has become increasingly central to the brand's identity and has attracted environmentally conscious consumers worldwide.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">International Expansion</h2>
-                    <p>Elena has successfully expanded her brand from a Czech boutique to an international fashion house with presence in multiple countries. The company's expansion has been characterized by maintaining quality and design integrity while growing scale. The brand maintains manufacturing excellence regardless of market.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Leadership & Innovation</h2>
-                    <p>As CEO, Elena continues to lead the company with a focus on design innovation, quality maintenance, and sustainable business practices. She remains involved in the creative process while managing the complexities of international business operations. Her leadership balances artistic vision with business pragmatism.</p>
-                </section>
-                
-                <section class="bio-section">
-                    <h2 class="bio-section__title">Impact & Legacy</h2>
-                    <p>Elena Kovac represents the potential for luxury fashion brands built on ethical principles and quality. Her success demonstrates that international fashion business success is possible without compromising values. She has influenced the industry to consider sustainability more seriously.</p>
-                </section>
-                
-                <section class="related-profiles" role="complementary">
-                    <h2>Related Entrepreneurs</h2>
-                    <ul class="related-profiles__list" role="list">
-                        <li><a href="elon-musk.html">Elon Musk</a></li>
-                        <li><a href="jeff-bezos.html">Jeff Bezos</a></li>
-                        <li><a href="mark-zuckerberg.html">Mark Zuckerberg</a></li>
-                        <li><a href="bill-gates.html">Bill Gates</a></li>
-                    </ul>
-                </section>
-            </article>
-        </div>
-    </main>
-    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__grid">
-                <div>
-                    <strong class="footer__col-title">ZIVO</strong>
-                    <p>Celebrity biography database</p>
-                </div>
-                <nav aria-label="Categories">
-                    <strong class="footer__col-title">Categories</strong>
-                    <ul class="footer__list">
-                        <li><a href="../categories/actors.html" class="footer__link">Actors</a></li>
-                        <li><a href="../categories/singers.html" class="footer__link">Singers</a></li>
-                        <li><a href="../categories/athletes.html" class="footer__link">Athletes</a></li>
-                        <li><a href="../categories/creators.html" class="footer__link">Creators</a></li>
-                        <li><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-label="Company">
-                    <strong class="footer__col-title">Company</strong>
-                    <ul class="footer__list">
-                        <li><a href="../about.html" class="footer__link">About</a></li>
-                        <li><a href="../contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="footer__link">Privacy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="../script.js" defer></script>
-</body>
-</html>
-
-================================================================================
-UPLOAD INSTRUCTIONS
-================================================================================
-
-FILES TO UPLOAD TO YOUR GITHUB REPOSITORY:
-
-1. Upload all 8 HTML files to: /profiles/
-   - julian-marsh.html
-   - amara-okafor.html
-   - luna-vega.html
-   - marco-silveira.html
-   - aisha-bello.html
-   - riley-chen.html
-   - victor-hale.html
-   - elena-kovac.html
-
-2. Download high-quality images from Google Images or Pinterest:
-   - julian-marsh.jpg (professional headshot)
-   - amara-okafor.jpg (professional headshot)
-   - luna-vega.jpg (artist/musician photo)
-   - marco-silveira.jpg (footballer action/portrait)
-   - aisha-bello.jpg (athlete/track photo)
-   - riley-chen.jpg (content creator headshot)
-   - victor-hale.jpg (entrepreneur/business photo)
-   - elena-kovac.jpg (fashion designer/CEO photo)
-
-3. Upload all images to: /images/
-
-4. Update your sitemap.xml to include these 8 new profiles
-
-5. Update your script.js CELEBRITIES array to include these new profiles (if using data-driven approach)
-
-6. Submit updated sitemap.xml to Google Search Console
-
-7. Test all links and images on your live website
-
-================================================================================
-
-All 8 profiles are production-ready with:
-✓ Professional semantic HTML5
-✓ Complete Schema.org structured data
-✓ SEO meta tags and Open Graph tags
-✓ Twitter Card tags
-✓ Breadcrumb navigation
-✓ Mobile-responsive design
-✓ Professional biography content
-✓ Related profile links
-✓ Image placeholders
-✓ Matching website design
-
-READY TO DEPLOY! 🚀
