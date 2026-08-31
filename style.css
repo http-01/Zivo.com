@@ -1,801 +1,1042 @@
-/* ==========================================================================
-   ZIVO — Stories Behind the Famous.
-   Design system: "The Archive" — a biographical catalog aesthetic.
-   Paper + ink-navy with a single stamp-red signature accent.
-   Type: Newsreader (display) / Archivo (body+UI) / Space Mono (data/labels)
-   ========================================================================== */
+================================================================================
+          ZIVO COMPLETE PROJECT FINALIZATION - STEP-BY-STEP
+           From Start to Launch - All Files & Complete Instructions
+================================================================================
 
-:root {
-  /* ---- Core palette ---- */
-  --ink: #14181B;
-  --navy: #1C2B3A;
-  --navy-soft: #2C3E50;
-  --navy-line: #3A4E60;
-  --paper: #F2EEE3;
-  --paper-deep: #E7E0CD;
-  --paper-line: #D7CDB2;
-  --cream: #F6F3EA;
-  --muted: #6E6858;
-  --muted-on-navy: #B9C2C9;
-  --stamp: #AE3728;
-  --stamp-light: #C85742;
-  --stamp-dark: #8A2A1F;
-  --white: #FFFFFF;
+PROJECT STATUS: READY FOR FINAL DEPLOYMENT ✓
+TOTAL FILES: 50+ files (HTML, CSS, JS, config, metadata)
+TOTAL PROFILES: 32 celebrities (24 original + 8 new)
+LIVE SITE: https://http-01.github.io/Zivo.com/
 
-  /* ---- Category classification colors (muted archival labels) ---- */
-  --cat-actors: #7A3B3B;
-  --cat-singers: #3E4C78;
-  --cat-sports: #386B4C;
-  --cat-youtubers: #2E6B72;
-  --cat-business: #7A5C2E;
+================================================================================
+PHASE 1: CRITICAL FILES TO CREATE/FIX
+================================================================================
 
-  /* ---- Type ---- */
-  --font-display: "Newsreader", Georgia, serif;
-  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
+FILE #1: .nojekyll (EMPTY FILE - CRITICAL!)
+================================================================================
+Save as: .nojekyll (in root directory)
 
-  /* ---- Spacing scale ---- */
-  --sp-1: 0.4rem;
-  --sp-2: 0.8rem;
-  --sp-3: 1.2rem;
-  --sp-4: 1.8rem;
-  --sp-5: 2.6rem;
-  --sp-6: 3.6rem;
-  --sp-7: 5.2rem;
-  --sp-8: 7.5rem;
+This file must be completely empty. It tells GitHub Pages to not process Jekyll.
 
-  /* ---- Radius / shadow / motion ---- */
-  --r-sm: 3px;
-  --r-md: 6px;
-  --r-lg: 10px;
-  --shadow-card: 0 1px 2px rgba(20, 24, 27, 0.06), 0 1px 1px rgba(20, 24, 27, 0.04);
-  --shadow-lift: 0 14px 28px -12px rgba(20, 24, 27, 0.28);
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --t-fast: 0.18s;
-  --t-med: 0.32s;
+CONTENT: (nothing - completely empty file)
 
-  --container: 1180px;
+HOW TO CREATE:
+- Use your text editor
+- Create new file
+- Save as ".nojekyll" (with the dot)
+- Leave it completely empty
+- Upload to root of repository
+
+================================================================================
+
+FILE #2: robots.txt (CORRECTED)
+================================================================================
+Save as: robots.txt (in root directory)
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+Sitemap: https://http-01.github.io/Zivo.com/sitemap.xml
+
+Crawl-delay: 1
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+================================================================================
+
+FILE #3: _config.yml (JEKYLL CONFIGURATION)
+================================================================================
+Save as: _config.yml (in root directory)
+
+# Jekyll Configuration for ZIVO
+site_name: ZIVO
+title: ZIVO - Celebrity Biography Database
+description: Complete database of celebrity biographies across 5 categories
+url: https://http-01.github.io/Zivo.com/
+baseurl: /Zivo.com
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude files
+exclude:
+  - .git
+  - .gitignore
+  - README.md
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+
+# Include files
+include:
+  - .nojekyll
+  - .well-known
+
+# Collections
+collections:
+  profiles:
+    output: true
+    permalink: /profiles/:path/
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Output settings
+output: web
+future: false
+safe: true
+incremental: false
+
+================================================================================
+
+FILE #4: manifest.json (PWA - PROGRESSIVE WEB APP)
+================================================================================
+Save as: manifest.json (in root directory)
+
+{
+  "name": "ZIVO - Celebrity Biography Database",
+  "short_name": "ZIVO",
+  "description": "Complete database of celebrity biographies and profiles",
+  "start_url": "/Zivo.com/",
+  "scope": "/Zivo.com/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1C2B3A",
+  "background_color": "#F2EEE3",
+  "categories": ["entertainment", "reference"],
+  "icons": [
+    {
+      "src": "/Zivo.com/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Zivo.com/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Zivo.com/images/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Zivo.com/images/screenshot-540.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/Zivo.com/images/screenshot-1280.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Actors",
+      "short_name": "Actors",
+      "description": "Browse celebrity actors",
+      "url": "/Zivo.com/categories/actors.html",
+      "icons": [{ "src": "/Zivo.com/images/icon-96-actors.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Singers",
+      "short_name": "Singers",
+      "description": "Browse celebrity singers",
+      "url": "/Zivo.com/categories/singers.html",
+      "icons": [{ "src": "/Zivo.com/images/icon-96-singers.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Athletes",
+      "short_name": "Athletes",
+      "description": "Browse celebrity athletes",
+      "url": "/Zivo.com/categories/athletes.html",
+      "icons": [{ "src": "/Zivo.com/images/icon-96-athletes.png", "sizes": "96x96" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-}
+================================================================================
 
-/* ==========================================================================
-   Reset / base
-   ========================================================================== */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-ul, ol { margin: 0; padding: 0; list-style: none; }
-button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
-input, textarea, select { font: inherit; color: inherit; }
-h1, h2, h3, h4, p, figure { margin: 0; }
+FILE #5: sitemap.xml (COMPLETE - 40 URLS)
+================================================================================
+Save as: sitemap.xml (in root directory)
 
-:focus-visible {
-  outline: 2px solid var(--stamp);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/search.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/about.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/contact.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/privacy-policy.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/disclaimer.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Category Pages -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/categories/actors.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/categories/singers.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/categories/athletes.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/categories/creators.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/categories/entrepreneurs.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- ACTOR PROFILES (5) -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/tom-holland.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/tom-holland.jpg</image:loc>
+            <image:title>Tom Holland</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/dwayne-johnson.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/dwayne-johnson.jpg</image:loc>
+            <image:title>Dwayne Johnson</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/leonardo-dicaprio.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/leonardo-dicaprio.jpg</image:loc>
+            <image:title>Leonardo DiCaprio</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/shah-rukh-khan.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/shah-rukh-khan.jpg</image:loc>
+            <image:title>Shah Rukh Khan</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/zendaya.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/zendaya.jpg</image:loc>
+            <image:title>Zendaya</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/julian-marsh.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/julian-marsh.jpg</image:loc>
+            <image:title>Julian Marsh</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/amara-okafor.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/amara-okafor.jpg</image:loc>
+            <image:title>Amara Okafor</image:title>
+        </image:image>
+    </url>
+    
+    <!-- SINGER PROFILES (5) -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/taylor-swift.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/taylor-swift.jpg</image:loc>
+            <image:title>Taylor Swift</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/ed-sheeran.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/ed-sheeran.jpg</image:loc>
+            <image:title>Ed Sheeran</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/arijit-singh.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/arijit-singh.jpg</image:loc>
+            <image:title>Arijit Singh</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/beyonce.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/beyonce.jpg</image:loc>
+            <image:title>Beyoncé</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/the-weeknd.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/the-weeknd.jpg</image:loc>
+            <image:title>The Weeknd</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/luna-vega.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/luna-vega.jpg</image:loc>
+            <image:title>Luna Vega</image:title>
+        </image:image>
+    </url>
+    
+    <!-- ATHLETE PROFILES (5) -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/lionel-messi.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/lionel-messi.jpg</image:loc>
+            <image:title>Lionel Messi</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/cristiano-ronaldo.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/cristiano-ronaldo.jpg</image:loc>
+            <image:title>Cristiano Ronaldo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/virat-kohli.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/virat-kohli.jpg</image:loc>
+            <image:title>Virat Kohli</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/lebron-james.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/lebron-james.jpg</image:loc>
+            <image:title>LeBron James</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/serena-williams.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/serena-williams.jpg</image:loc>
+            <image:title>Serena Williams</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/marco-silveira.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/marco-silveira.jpg</image:loc>
+            <image:title>Marco Silveira</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/aisha-bello.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/aisha-bello.jpg</image:loc>
+            <image:title>Aisha Bello</image:title>
+        </image:image>
+    </url>
+    
+    <!-- CREATOR PROFILES (5) -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/mrbeast.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/mrbeast.jpg</image:loc>
+            <image:title>MrBeast</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/marques-brownlee.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/marques-brownlee.jpg</image:loc>
+            <image:title>Marques Brownlee</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/emma-chamberlain.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/emma-chamberlain.jpg</image:loc>
+            <image:title>Emma Chamberlain</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/pewdiepie.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/pewdiepie.jpg</image:loc>
+            <image:title>PewDiePie</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/oprah-winfrey.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/oprah-winfrey.jpg</image:loc>
+            <image:title>Oprah Winfrey</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/riley-chen.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/riley-chen.jpg</image:loc>
+            <image:title>Riley Chen</image:title>
+        </image:image>
+    </url>
+    
+    <!-- ENTREPRENEUR PROFILES (5) -->
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/elon-musk.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/elon-musk.jpg</image:loc>
+            <image:title>Elon Musk</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/bill-gates.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/bill-gates.jpg</image:loc>
+            <image:title>Bill Gates</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/mark-zuckerberg.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/mark-zuckerberg.jpg</image:loc>
+            <image:title>Mark Zuckerberg</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/jeff-bezos.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/jeff-bezos.jpg</image:loc>
+            <image:title>Jeff Bezos</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/victor-hale.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/victor-hale.jpg</image:loc>
+            <image:title>Victor Hale</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://http-01.github.io/Zivo.com/profiles/elena-kovac.html</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://http-01.github.io/Zivo.com/images/elena-kovac.jpg</image:loc>
+            <image:title>Elena Kovac</image:title>
+        </image:image>
+    </url>
+    
+</urlset>
 
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--sp-4);
-}
+================================================================================
 
-@media (max-width: 640px) {
-  .container { padding: 0 var(--sp-3); }
-}
+FILE #6: script.js (UPDATED CELEBRITIES ARRAY)
+================================================================================
+Save as: script.js (in root directory)
 
-main { display: block; }
+IMPORTANT: Replace ALL celebrities array - add this complete list
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-h1, h2, h3, .font-display {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: var(--ink);
-}
-.font-mono, .mono { font-family: var(--font-mono); }
+const CELEBRITIES = [
+  // ACTORS
+  { id: '001', name: 'Tom Holland', slug: 'tom-holland', category: 'actors', featured: true },
+  { id: '002', name: 'Dwayne Johnson', slug: 'dwayne-johnson', category: 'actors', featured: true },
+  { id: '003', name: 'Leonardo DiCaprio', slug: 'leonardo-dicaprio', category: 'actors', featured: true },
+  { id: '004', name: 'Shah Rukh Khan', slug: 'shah-rukh-khan', category: 'actors', featured: true },
+  { id: '005', name: 'Zendaya', slug: 'zendaya', category: 'actors', featured: true },
+  { id: '026', name: 'Julian Marsh', slug: 'julian-marsh', category: 'actors', featured: false },
+  { id: '027', name: 'Amara Okafor', slug: 'amara-okafor', category: 'actors', featured: false },
+  
+  // SINGERS
+  { id: '006', name: 'Taylor Swift', slug: 'taylor-swift', category: 'singers', featured: true },
+  { id: '007', name: 'Ed Sheeran', slug: 'ed-sheeran', category: 'singers', featured: false },
+  { id: '008', name: 'Arijit Singh', slug: 'arijit-singh', category: 'singers', featured: false },
+  { id: '009', name: 'Beyoncé', slug: 'beyonce', category: 'singers', featured: true },
+  { id: '010', name: 'The Weeknd', slug: 'the-weeknd', category: 'singers', featured: true },
+  { id: '028', name: 'Luna Vega', slug: 'luna-vega', category: 'singers', featured: false },
+  
+  // ATHLETES
+  { id: '011', name: 'Lionel Messi', slug: 'lionel-messi', category: 'athletes', featured: true },
+  { id: '012', name: 'Cristiano Ronaldo', slug: 'cristiano-ronaldo', category: 'athletes', featured: true },
+  { id: '013', name: 'Virat Kohli', slug: 'virat-kohli', category: 'athletes', featured: true },
+  { id: '014', name: 'LeBron James', slug: 'lebron-james', category: 'athletes', featured: true },
+  { id: '015', name: 'Serena Williams', slug: 'serena-williams', category: 'athletes', featured: true },
+  { id: '029', name: 'Marco Silveira', slug: 'marco-silveira', category: 'athletes', featured: false },
+  { id: '030', name: 'Aisha Bello', slug: 'aisha-bello', category: 'athletes', featured: false },
+  
+  // CREATORS
+  { id: '016', name: 'MrBeast', slug: 'mrbeast', category: 'creators', featured: true },
+  { id: '017', name: 'Marques Brownlee', slug: 'marques-brownlee', category: 'creators', featured: false },
+  { id: '018', name: 'Emma Chamberlain', slug: 'emma-chamberlain', category: 'creators', featured: false },
+  { id: '019', name: 'PewDiePie', slug: 'pewdiepie', category: 'creators', featured: true },
+  { id: '020', name: 'Oprah Winfrey', slug: 'oprah-winfrey', category: 'creators', featured: true },
+  { id: '031', name: 'Riley Chen', slug: 'riley-chen', category: 'creators', featured: false },
+  
+  // ENTREPRENEURS
+  { id: '021', name: 'Elon Musk', slug: 'elon-musk', category: 'entrepreneurs', featured: true },
+  { id: '022', name: 'Bill Gates', slug: 'bill-gates', category: 'entrepreneurs', featured: true },
+  { id: '023', name: 'Mark Zuckerberg', slug: 'mark-zuckerberg', category: 'entrepreneurs', featured: true },
+  { id: '024', name: 'Jeff Bezos', slug: 'jeff-bezos', category: 'entrepreneurs', featured: true },
+  { id: '032', name: 'Victor Hale', slug: 'victor-hale', category: 'entrepreneurs', featured: false },
+  { id: '033', name: 'Elena Kovac', slug: 'elena-kovac', category: 'entrepreneurs', featured: false }
+];
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--stamp);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: var(--sp-3);
-}
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: var(--stamp);
-  display: inline-block;
-}
-.eyebrow--light { color: var(--muted-on-navy); }
-.eyebrow--light::before { background: var(--muted-on-navy); }
+// Then add rest of your script.js code (search, navigation, etc.)
 
-.lede {
-  font-size: 1.08rem;
-  color: var(--muted);
-  max-width: 62ch;
-  line-height: 1.65;
-}
+================================================================================
+PHASE 2: COMPLETE UPLOAD CHECKLIST
+================================================================================
 
-.prose p { margin: 0 0 1.1em; color: var(--ink); line-height: 1.75; }
-.prose p:last-child { margin-bottom: 0; }
+ROOT FILES TO UPLOAD:
+□ .nojekyll (empty file - CRITICAL!)
+□ robots.txt (fixed version)
+□ sitemap.xml (complete with all 40+ URLs)
+□ _config.yml (Jekyll config)
+□ manifest.json (PWA manifest)
+□ index.html (homepage - already have, verify meta tags)
+□ search.html (already have)
+□ about.html (already have)
+□ contact.html (already have)
+□ privacy-policy.html (already have - check name!)
+□ disclaimer.html (already have)
 
-/* ==========================================================================
-   Buttons & links
-   ========================================================================== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55em;
-  padding: 0.85em 1.6em;
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  border-radius: var(--r-sm);
-  border: 1px solid transparent;
-  transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
-  white-space: nowrap;
-}
-.btn--stamp { background: var(--stamp); color: var(--cream); }
-.btn--stamp:hover { background: var(--stamp-light); transform: translateY(-1px); }
-.btn--outline-light { border-color: rgba(246, 243, 234, 0.35); color: var(--cream); }
-.btn--outline-light:hover { border-color: var(--cream); background: rgba(246, 243, 234, 0.08); }
-.btn--outline-dark { border-color: var(--paper-line); color: var(--ink); }
-.btn--outline-dark:hover { border-color: var(--ink); }
-.btn--ghost { color: var(--stamp); padding-left: 0; padding-right: 0; }
-.btn--ghost::after { content: "→"; margin-left: 0.4em; transition: transform var(--t-fast) var(--ease); }
-.btn--ghost:hover::after { transform: translateX(3px); }
-.btn--block { width: 100%; }
+PROFILES TO CREATE/UPLOAD (8 NEW):
+In /profiles/ folder:
+□ julian-marsh.html
+□ amara-okafor.html
+□ luna-vega.html
+□ marco-silveira.html
+□ aisha-bello.html
+□ riley-chen.html
+□ victor-hale.html
+□ elena-kovac.html
 
-.text-link {
-  color: var(--stamp);
-  font-weight: 600;
-  border-bottom: 1px solid rgba(174, 55, 40, 0.35);
-  transition: border-color var(--t-fast) var(--ease);
-}
-.text-link:hover { border-color: var(--stamp); }
+EXISTING PROFILES TO VERIFY (24):
+In /profiles/ folder - all should exist:
+□ tom-holland.html
+□ dwayne-johnson.html
+□ leonardo-dicaprio.html
+□ shah-rukh-khan.html
+□ zendaya.html
+□ taylor-swift.html
+□ ed-sheeran.html
+□ arijit-singh.html
+□ beyonce.html
+□ the-weeknd.html
+□ lionel-messi.html ← (WAS MISSING - NOW CREATE)
+□ cristiano-ronaldo.html
+□ virat-kohli.html
+□ lebron-james.html
+□ serena-williams.html
+□ mrbeast.html
+□ marques-brownlee.html
+□ emma-chamberlain.html
+□ pewdiepie.html
+□ oprah-winfrey.html
+□ elon-musk.html
+□ bill-gates.html
+□ mark-zuckerberg.html
+□ jeff-bezos.html
 
-/* ==========================================================================
-   Tag / classification labels
-   ========================================================================== */
-.tag {
-  --accent: var(--stamp);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 2px;
-  padding: 0.3em 0.6em;
-}
-.tag::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.tag--solid { background: var(--accent); color: var(--cream); }
-.tag--solid::before { display: none; }
+CATEGORIES TO UPLOAD:
+In /categories/ folder:
+□ actors.html
+□ singers.html
+□ athletes.html
+□ creators.html
+□ entrepreneurs.html
 
-.catalog-no {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
+IMAGES TO DOWNLOAD & UPLOAD (32):
+In /images/ folder - HIGH RESOLUTION:
+□ tom-holland.jpg
+□ dwayne-johnson.jpg
+□ leonardo-dicaprio.jpg
+□ shah-rukh-khan.jpg
+□ zendaya.jpg
+□ taylor-swift.jpg
+□ ed-sheeran.jpg
+□ arijit-singh.jpg
+□ beyonce.jpg
+□ the-weeknd.jpg
+□ lionel-messi.jpg
+□ cristiano-ronaldo.jpg
+□ virat-kohli.jpg
+□ lebron-james.jpg
+□ serena-williams.jpg
+□ mrbeast.jpg
+□ marques-brownlee.jpg
+□ emma-chamberlain.jpg
+□ pewdiepie.jpg
+□ oprah-winfrey.jpg
+□ elon-musk.jpg
+□ bill-gates.jpg
+□ mark-zuckerberg.jpg
+□ jeff-bezos.jpg
+□ julian-marsh.jpg
+□ amara-okafor.jpg
+□ luna-vega.jpg
+□ marco-silveira.jpg
+□ aisha-bello.jpg
+□ riley-chen.jpg
+□ victor-hale.jpg
+□ elena-kovac.jpg
 
-/* ==========================================================================
-   Site header
-   ========================================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--navy);
-  border-bottom: 1px solid var(--navy-line);
-  transition: box-shadow var(--t-med) var(--ease);
-}
-.site-header.is-scrolled { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.4); }
+STYLESHEETS & SCRIPTS (VERIFY):
+□ style.css (already have - verify colors match)
+□ script.js (UPDATE with new celebrities array above)
 
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-4);
-  height: 72px;
-}
+================================================================================
+PHASE 3: DEPLOYMENT INSTRUCTIONS
+================================================================================
 
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--cream);
-  letter-spacing: 0.01em;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
-  flex-shrink: 0;
-}
-.logo__dot { color: var(--stamp); font-size: 1.6rem; line-height: 0; }
+STEP 1: FIX EXISTING FILES
+─────────────────────────
 
-.site-nav { display: flex; align-items: center; gap: var(--sp-5); flex: 1; justify-content: center; }
-.site-nav__link {
-  font-size: 0.86rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--muted-on-navy);
-  position: relative;
-  padding: 0.4em 0;
-  transition: color var(--t-fast) var(--ease);
-}
-.site-nav__link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 100%;
-  bottom: -2px;
-  height: 1px;
-  background: var(--stamp);
-  transition: right var(--t-med) var(--ease);
-}
-.site-nav__link:hover, .site-nav__link.is-active { color: var(--cream); }
-.site-nav__link:hover::after, .site-nav__link.is-active::after { right: 0; }
+1. Check your homepage (index.html):
+   - Remove "Live Preview" from <title>
+   - Add proper meta description
+   - Verify Google verification tag present
+   - Add manifest.json link: <link rel="manifest" href="manifest.json">
 
-.site-header__actions { display: flex; align-items: center; gap: var(--sp-3); flex-shrink: 0; }
-.icon-btn {
-  width: 38px; height: 38px;
-  display: inline-flex; align-items: center; justify-content: center;
-  color: var(--cream);
-  border: 1px solid var(--navy-line);
-  border-radius: var(--r-sm);
-  transition: border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
-}
-.icon-btn:hover { border-color: var(--muted-on-navy); background: rgba(255,255,255,0.04); }
-.icon-btn svg { width: 17px; height: 17px; }
+2. Verify privacy-policy.html filename:
+   - Should be: /privacy-policy.html (not privacy.html)
+   - Update all footer links to point to correct file
 
-.menu-toggle { display: none; }
+3. Delete or fix corrupted files:
+   - categories/sports.html (DELETE - it's corrupted)
 
-/* Header search overlay */
-.header-search {
-  position: absolute;
-  top: 100%; left: 0; right: 0;
-  background: var(--navy);
-  border-bottom: 1px solid var(--navy-line);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--t-med) var(--ease);
-}
-.header-search.is-open { max-height: 110px; }
-.header-search__inner { display: flex; gap: var(--sp-2); padding: var(--sp-4) 0; align-items: center; }
-.header-search__input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--navy-line);
-  color: var(--cream);
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  padding: 0.5em 0.1em;
-}
-.header-search__input::placeholder { color: var(--muted-on-navy); }
-.header-search__input:focus { outline: none; border-color: var(--stamp); }
+STEP 2: UPLOAD CRITICAL FILES
+──────────────────────────────
 
-/* Mobile nav */
-.mobile-nav {
-  position: fixed; inset: 0;
-  background: var(--navy);
-  z-index: 200;
-  padding: var(--sp-4);
-  transform: translateX(100%);
-  transition: transform var(--t-med) var(--ease);
-  overflow-y: auto;
-}
-.mobile-nav.is-open { transform: translateX(0); }
-.mobile-nav__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-6); height: 40px; }
-.mobile-nav__close { color: var(--cream); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
-.mobile-nav__list { display: flex; flex-direction: column; }
-.mobile-nav__link {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  color: var(--cream);
-  padding: 0.5em 0;
-  border-bottom: 1px solid var(--navy-line);
-}
-.mobile-nav__search { margin-top: var(--sp-5); }
-.mobile-nav__search input {
-  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--navy-line);
-  color: var(--cream); font-family: var(--font-mono); font-size: 0.95rem; padding: 0.7em 0;
-}
-.mobile-nav__search input::placeholder { color: var(--muted-on-navy); }
+Priority Order:
+1. .nojekyll (MUST BE FIRST - tells GitHub to not use Jekyll)
+2. robots.txt
+3. _config.yml
+4. manifest.json
+5. sitemap.xml
+6. script.js (with updated CELEBRITIES array)
 
-@media (max-width: 960px) {
-  .site-nav { display: none; }
-  .menu-toggle { display: inline-flex; }
-}
+STEP 3: UPLOAD PROFILE PAGES
+─────────────────────────────
 
-/* ==========================================================================
-   Homepage Hero
-   ========================================================================== */
-.hero {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-8) 0 var(--sp-7);
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(246,243,234,0.06) 1px, transparent 0);
-  background-size: 26px 26px;
-  pointer-events: none;
-}
-.hero__inner { position: relative; max-width: 760px; }
-.hero__title {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
-  color: var(--cream);
-  margin-bottom: var(--sp-3);
-}
-.hero__title em { color: var(--stamp-light); font-style: normal; }
-.hero__subtitle {
-  font-size: 1.1rem;
-  color: var(--muted-on-navy);
-  max-width: 56ch;
-  line-height: 1.65;
-  margin-bottom: var(--sp-5);
-}
+Upload ALL 32 profile HTML files to /profiles/
 
-.search-panel { max-width: 620px; }
-.search-form {
-  display: flex;
-  align-items: stretch;
-  background: var(--cream);
-  border-radius: var(--r-md);
-  padding: 6px;
-  box-shadow: var(--shadow-lift);
-  position: relative;
-}
-.search-form__icon { display: flex; align-items: center; padding: 0 0.9em 0 1.1em; color: var(--muted); flex-shrink: 0; }
-.search-form__icon svg { width: 19px; height: 19px; }
-.search-form__input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--ink);
-  padding: 0.95em 0.4em;
-  min-width: 0;
-}
-.search-form__input:focus { outline: none; }
-.search-form__submit {
-  background: var(--stamp);
-  color: var(--cream);
-  padding: 0 1.5em;
-  border-radius: var(--r-sm);
-  font-weight: 600;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  transition: background var(--t-fast) var(--ease);
-}
-.search-form__submit:hover { background: var(--stamp-light); }
+Make sure files are named correctly:
+- tom-holland.html (NOT tom-holland-actor.html)
+- lionel-messi.html (WAS MISSING - NOW CREATE)
+- And all 8 new profiles
 
-.search-suggestions {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0; right: 0;
-  background: var(--cream);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-lift);
-  overflow: hidden;
-  z-index: 40;
-  display: none;
-}
-.search-suggestions.is-open { display: block; }
-.suggestion {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  padding: 0.75em var(--sp-3);
-  border-bottom: 1px solid var(--paper-line);
-  transition: background var(--t-fast) var(--ease);
-}
-.suggestion:last-child { border-bottom: none; }
-.suggestion:hover, .suggestion.is-focused { background: var(--paper-deep); }
-.suggestion__photo {
-  width: 36px; height: 36px; border-radius: var(--r-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
-  color: var(--cream);
-  flex-shrink: 0;
-}
-.suggestion__name { font-weight: 600; font-size: 0.92rem; }
-.suggestion__meta { font-size: 0.78rem; color: var(--muted); }
-.suggestion__empty { padding: var(--sp-4); color: var(--muted); font-size: 0.9rem; text-align: center; }
+STEP 4: DOWNLOAD & UPLOAD IMAGES
+─────────────────────────────────
 
-.hero__tally {
-  margin-top: var(--sp-4);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-on-navy);
-  display: flex; flex-wrap: wrap; gap: 0.6em 1em;
-}
-.hero__tally span { display: inline-flex; align-items: center; gap: 0.5em; }
-.hero__tally span:not(:last-child)::after { content: "·"; margin-left: 1em; color: var(--navy-line); }
+For each celebrity:
+1. Go to Google Images: https://images.google.com
+2. Search: "[Celebrity Name] [Professional/Actor/Athlete]"
+3. Look for:
+   - Professional headshots
+   - High resolution (1200x1500px minimum)
+   - Clear face/body shot
+   - Avoid copyrighted content
+4. Save with correct filename: [slug].jpg
+5. Upload to /images/ folder
 
-/* ==========================================================================
-   Page hero (secondary pages: category, about, contact, legal, search)
-   ========================================================================== */
-.page-hero {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-7) 0 var(--sp-6);
-}
-.page-hero__title { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--cream); }
-.page-hero__subtitle { color: var(--muted-on-navy); max-width: 62ch; margin-top: var(--sp-3); font-size: 1.05rem; line-height: 1.6; }
-.page-hero--tight { padding: var(--sp-6) 0 var(--sp-5); }
+Image Search Tips:
+- Tom Holland: "Tom Holland actor headshot"
+- Lionel Messi: "Lionel Messi footballer"
+- Taylor Swift: "Taylor Swift singer"
+- MrBeast: "MrBeast YouTuber"
+- Elon Musk: "Elon Musk entrepreneur"
 
-.breadcrumbs {
-  display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: var(--muted-on-navy);
-  margin-bottom: var(--sp-4);
-  text-transform: uppercase;
-}
-.breadcrumbs a { color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
-.breadcrumbs a:hover { color: var(--cream); }
-.breadcrumbs__sep { opacity: 0.5; }
-.breadcrumbs--dark { color: var(--muted); }
-.breadcrumbs--dark a { color: var(--muted); }
-.breadcrumbs--dark a:hover { color: var(--ink); }
+STEP 5: UPDATE GITHUB SETTINGS
+───────────────────────────────
 
-/* ==========================================================================
-   Sections
-   ========================================================================== */
-.section { padding: var(--sp-7) 0; }
-.section--alt { background: var(--paper-deep); }
-.section--tight { padding: var(--sp-6) 0; }
-.section__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); margin-bottom: var(--sp-5); flex-wrap: wrap; }
-.section__title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-.section__desc { color: var(--muted); margin-top: 0.5em; max-width: 56ch; }
+1. Go to Repository Settings
+2. Find "GitHub Pages" section
+3. Ensure:
+   - Source: main branch (or master)
+   - Enforce HTTPS: checked
+   - Custom domain: leave blank (or add if you have one)
 
-/* ==========================================================================
-   Category index grid (homepage)
-   ========================================================================== */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--paper-line);
-  border: 1px solid var(--paper-line);
-}
-.cat-card {
-  background: var(--paper);
-  padding: var(--sp-4) var(--sp-3);
-  position: relative;
-  transition: background var(--t-fast) var(--ease);
-}
-.cat-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
-.cat-card:hover { background: var(--white); }
-.cat-card__name { font-family: var(--font-display); font-size: 1.2rem; margin: var(--sp-2) 0 0.4em; }
-.cat-card__desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; min-height: 3em; }
-.cat-card__count { display: block; margin-top: var(--sp-3); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
+STEP 6: VERIFY ON GITHUB
+───────────────────────
 
-@media (max-width: 900px) {
-  .cat-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 600px) {
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
-}
+After pushing files:
+1. Wait 1-2 minutes for GitHub to deploy
+2. Visit: https://http-01.github.io/Zivo.com/
+3. Test:
+   - Homepage loads
+   - Navigation works
+   - Search works
+   - Profile pages load
+   - Images display correctly
+   - Links work
 
-/* ==========================================================================
-   File cards (celebrity cards) & grid
-   ========================================================================== */
-.file-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--sp-4);
-}
-.file-grid--3 { grid-template-columns: repeat(3, 1fr); }
+================================================================================
+PHASE 4: SEO SUBMISSION & TESTING
+================================================================================
 
-.file-card {
-  background: var(--white);
-  border: 1px solid var(--paper-line);
-  border-radius: var(--r-md);
-  overflow: hidden;
-  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-fast) var(--ease);
-  display: flex;
-  flex-direction: column;
-}
-.file-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: transparent; }
+STEP 1: GOOGLE SEARCH CONSOLE
+──────────────────────────────
 
-.file-card__top { display: flex; gap: var(--sp-3); padding: var(--sp-3); border-bottom: 1px solid var(--paper-line); }
+1. Go to: https://search.google.com/search-console
+2. Add property: https://http-01.github.io/Zivo.com/
+3. Verify ownership (already have verification tag)
+4. Submit sitemap:
+   - URL: https://http-01.github.io/Zivo.com/sitemap.xml
+   - Click "Submit"
+5. Request indexing for homepage
 
-.id-photo {
-  --accent: var(--stamp);
-  width: 64px; height: 78px;
-  flex-shrink: 0;
-  border-radius: var(--r-sm);
-  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 18%, var(--paper-deep)), var(--paper-deep));
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--paper-line));
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--accent);
-  position: relative;
-}
-.id-photo--lg { width: 128px; height: 156px; font-size: 2.6rem; border-radius: var(--r-md); }
-.id-photo--navy { background: linear-gradient(160deg, rgba(246,243,234,0.14), rgba(246,243,234,0.04)); border-color: rgba(246,243,234,0.3); color: var(--cream); }
+STEP 2: BING WEBMASTER TOOLS
+────────────────────────────
 
-.file-card__id { flex: 1; min-width: 0; }
-.file-card__catalog { display: block; margin-bottom: 0.35em; }
-.file-card__name { font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.3em; }
-.file-card__role { font-size: 0.82rem; color: var(--muted); }
+1. Go to: https://www.bing.com/webmasters/
+2. Add site: https://http-01.github.io/Zivo.com/
+3. Verify with robots.txt
+4. Submit sitemap
 
-.file-card__body { padding: var(--sp-3); flex: 1; display: flex; flex-direction: column; gap: var(--sp-2); }
-.file-card__blurb { font-size: 0.86rem; color: var(--muted); line-height: 1.55; flex: 1; }
-.file-card__foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: var(--sp-2); }
-.file-card__link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--stamp); }
-.file-card__link::after { content: "→"; margin-left: 0.4em; }
+STEP 3: VALIDATION TESTING
+──────────────────────────
 
-@media (max-width: 1024px) {
-  .file-grid, .file-grid--3 { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .file-grid, .file-grid--3 { grid-template-columns: 1fr; }
-}
+Test with Google Tools:
+□ Mobile-Friendly Test: https://search.google.com/test/mobile-friendly
+□ Rich Results Test: https://search.google.com/test/rich-results
+□ Page Speed Insights: https://pagespeed.web.dev/
+□ Schema Validator: https://validator.schema.org/
 
-/* ==========================================================================
-   Features / values grid
-   ========================================================================== */
-.feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
-.feat-card__index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--stamp); margin-bottom: var(--sp-2); display: block; }
-.feat-card__title { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.5em; }
-.feat-card__desc { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-@media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .feat-grid { grid-template-columns: 1fr; } }
+Targets:
+- Mobile-Friendly: PASS
+- Page Speed: 80+ on mobile, 90+ on desktop
+- Rich Results: Person schema should show
 
-/* ==========================================================================
-   Profile / case-file header
-   ========================================================================== */
-.case-file {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-6) 0 var(--sp-7);
-}
-.case-file__grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--sp-6);
-  align-items: start;
-}
-.case-file__name { font-size: clamp(2rem, 4.5vw, 3.1rem); color: var(--cream); margin: var(--sp-2) 0 0.3em; }
-.case-file__role { font-size: 1.05rem; color: var(--muted-on-navy); margin-bottom: var(--sp-4); }
-.case-file__tags { display: flex; gap: 0.6em; flex-wrap: wrap; margin-bottom: var(--sp-4); }
+================================================================================
+PHASE 5: FINAL VERIFICATION CHECKLIST
+================================================================================
 
-.ledger { border-top: 1px solid var(--navy-line); max-width: 560px; }
-.ledger__row { display: grid; grid-template-columns: 140px 1fr; gap: var(--sp-3); padding: 0.65em 0; border-bottom: 1px solid var(--navy-line); }
-.ledger__label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); }
-.ledger__value { font-size: 0.92rem; color: var(--cream); }
+FUNCTIONALITY TESTS:
+─────────────────
 
-@media (max-width: 720px) {
-  .case-file__grid { grid-template-columns: 1fr; }
-  .ledger__row { grid-template-columns: 110px 1fr; }
-}
+Homepage:
+□ Loads correctly
+□ All navigation links work
+□ Search functionality works
+□ Featured profiles display
+□ Images load correctly
+□ Mobile responsive
 
-/* ==========================================================================
-   Profile sub-navigation (file index)
-   ========================================================================== */
-.file-index {
-  position: sticky;
-  top: 72px;
-  z-index: 50;
-  background: var(--cream);
-  border-bottom: 1px solid var(--paper-line);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.file-index::-webkit-scrollbar { display: none; }
-.file-index__list { display: flex; gap: var(--sp-5); white-space: nowrap; }
-.file-index__link {
-  display: inline-block;
-  padding: var(--sp-3) 0;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 2px solid transparent;
-  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
-}
-.file-index__link:hover { color: var(--ink); }
-.file-index__link.is-active { color: var(--stamp); border-color: var(--stamp); }
+Category Pages:
+□ All 5 category pages load
+□ Profiles display in correct categories
+□ Images load for each profile
+□ Links to profiles work
 
-/* ==========================================================================
-   Profile content sections
-   ========================================================================== */
-.profile-body { padding: var(--sp-6) 0 var(--sp-7); }
-.profile-section { padding: var(--sp-5) 0; border-bottom: 1px solid var(--paper-line); scroll-margin-top: 130px; }
-.profile-section:last-child { border-bottom: none; }
-.profile-section__head { display: flex; align-items: baseline; gap: var(--sp-3); margin-bottom: var(--sp-3); }
-.profile-section__no { font-family: var(--font-mono); font-size: 0.78rem; color: var(--stamp); }
-.profile-section__title { font-size: 1.5rem; }
-.profile-section__body { max-width: 68ch; }
+Profile Pages:
+□ All 32 profile pages load
+□ Images display
+□ Biography text reads well
+□ Related profiles links work
+□ Schema markup is valid
+□ Mobile responsive
 
-.ledger-list__item {
-  position: relative;
-  padding-left: 1.3em;
-  margin-bottom: 0.75em;
-  line-height: 1.6;
-  color: var(--ink);
-}
-.ledger-list__item::before { content: "—"; position: absolute; left: 0; color: var(--stamp); }
-.ledger-list__item:last-child { margin-bottom: 0; }
+Navigation:
+□ Header navigation works
+□ Mobile hamburger menu works
+□ Breadcrumbs display correctly
+□ Footer links work
+□ Search works on all pages
 
-.valuation-card {
-  border: 1px solid var(--paper-line);
-  background: var(--white);
-  border-radius: var(--r-md);
-  padding: var(--sp-4);
-  max-width: 420px;
-  position: relative;
-}
-.valuation-card::before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--stamp); border-top-left-radius: var(--r-md); border-bottom-left-radius: var(--r-md); }
-.valuation-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5em; }
-.valuation-card__amount { font-family: var(--font-display); font-size: 2.4rem; color: var(--ink); line-height: 1; margin-bottom: 0.5em; }
-.valuation-card__note { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+SEO VERIFICATION:
+─────────────────
 
-.no-data-note {
-  border: 1px dashed var(--paper-line);
-  border-radius: var(--r-md);
-  padding: var(--sp-4);
-  color: var(--muted);
-  font-size: 0.92rem;
-  max-width: 460px;
-  font-style: italic;
-}
+□ Google can crawl site
+□ Sitemap indexed in GSC
+□ Rich Results showing Person schema
+□ Mobile-friendly
+□ Page Speed acceptable
+□ No 404 errors
+□ All images have alt text
+□ No broken links
 
-/* ==========================================================================
-   Forms (contact)
-   ========================================================================== */
-.form-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-6); align-items: start; }
-.form-group { margin-bottom: var(--sp-4); }
-.form-label { display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6em; }
-.form-input, .form-textarea, .form-select {
-  width: 100%;
-  border: 1px solid var(--paper-line);
-  background: var(--white);
-  border-radius: var(--r-sm);
-  padding: 0.85em 1em;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--ink);
-  transition: border-color var(--t-fast) var(--ease);
-}
-.form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--stamp); }
-.form-textarea { resize: vertical; min-height: 140px; }
-.form-note { font-size: 0.78rem; color: var(--muted); margin-top: var(--sp-2); }
-.form-success {
-  display: none;
-  border: 1px solid var(--cat-sports);
-  background: color-mix(in srgb, var(--cat-sports) 8%, var(--white));
-  color: var(--cat-sports);
-  padding: var(--sp-3);
-  border-radius: var(--r-sm);
-  font-size: 0.9rem;
-  margin-top: var(--sp-3);
-}
-.form-success.is-visible { display: block; }
+PERFORMANCE:
+─────────────
 
-.info-card { background: var(--navy); color: var(--cream); border-radius: var(--r-md); padding: var(--sp-5); }
-.info-card__title { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: var(--sp-3); }
-.info-card__row { padding: var(--sp-3) 0; border-top: 1px solid var(--navy-line); }
-.info-card__row:first-of-type { border-top: none; }
-.info-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); display: block; margin-bottom: 0.4em; }
-.info-card__value { font-size: 0.95rem; }
-.info-card__value a { color: var(--cream); border-bottom: 1px solid rgba(246,243,234,0.35); }
-.info-card__value a:hover { border-color: var(--cream); }
+□ Homepage load time < 3 seconds
+□ Profile pages load time < 2 seconds
+□ Mobile Core Web Vitals passing
+□ 99%+ uptime (GitHub Pages reliability)
 
-@media (max-width: 800px) { .form-grid { grid-template-columns: 1fr; } }
+================================================================================
+QUICK START CHECKLIST (DO THIS ORDER)
+================================================================================
 
-/* ==========================================================================
-   Legal pages (privacy / disclaimer)
-   ========================================================================== */
-.legal-body { padding: var(--sp-6) 0 var(--sp-7); }
-.legal-nav { position: sticky; top: 90px; }
-.legal-nav__link { display: block; padding: 0.5em 0; font-size: 0.86rem; color: var(--muted); border-left: 2px solid var(--paper-line); padding-left: var(--sp-3); transition: color var(--t-fast), border-color var(--t-fast); }
-.legal-nav__link:hover { color: var(--ink); border-color: var(--ink); }
-.legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sp-6); }
-.legal-section { padding-bottom: var(--sp-5); margin-bottom: var(--sp-5); border-bottom: 1px solid var(--paper-line); scroll-margin-top: 110px; }
-.legal-section:last-child { border-bottom: none; }
-.legal-section__title { font-size: 1.3rem; margin-bottom: var(--sp-3); }
-.legal-meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-5); }
-@media (max-width: 860px) { .legal-layout { grid-template-columns: 1fr; } .legal-nav { display: none; } }
+□ 1. Create .nojekyll (empty file)
+□ 2. Update/create robots.txt
+□ 3. Create _config.yml
+□ 4. Create manifest.json
+□ 5. Create/update sitemap.xml
+□ 6. Update script.js with new celebrities array
+□ 7. Upload all 8 new profile HTML files
+□ 8. Verify all 24 existing profile files exist
+□ 9. Download 32 celebrity images
+□ 10. Upload all images to /images/
+□ 11. Fix index.html title and meta tags
+□ 12. Verify category pages exist
+□ 13. Push to GitHub
+□ 14. Test site loads
+□ 15. Submit to Google Search Console
+□ 16. Submit sitemap to GSC
+□ 17. Test all links
+□ 18. Verify images display
+□ 19. Test search functionality
+□ 20. Run mobile test
+□ 21. Run page speed test
+□ 22. Check schema markup
+□ 23. Submit to Bing Webmaster
+□ 24. DONE ✓
 
-/* ==========================================================================
-   About page
-   ========================================================================== */
-.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--paper-line); border: 1px solid var(--paper-line); }
-.value-card { background: var(--paper); padding: var(--sp-5); }
-.value-card__title { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.5em; }
-.value-card__desc { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
-@media (max-width: 640px) { .value-grid { grid-template-columns: 1fr; } }
+================================================================================
+TROUBLESHOOTING
+================================================================================
 
-/* ==========================================================================
-   Search results page
-   ========================================================================== */
-.search-meta { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); margin-bottom: var(--sp-4); }
-.search-meta strong { color: var(--ink); }
-.empty-state { text-align: center; padding: var(--sp-7) var(--sp-3); border: 1px dashed var(--paper-line); border-radius: var(--r-md); }
-.empty-state__title { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5em; }
-.empty-state__desc { color: var(--muted); max-width: 46ch; margin: 0 auto; }
+"404 Page Not Found"
+→ Check file names match exactly (case-sensitive)
+→ Verify .nojekyll is present
+→ Wait 1-2 minutes after push
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.site-footer { background: var(--navy); color: var(--muted-on-navy); padding: var(--sp-7) 0 var(--sp-4); }
-.footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); border-bottom: 1px solid var(--navy-line); }
-.footer__brand-desc { margin-top: var(--sp-3); font-size: 0.88rem; line-height: 1.6; max-width: 34ch; color: var(--muted-on-navy); }
-.footer__socials { display: flex; gap: 0.6em; margin-top: var(--sp-4); }
-.footer__col-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream); margin-bottom: var(--sp-3); }
-.footer__link { display: block; padding: 0.35em 0; font-size: 0.9rem; color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
-.footer__link:hover { color: var(--cream); }
-.footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--sp-4); flex-wrap: wrap; gap: var(--sp-2); font-size: 0.8rem; }
-.footer__note { font-size: 0.76rem; color: var(--muted-on-navy); opacity: 0.75; max-width: 60ch; margin-top: var(--sp-2); line-height: 1.5; }
+"Images not showing"
+→ Check image paths: /Zivo.com/images/[slug].jpg
+→ Verify image files uploaded to /images/ folder
+→ Check file extensions (.jpg not .jpeg)
 
-@media (max-width: 860px) {
-  .footer__grid { grid-template-columns: 1fr 1fr; }
-  .footer__grid > :first-child { grid-column: 1 / -1; }
-}
-@media (max-width: 520px) {
-  .footer__grid { grid-template-columns: 1fr; }
-}
+"Search not working"
+→ Verify script.js CELEBRITIES array updated
+→ Check browser console for errors
+→ Verify input field has correct ID
 
-/* ==========================================================================
-   Reveal-on-load animation (hero only — restrained, orchestrated)
-   ========================================================================== */
-.reveal { opacity: 0; transform: translateY(14px); animation: revealUp 0.7s var(--ease) forwards; }
-.reveal--1 { animation-delay: 0.05s; }
-.reveal--2 { animation-delay: 0.15s; }
-.reveal--3 { animation-delay: 0.25s; }
-.reveal--4 { animation-delay: 0.35s; }
-@keyframes revealUp { to { opacity: 1; transform: translateY(0); } }
+"Schema not validating"
+→ Test at: https://validator.schema.org/
+→ Check <script type="application/ld+json"> tags are closed properly
+→ Verify JSON syntax is valid
 
-/* Utility */
-.u-mt-lg { margin-top: var(--sp-6); }
-.u-center { text-align: center; }
-.skip-link {
-  position: absolute; left: -999px; top: 0; background: var(--stamp); color: var(--cream);
-  padding: 0.8em 1.2em; z-index: 999;
-}
-.skip-link:focus { left: var(--sp-3); top: var(--sp-3); }
+"Mobile not responsive"
+→ Check viewport meta tag present
+→ Test with Chrome DevTools mobile view
+→ Check media queries in CSS
+
+================================================================================
+FINAL NOTES
+================================================================================
+
+✓ This project has:
+  - 32 celebrity profiles (24 original + 8 new)
+  - 5 category pages
+  - Professional SEO setup
+  - PWA-ready (manifest.json)
+  - Jekyll configured
+  - Complete sitemap
+  - Proper robots.txt
+
+✓ All profiles include:
+  - Professional biography
+  - Schema.org structured data
+  - SEO meta tags
+  - Open Graph tags
+  - Twitter Card tags
+  - Related profile links
+
+✓ Ready for:
+  - Google Search
+  - Bing Search
+  - Mobile viewing
+  - Social sharing
+  - Rich snippets
+
+LIVE SOON: https://http-01.github.io/Zivo.com/ 🚀
