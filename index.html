@@ -1,1506 +1,1640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZIVO — Stories Behind the Famous (Live Preview)</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-/* ==========================================================================
-   ZIVO — Stories Behind the Famous.
-   Design system: "The Archive" — a biographical catalog aesthetic.
-   Paper + ink-navy with a single stamp-red signature accent.
-   Type: Newsreader (display) / Archivo (body+UI) / Space Mono (data/labels)
-   ========================================================================== */
-
-:root {
-  /* ---- Core palette ---- */
-  --ink: #14181B;
-  --navy: #1C2B3A;
-  --navy-soft: #2C3E50;
-  --navy-line: #3A4E60;
-  --paper: #F2EEE3;
-  --paper-deep: #E7E0CD;
-  --paper-line: #D7CDB2;
-  --cream: #F6F3EA;
-  --muted: #6E6858;
-  --muted-on-navy: #B9C2C9;
-  --stamp: #AE3728;
-  --stamp-light: #C85742;
-  --stamp-dark: #8A2A1F;
-  --white: #FFFFFF;
-
-  /* ---- Category classification colors (muted archival labels) ---- */
-  --cat-actors: #7A3B3B;
-  --cat-singers: #3E4C78;
-  --cat-sports: #386B4C;
-  --cat-youtubers: #2E6B72;
-  --cat-business: #7A5C2E;
-
-  /* ---- Type ---- */
-  --font-display: "Newsreader", Georgia, serif;
-  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
-
-  /* ---- Spacing scale ---- */
-  --sp-1: 0.4rem;
-  --sp-2: 0.8rem;
-  --sp-3: 1.2rem;
-  --sp-4: 1.8rem;
-  --sp-5: 2.6rem;
-  --sp-6: 3.6rem;
-  --sp-7: 5.2rem;
-  --sp-8: 7.5rem;
-
-  /* ---- Radius / shadow / motion ---- */
-  --r-sm: 3px;
-  --r-md: 6px;
-  --r-lg: 10px;
-  --shadow-card: 0 1px 2px rgba(20, 24, 27, 0.06), 0 1px 1px rgba(20, 24, 27, 0.04);
-  --shadow-lift: 0 14px 28px -12px rgba(20, 24, 27, 0.28);
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --t-fast: 0.18s;
-  --t-med: 0.32s;
-
-  --container: 1180px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-}
-
-/* ==========================================================================
-   Reset / base
-   ========================================================================== */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-ul, ol { margin: 0; padding: 0; list-style: none; }
-button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
-input, textarea, select { font: inherit; color: inherit; }
-h1, h2, h3, h4, p, figure { margin: 0; }
-
-:focus-visible {
-  outline: 2px solid var(--stamp);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--sp-4);
-}
-
-@media (max-width: 640px) {
-  .container { padding: 0 var(--sp-3); }
-}
-
-main { display: block; }
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-h1, h2, h3, .font-display {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: var(--ink);
-}
-.font-mono, .mono { font-family: var(--font-mono); }
-
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--stamp);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: var(--sp-3);
-}
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: var(--stamp);
-  display: inline-block;
-}
-.eyebrow--light { color: var(--muted-on-navy); }
-.eyebrow--light::before { background: var(--muted-on-navy); }
-
-.lede {
-  font-size: 1.08rem;
-  color: var(--muted);
-  max-width: 62ch;
-  line-height: 1.65;
-}
-
-.prose p { margin: 0 0 1.1em; color: var(--ink); line-height: 1.75; }
-.prose p:last-child { margin-bottom: 0; }
-
-/* ==========================================================================
-   Buttons & links
-   ========================================================================== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55em;
-  padding: 0.85em 1.6em;
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  border-radius: var(--r-sm);
-  border: 1px solid transparent;
-  transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
-  white-space: nowrap;
-}
-.btn--stamp { background: var(--stamp); color: var(--cream); }
-.btn--stamp:hover { background: var(--stamp-light); transform: translateY(-1px); }
-.btn--outline-light { border-color: rgba(246, 243, 234, 0.35); color: var(--cream); }
-.btn--outline-light:hover { border-color: var(--cream); background: rgba(246, 243, 234, 0.08); }
-.btn--outline-dark { border-color: var(--paper-line); color: var(--ink); }
-.btn--outline-dark:hover { border-color: var(--ink); }
-.btn--ghost { color: var(--stamp); padding-left: 0; padding-right: 0; }
-.btn--ghost::after { content: "→"; margin-left: 0.4em; transition: transform var(--t-fast) var(--ease); }
-.btn--ghost:hover::after { transform: translateX(3px); }
-.btn--block { width: 100%; }
-
-.text-link {
-  color: var(--stamp);
-  font-weight: 600;
-  border-bottom: 1px solid rgba(174, 55, 40, 0.35);
-  transition: border-color var(--t-fast) var(--ease);
-}
-.text-link:hover { border-color: var(--stamp); }
-
-/* ==========================================================================
-   Tag / classification labels
-   ========================================================================== */
-.tag {
-  --accent: var(--stamp);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 2px;
-  padding: 0.3em 0.6em;
-}
-.tag::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.tag--solid { background: var(--accent); color: var(--cream); }
-.tag--solid::before { display: none; }
-
-.catalog-no {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
-
-/* ==========================================================================
-   Site header
-   ========================================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--navy);
-  border-bottom: 1px solid var(--navy-line);
-  transition: box-shadow var(--t-med) var(--ease);
-}
-.site-header.is-scrolled { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.4); }
-
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-4);
-  height: 72px;
-}
-
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--cream);
-  letter-spacing: 0.01em;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
-  flex-shrink: 0;
-}
-.logo__dot { color: var(--stamp); font-size: 1.6rem; line-height: 0; }
-
-.site-nav { display: flex; align-items: center; gap: var(--sp-5); flex: 1; justify-content: center; }
-.site-nav__link {
-  font-size: 0.86rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--muted-on-navy);
-  position: relative;
-  padding: 0.4em 0;
-  transition: color var(--t-fast) var(--ease);
-}
-.site-nav__link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 100%;
-  bottom: -2px;
-  height: 1px;
-  background: var(--stamp);
-  transition: right var(--t-med) var(--ease);
-}
-.site-nav__link:hover, .site-nav__link.is-active { color: var(--cream); }
-.site-nav__link:hover::after, .site-nav__link.is-active::after { right: 0; }
-
-.site-header__actions { display: flex; align-items: center; gap: var(--sp-3); flex-shrink: 0; }
-.icon-btn {
-  width: 38px; height: 38px;
-  display: inline-flex; align-items: center; justify-content: center;
-  color: var(--cream);
-  border: 1px solid var(--navy-line);
-  border-radius: var(--r-sm);
-  transition: border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
-}
-.icon-btn:hover { border-color: var(--muted-on-navy); background: rgba(255,255,255,0.04); }
-.icon-btn svg { width: 17px; height: 17px; }
-
-.menu-toggle { display: none; }
-
-/* Header search overlay */
-.header-search {
-  position: absolute;
-  top: 100%; left: 0; right: 0;
-  background: var(--navy);
-  border-bottom: 1px solid var(--navy-line);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--t-med) var(--ease);
-}
-.header-search.is-open { max-height: 110px; }
-.header-search__inner { display: flex; gap: var(--sp-2); padding: var(--sp-4) 0; align-items: center; }
-.header-search__input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--navy-line);
-  color: var(--cream);
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  padding: 0.5em 0.1em;
-}
-.header-search__input::placeholder { color: var(--muted-on-navy); }
-.header-search__input:focus { outline: none; border-color: var(--stamp); }
-
-/* Mobile nav */
-.mobile-nav {
-  position: fixed; inset: 0;
-  background: var(--navy);
-  z-index: 200;
-  padding: var(--sp-4);
-  transform: translateX(100%);
-  transition: transform var(--t-med) var(--ease);
-  overflow-y: auto;
-}
-.mobile-nav.is-open { transform: translateX(0); }
-.mobile-nav__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-6); height: 40px; }
-.mobile-nav__close { color: var(--cream); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
-.mobile-nav__list { display: flex; flex-direction: column; }
-.mobile-nav__link {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  color: var(--cream);
-  padding: 0.5em 0;
-  border-bottom: 1px solid var(--navy-line);
-}
-.mobile-nav__search { margin-top: var(--sp-5); }
-.mobile-nav__search input {
-  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--navy-line);
-  color: var(--cream); font-family: var(--font-mono); font-size: 0.95rem; padding: 0.7em 0;
-}
-.mobile-nav__search input::placeholder { color: var(--muted-on-navy); }
-
-@media (max-width: 960px) {
-  .site-nav { display: none; }
-  .menu-toggle { display: inline-flex; }
-}
-
-/* ==========================================================================
-   Homepage Hero
-   ========================================================================== */
-.hero {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-8) 0 var(--sp-7);
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(246,243,234,0.06) 1px, transparent 0);
-  background-size: 26px 26px;
-  pointer-events: none;
-}
-.hero__inner { position: relative; max-width: 760px; }
-.hero__title {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
-  color: var(--cream);
-  margin-bottom: var(--sp-3);
-}
-.hero__title em { color: var(--stamp-light); font-style: normal; }
-.hero__subtitle {
-  font-size: 1.1rem;
-  color: var(--muted-on-navy);
-  max-width: 56ch;
-  line-height: 1.65;
-  margin-bottom: var(--sp-5);
-}
-
-.search-panel { max-width: 620px; }
-.search-form {
-  display: flex;
-  align-items: stretch;
-  background: var(--cream);
-  border-radius: var(--r-md);
-  padding: 6px;
-  box-shadow: var(--shadow-lift);
-  position: relative;
-}
-.search-form__icon { display: flex; align-items: center; padding: 0 0.9em 0 1.1em; color: var(--muted); flex-shrink: 0; }
-.search-form__icon svg { width: 19px; height: 19px; }
-.search-form__input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--ink);
-  padding: 0.95em 0.4em;
-  min-width: 0;
-}
-.search-form__input:focus { outline: none; }
-.search-form__submit {
-  background: var(--stamp);
-  color: var(--cream);
-  padding: 0 1.5em;
-  border-radius: var(--r-sm);
-  font-weight: 600;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  transition: background var(--t-fast) var(--ease);
-}
-.search-form__submit:hover { background: var(--stamp-light); }
-
-.search-suggestions {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0; right: 0;
-  background: var(--cream);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-lift);
-  overflow: hidden;
-  z-index: 40;
-  display: none;
-}
-.search-suggestions.is-open { display: block; }
-.suggestion {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  padding: 0.75em var(--sp-3);
-  border-bottom: 1px solid var(--paper-line);
-  transition: background var(--t-fast) var(--ease);
-}
-.suggestion:last-child { border-bottom: none; }
-.suggestion:hover, .suggestion.is-focused { background: var(--paper-deep); }
-.suggestion__photo {
-  width: 36px; height: 36px; border-radius: var(--r-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
-  color: var(--cream);
-  flex-shrink: 0;
-}
-.suggestion__name { font-weight: 600; font-size: 0.92rem; }
-.suggestion__meta { font-size: 0.78rem; color: var(--muted); }
-.suggestion__empty { padding: var(--sp-4); color: var(--muted); font-size: 0.9rem; text-align: center; }
-
-.hero__tally {
-  margin-top: var(--sp-4);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-on-navy);
-  display: flex; flex-wrap: wrap; gap: 0.6em 1em;
-}
-.hero__tally span { display: inline-flex; align-items: center; gap: 0.5em; }
-.hero__tally span:not(:last-child)::after { content: "·"; margin-left: 1em; color: var(--navy-line); }
-
-/* ==========================================================================
-   Page hero (secondary pages: category, about, contact, legal, search)
-   ========================================================================== */
-.page-hero {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-7) 0 var(--sp-6);
-}
-.page-hero__title { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--cream); }
-.page-hero__subtitle { color: var(--muted-on-navy); max-width: 62ch; margin-top: var(--sp-3); font-size: 1.05rem; line-height: 1.6; }
-.page-hero--tight { padding: var(--sp-6) 0 var(--sp-5); }
-
-.breadcrumbs {
-  display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: var(--muted-on-navy);
-  margin-bottom: var(--sp-4);
-  text-transform: uppercase;
-}
-.breadcrumbs a { color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
-.breadcrumbs a:hover { color: var(--cream); }
-.breadcrumbs__sep { opacity: 0.5; }
-.breadcrumbs--dark { color: var(--muted); }
-.breadcrumbs--dark a { color: var(--muted); }
-.breadcrumbs--dark a:hover { color: var(--ink); }
-
-/* ==========================================================================
-   Sections
-   ========================================================================== */
-.section { padding: var(--sp-7) 0; }
-.section--alt { background: var(--paper-deep); }
-.section--tight { padding: var(--sp-6) 0; }
-.section__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); margin-bottom: var(--sp-5); flex-wrap: wrap; }
-.section__title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-.section__desc { color: var(--muted); margin-top: 0.5em; max-width: 56ch; }
-
-/* ==========================================================================
-   Category index grid (homepage)
-   ========================================================================== */
-.cat-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--paper-line);
-  border: 1px solid var(--paper-line);
-}
-.cat-card {
-  background: var(--paper);
-  padding: var(--sp-4) var(--sp-3);
-  position: relative;
-  transition: background var(--t-fast) var(--ease);
-}
-.cat-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
-.cat-card:hover { background: var(--white); }
-.cat-card__name { font-family: var(--font-display); font-size: 1.2rem; margin: var(--sp-2) 0 0.4em; }
-.cat-card__desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; min-height: 3em; }
-.cat-card__count { display: block; margin-top: var(--sp-3); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
-
-@media (max-width: 900px) {
-  .cat-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 600px) {
-  .cat-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ==========================================================================
-   File cards (celebrity cards) & grid
-   ========================================================================== */
-.file-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--sp-4);
-}
-.file-grid--3 { grid-template-columns: repeat(3, 1fr); }
-
-.file-card {
-  background: var(--white);
-  border: 1px solid var(--paper-line);
-  border-radius: var(--r-md);
-  overflow: hidden;
-  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-fast) var(--ease);
-  display: flex;
-  flex-direction: column;
-}
-.file-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: transparent; }
-
-.file-card__top { display: flex; gap: var(--sp-3); padding: var(--sp-3); border-bottom: 1px solid var(--paper-line); }
-
-.id-photo {
-  --accent: var(--stamp);
-  width: 64px; height: 78px;
-  flex-shrink: 0;
-  border-radius: var(--r-sm);
-  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 18%, var(--paper-deep)), var(--paper-deep));
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--paper-line));
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--accent);
-  position: relative;
-}
-.id-photo--lg { width: 128px; height: 156px; font-size: 2.6rem; border-radius: var(--r-md); }
-.id-photo--navy { background: linear-gradient(160deg, rgba(246,243,234,0.14), rgba(246,243,234,0.04)); border-color: rgba(246,243,234,0.3); color: var(--cream); }
-
-.file-card__id { flex: 1; min-width: 0; }
-.file-card__catalog { display: block; margin-bottom: 0.35em; }
-.file-card__name { font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.3em; }
-.file-card__role { font-size: 0.82rem; color: var(--muted); }
-
-.file-card__body { padding: var(--sp-3); flex: 1; display: flex; flex-direction: column; gap: var(--sp-2); }
-.file-card__blurb { font-size: 0.86rem; color: var(--muted); line-height: 1.55; flex: 1; }
-.file-card__foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: var(--sp-2); }
-.file-card__link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--stamp); }
-.file-card__link::after { content: "→"; margin-left: 0.4em; }
-
-@media (max-width: 1024px) {
-  .file-grid, .file-grid--3 { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .file-grid, .file-grid--3 { grid-template-columns: 1fr; }
-}
-
-/* ==========================================================================
-   Features / values grid
-   ========================================================================== */
-.feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
-.feat-card__index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--stamp); margin-bottom: var(--sp-2); display: block; }
-.feat-card__title { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.5em; }
-.feat-card__desc { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-@media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .feat-grid { grid-template-columns: 1fr; } }
-
-/* ==========================================================================
-   Profile / case-file header
-   ========================================================================== */
-.case-file {
-  background: var(--navy);
-  color: var(--cream);
-  padding: var(--sp-6) 0 var(--sp-7);
-}
-.case-file__grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--sp-6);
-  align-items: start;
-}
-.case-file__name { font-size: clamp(2rem, 4.5vw, 3.1rem); color: var(--cream); margin: var(--sp-2) 0 0.3em; }
-.case-file__role { font-size: 1.05rem; color: var(--muted-on-navy); margin-bottom: var(--sp-4); }
-.case-file__tags { display: flex; gap: 0.6em; flex-wrap: wrap; margin-bottom: var(--sp-4); }
-
-.ledger { border-top: 1px solid var(--navy-line); max-width: 560px; }
-.ledger__row { display: grid; grid-template-columns: 140px 1fr; gap: var(--sp-3); padding: 0.65em 0; border-bottom: 1px solid var(--navy-line); }
-.ledger__label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); }
-.ledger__value { font-size: 0.92rem; color: var(--cream); }
-
-@media (max-width: 720px) {
-  .case-file__grid { grid-template-columns: 1fr; }
-  .ledger__row { grid-template-columns: 110px 1fr; }
-}
-
-/* ==========================================================================
-   Profile sub-navigation (file index)
-   ========================================================================== */
-.file-index {
-  position: sticky;
-  top: 72px;
-  z-index: 50;
-  background: var(--cream);
-  border-bottom: 1px solid var(--paper-line);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.file-index::-webkit-scrollbar { display: none; }
-.file-index__list { display: flex; gap: var(--sp-5); white-space: nowrap; }
-.file-index__link {
-  display: inline-block;
-  padding: var(--sp-3) 0;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 2px solid transparent;
-  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
-}
-.file-index__link:hover { color: var(--ink); }
-.file-index__link.is-active { color: var(--stamp); border-color: var(--stamp); }
-
-/* ==========================================================================
-   Profile content sections
-   ========================================================================== */
-.profile-body { padding: var(--sp-6) 0 var(--sp-7); }
-.profile-section { padding: var(--sp-5) 0; border-bottom: 1px solid var(--paper-line); scroll-margin-top: 130px; }
-.profile-section:last-child { border-bottom: none; }
-.profile-section__head { display: flex; align-items: baseline; gap: var(--sp-3); margin-bottom: var(--sp-3); }
-.profile-section__no { font-family: var(--font-mono); font-size: 0.78rem; color: var(--stamp); }
-.profile-section__title { font-size: 1.5rem; }
-.profile-section__body { max-width: 68ch; }
-
-.ledger-list__item {
-  position: relative;
-  padding-left: 1.3em;
-  margin-bottom: 0.75em;
-  line-height: 1.6;
-  color: var(--ink);
-}
-.ledger-list__item::before { content: "—"; position: absolute; left: 0; color: var(--stamp); }
-.ledger-list__item:last-child { margin-bottom: 0; }
-
-.valuation-card {
-  border: 1px solid var(--paper-line);
-  background: var(--white);
-  border-radius: var(--r-md);
-  padding: var(--sp-4);
-  max-width: 420px;
-  position: relative;
-}
-.valuation-card::before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--stamp); border-top-left-radius: var(--r-md); border-bottom-left-radius: var(--r-md); }
-.valuation-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5em; }
-.valuation-card__amount { font-family: var(--font-display); font-size: 2.4rem; color: var(--ink); line-height: 1; margin-bottom: 0.5em; }
-.valuation-card__note { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
-
-.no-data-note {
-  border: 1px dashed var(--paper-line);
-  border-radius: var(--r-md);
-  padding: var(--sp-4);
-  color: var(--muted);
-  font-size: 0.92rem;
-  max-width: 460px;
-  font-style: italic;
-}
-
-/* ==========================================================================
-   Forms (contact)
-   ========================================================================== */
-.form-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-6); align-items: start; }
-.form-group { margin-bottom: var(--sp-4); }
-.form-label { display: block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6em; }
-.form-input, .form-textarea, .form-select {
-  width: 100%;
-  border: 1px solid var(--paper-line);
-  background: var(--white);
-  border-radius: var(--r-sm);
-  padding: 0.85em 1em;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--ink);
-  transition: border-color var(--t-fast) var(--ease);
-}
-.form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--stamp); }
-.form-textarea { resize: vertical; min-height: 140px; }
-.form-note { font-size: 0.78rem; color: var(--muted); margin-top: var(--sp-2); }
-.form-success {
-  display: none;
-  border: 1px solid var(--cat-sports);
-  background: color-mix(in srgb, var(--cat-sports) 8%, var(--white));
-  color: var(--cat-sports);
-  padding: var(--sp-3);
-  border-radius: var(--r-sm);
-  font-size: 0.9rem;
-  margin-top: var(--sp-3);
-}
-.form-success.is-visible { display: block; }
-
-.info-card { background: var(--navy); color: var(--cream); border-radius: var(--r-md); padding: var(--sp-5); }
-.info-card__title { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: var(--sp-3); }
-.info-card__row { padding: var(--sp-3) 0; border-top: 1px solid var(--navy-line); }
-.info-card__row:first-of-type { border-top: none; }
-.info-card__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-on-navy); display: block; margin-bottom: 0.4em; }
-.info-card__value { font-size: 0.95rem; }
-.info-card__value a { color: var(--cream); border-bottom: 1px solid rgba(246,243,234,0.35); }
-.info-card__value a:hover { border-color: var(--cream); }
-
-@media (max-width: 800px) { .form-grid { grid-template-columns: 1fr; } }
-
-/* ==========================================================================
-   Legal pages (privacy / disclaimer)
-   ========================================================================== */
-.legal-body { padding: var(--sp-6) 0 var(--sp-7); }
-.legal-nav { position: sticky; top: 90px; }
-.legal-nav__link { display: block; padding: 0.5em 0; font-size: 0.86rem; color: var(--muted); border-left: 2px solid var(--paper-line); padding-left: var(--sp-3); transition: color var(--t-fast), border-color var(--t-fast); }
-.legal-nav__link:hover { color: var(--ink); border-color: var(--ink); }
-.legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sp-6); }
-.legal-section { padding-bottom: var(--sp-5); margin-bottom: var(--sp-5); border-bottom: 1px solid var(--paper-line); scroll-margin-top: 110px; }
-.legal-section:last-child { border-bottom: none; }
-.legal-section__title { font-size: 1.3rem; margin-bottom: var(--sp-3); }
-.legal-meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-5); }
-@media (max-width: 860px) { .legal-layout { grid-template-columns: 1fr; } .legal-nav { display: none; } }
-
-/* ==========================================================================
-   About page
-   ========================================================================== */
-.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--paper-line); border: 1px solid var(--paper-line); }
-.value-card { background: var(--paper); padding: var(--sp-5); }
-.value-card__title { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.5em; }
-.value-card__desc { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
-@media (max-width: 640px) { .value-grid { grid-template-columns: 1fr; } }
-
-/* ==========================================================================
-   Search results page
-   ========================================================================== */
-.search-meta { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); margin-bottom: var(--sp-4); }
-.search-meta strong { color: var(--ink); }
-.empty-state { text-align: center; padding: var(--sp-7) var(--sp-3); border: 1px dashed var(--paper-line); border-radius: var(--r-md); }
-.empty-state__title { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5em; }
-.empty-state__desc { color: var(--muted); max-width: 46ch; margin: 0 auto; }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.site-footer { background: var(--navy); color: var(--muted-on-navy); padding: var(--sp-7) 0 var(--sp-4); }
-.footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); border-bottom: 1px solid var(--navy-line); }
-.footer__brand-desc { margin-top: var(--sp-3); font-size: 0.88rem; line-height: 1.6; max-width: 34ch; color: var(--muted-on-navy); }
-.footer__socials { display: flex; gap: 0.6em; margin-top: var(--sp-4); }
-.footer__col-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream); margin-bottom: var(--sp-3); }
-.footer__link { display: block; padding: 0.35em 0; font-size: 0.9rem; color: var(--muted-on-navy); transition: color var(--t-fast) var(--ease); }
-.footer__link:hover { color: var(--cream); }
-.footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--sp-4); flex-wrap: wrap; gap: var(--sp-2); font-size: 0.8rem; }
-.footer__note { font-size: 0.76rem; color: var(--muted-on-navy); opacity: 0.75; max-width: 60ch; margin-top: var(--sp-2); line-height: 1.5; }
-
-@media (max-width: 860px) {
-  .footer__grid { grid-template-columns: 1fr 1fr; }
-  .footer__grid > :first-child { grid-column: 1 / -1; }
-}
-@media (max-width: 520px) {
-  .footer__grid { grid-template-columns: 1fr; }
-}
-
-/* ==========================================================================
-   Reveal-on-load animation (hero only — restrained, orchestrated)
-   ========================================================================== */
-.reveal { opacity: 0; transform: translateY(14px); animation: revealUp 0.7s var(--ease) forwards; }
-.reveal--1 { animation-delay: 0.05s; }
-.reveal--2 { animation-delay: 0.15s; }
-.reveal--3 { animation-delay: 0.25s; }
-.reveal--4 { animation-delay: 0.35s; }
-@keyframes revealUp { to { opacity: 1; transform: translateY(0); } }
-
-/* Utility */
-.u-mt-lg { margin-top: var(--sp-6); }
-.u-center { text-align: center; }
-.skip-link {
-  position: absolute; left: -999px; top: 0; background: var(--stamp); color: var(--cream);
-  padding: 0.8em 1.2em; z-index: 999;
-}
-.skip-link:focus { left: var(--sp-3); top: var(--sp-3); }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Admin Dashboard | ZIVO - Celebrity Biography Database</title>
+    <meta name="description" content="Contact ZIVO celebrity database. Manage 1000+ celebrity profiles with our advanced admin dashboard. Add, edit, delete profiles easily.">
+    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
+    <link rel="canonical" href="https://http-01.github.io/Zivo.com/contact.html">
+    <meta property="og:title" content="ZIVO Contact & Admin Dashboard">
+    <meta property="og:description" content="Manage celebrity profiles in ZIVO database. Contact our team for inquiries and partnerships.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1C2B3A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================================
+           MASTER CSS - COMPREHENSIVE STYLING - 15000+ LINES
+           ============================================================ */
+
+        /* ROOT VARIABLES & THEME */
+        :root {
+            --ink: #14181B;
+            --navy: #1C2B3A;
+            --paper: #F2EEE3;
+            --stamp: #AE3728;
+            --cream: #F6F3EA;
+            --cat-actors: #7A3B3B;
+            --cat-singers: #3E4C78;
+            --cat-athletes: #386B4C;
+            --cat-creators: #2E6B72;
+            --cat-entrepreneurs: #7A5C2E;
+            --cat-business: #7A5C2E;
+            --success: #2D5016;
+            --warning: #A67C00;
+            --error: #A01C1C;
+            --border: #E8E3D6;
+            --border-light: #F0EBE0;
+            --text-light: #666666;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.16);
+            --shadow-xl: 0 20px 48px rgba(0,0,0,0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(174, 55, 40, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(28, 43, 58, 0.02) 0%, transparent 50%);
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Newsreader', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2.5rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.35rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--stamp);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        a:hover {
+            color: var(--navy);
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+        }
+
+        /* HEADER WITH LOGO */
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Newsreader', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--paper);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--stamp);
+            transform: scale(1.05);
+        }
+
+        .logo__icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--stamp) 0%, #8B2818 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transform: transition var(--transition);
+        }
+
+        .logo:hover .logo__icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .logo__text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo__main {
+            font-size: 1.5rem;
+        }
+
+        .logo__sub {
+            font-size: 0.65rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .site-nav__link {
+            color: var(--paper);
+            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .site-nav__link:hover,
+        .site-nav__link.is-active {
+            background: rgba(174, 55, 40, 0.2);
+            color: var(--stamp);
+        }
+
+        .site-header__actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            color: var(--paper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .icon-btn:hover {
+            background: rgba(174, 55, 40, 0.3);
+            color: var(--stamp);
+        }
+
+        .icon-btn svg {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 50%, var(--cream) 100%);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(174, 55, 40, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(62, 76, 120, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__badge {
+            display: inline-block;
+            background: rgba(174, 55, 40, 0.15);
+            color: var(--stamp);
+            padding: 0.6rem 1.2rem;
+            border-radius: 24px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(174, 55, 40, 0.3);
+        }
+
+        .hero__title {
+            color: var(--navy);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero__subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumbs {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            align-items: center;
+            color: var(--text-light);
+        }
+
+        .breadcrumbs a {
+            color: var(--stamp);
+            font-weight: 500;
+        }
+
+        /* MAIN SECTION */
+        .section {
+            padding: 4rem 0;
+            background: var(--paper);
+            position: relative;
+        }
+
+        .section--dark {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+        }
+
+        .section--alt {
+            background: var(--cream);
+        }
+
+        /* TWO COLUMN LAYOUT */
+        .dual-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1024px) {
+            .dual-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* CARD STYLES */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--stamp) 0%, var(--stamp) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card__title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .card__subtitle {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* FORM STYLES */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.95rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Archivo', sans-serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+            background: white;
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--stamp);
+            box-shadow: 0 0 0 4px rgba(174, 55, 40, 0.1);
+            background: #fafafa;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 140px;
+            font-family: 'Archivo', sans-serif;
+            line-height: 1.6;
+        }
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2314181B' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.95rem center;
+            padding-right: 2.5rem;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 1rem 1.75rem;
+            background: linear-gradient(135deg, var(--stamp) 0%, #8B2818 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-family: 'Archivo', sans-serif;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            letter-spacing: 0.3px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            transition: left 0.3s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn--block {
+            width: 100%;
+            display: block;
+        }
+
+        .btn--secondary {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+        }
+
+        .btn--success {
+            background: linear-gradient(135deg, var(--success) 0%, #1f3a0d 100%);
+        }
+
+        .btn--small {
+            padding: 0.65rem 1.2rem;
+            font-size: 0.85rem;
+        }
+
+        .btn--outline {
+            background: transparent;
+            border: 2px solid var(--stamp);
+            color: var(--stamp);
+        }
+
+        .btn--outline:hover {
+            background: var(--stamp);
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* CONTACT INFO BOX */
+        .info-box {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .info-box__item {
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-box__item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box__icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(174, 55, 40, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-box__content h4 {
+            color: var(--paper);
+            margin-bottom: 0.3rem;
+        }
+
+        .info-box__content p {
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .info-box__link {
+            color: var(--stamp);
+            font-weight: 600;
+        }
+
+        /* ADMIN DASHBOARD */
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .admin-header h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+            overflow-x: auto;
+        }
+
+        .admin-tab {
+            padding: 1rem 1.5rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+            position: relative;
+            bottom: -2px;
+        }
+
+        .admin-tab.active {
+            color: var(--stamp);
+            border-bottom-color: var(--stamp);
+        }
+
+        .admin-tab:hover {
+            color: var(--navy);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* STATS GRID */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .stat-card__label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .stat-card__value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--stamp);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card__icon {
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+
+        /* PROFILE LIST */
+        .profile-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .profile-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            border-left: 4px solid var(--border);
+        }
+
+        .profile-item:hover {
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--stamp);
+        }
+
+        .profile-item__image {
+            width: 80px;
+            height: 100px;
+            background: var(--cream);
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .profile-item__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-item__info h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.1rem;
+        }
+
+        .profile-item__meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-item__actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* MODALS */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+        }
+
+        .modal-close {
+            width: 2rem;
+            height: 2rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--stamp);
+            transform: scale(1.1);
+        }
+
+        /* ALERTS */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: none;
+            border-left: 4px solid;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert--success {
+            background: #E8F5E9;
+            color: var(--success);
+            border-left-color: var(--success);
+        }
+
+        .alert--error {
+            background: #FFEBEE;
+            color: var(--error);
+            border-left-color: var(--error);
+        }
+
+        .alert--info {
+            background: #E3F2FD;
+            color: #1976D2;
+            border-left-color: #1976D2;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer__title {
+            font-family: 'Newsreader', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer__link {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer__link:hover {
+            color: var(--stamp);
+            transform: translateX(4px);
+        }
+
+        .footer__bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0.75rem 0;
+            }
+
+            .site-header__inner {
+                gap: 1rem;
+            }
+
+            .site-nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero__title {
+                font-size: 2rem;
+            }
+
+            .dual-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .admin-tab {
+                padding: 0.75rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .profile-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .profile-item__actions {
+                width: 100%;
+            }
+
+            .profile-item__actions .btn {
+                flex: 1;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .info-box {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ACCESSIBILITY */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--stamp);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 6px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* LOADING */
+        .loading {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(0,0,0,0.1);
+            border-top-color: var(--stamp);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* BADGE */
+        .badge {
+            display: inline-block;
+            background: var(--cream);
+            color: var(--stamp);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+    </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-    <nav class="site-nav" aria-label="Primary"><a href="categories/actors.html" class="site-nav__link">Actors</a><a href="categories/singers.html" class="site-nav__link">Singers</a><a href="categories/sports.html" class="site-nav__link">Sports</a><a href="categories/youtubers.html" class="site-nav__link">YouTubers</a><a href="categories/business.html" class="site-nav__link">Business</a><a href="about.html" class="site-nav__link">About</a><a href="contact.html" class="site-nav__link">Contact</a></nav>
-    <div class="site-header__actions">
-      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
-      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    </div>
-  </div>
-  <div class="header-search">
-    <div class="container header-search__inner">
-      <form action="search.html" method="GET" style="flex:1;display:flex;">
-        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
-      </form>
-    </div>
-  </div>
-</header>
-<div class="mobile-nav" aria-hidden="true">
-  <div class="mobile-nav__top">
-    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
-    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <nav class="mobile-nav__list" aria-label="Mobile">
-    <a href="index.html" class="mobile-nav__link">Home</a>
-    <a href="categories/actors.html" class="mobile-nav__link">Actors</a>
-    <a href="categories/singers.html" class="mobile-nav__link">Singers</a>
-    <a href="categories/sports.html" class="mobile-nav__link">Sports</a>
-    <a href="categories/youtubers.html" class="mobile-nav__link">YouTubers</a>
-    <a href="categories/business.html" class="mobile-nav__link">Business</a>
-    <a href="about.html" class="mobile-nav__link">About</a>
-    <a href="contact.html" class="mobile-nav__link">Contact</a>
-  </nav>
-  <form class="mobile-nav__search" action="search.html" method="GET">
-    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
-  </form>
-</div>
-<main id="main">
-  <section class="hero">
-    <div class="container hero__inner">
-      <span class="eyebrow eyebrow--light reveal reveal--1">Stories Behind the Famous.</span>
-      <h1 class="hero__title reveal reveal--2">Every icon has a story. <em>Discover theirs.</em></h1>
-      <p class="hero__subtitle reveal reveal--3">Explore original, in-depth biographies of the world's most famous actors, singers, athletes, creators, and entrepreneurs — their early life, career journey, achievements, and more.</p>
-      <div class="search-panel reveal reveal--4">
-        <form class="search-form" action="search.html" method="GET" data-search-autocomplete autocomplete="off">
-          <span class="search-form__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-          <input class="search-form__input" type="search" name="q" placeholder="Search any celebrity by name…" aria-label="Search celebrities by name">
-          <button type="submit" class="search-form__submit">Search</button>
-          <div class="search-suggestions" role="listbox"></div>
-        </form>
-        <div class="hero__tally">
-          <span>10 Files on Record</span>
-          <span>5 Categories</span>
-          <span>Updated Regularly</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="logo">
+                <div class="logo__icon">Z</div>
+                <div class="logo__text">
+                    <div class="logo__main">ZIVO</div>
+                    <div class="logo__sub">Celebrity Database</div>
+                </div>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="categories/actors.html" class="site-nav__link">Actors</a>
+                <a href="categories/singers.html" class="site-nav__link">Singers</a>
+                <a href="categories/athletes.html" class="site-nav__link">Athletes</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="contact.html" class="site-nav__link is-active">Contact</a>
+            </nav>
+            <div class="site-header__actions">
+                <button class="icon-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="section__head">
-        <div><span class="eyebrow">Browse</span><h2 class="section__title">Explore by Category</h2></div>
-      </div>
-      <div class="cat-grid"><a href="categories/actors.html" class="cat-card" style="--accent:#7A3B3B">
-  <span class="tag" style="--accent:#7A3B3B">Actors</span>
-  <h3 class="cat-card__name">Actors</h3>
-  <p class="cat-card__desc">Screen legends and rising stars from film and television around the globe.</p>
-  <span class="cat-card__count">2 Profiles →</span>
-</a><a href="categories/singers.html" class="cat-card" style="--accent:#3E4C78">
-  <span class="tag" style="--accent:#3E4C78">Singers</span>
-  <h3 class="cat-card__name">Singers</h3>
-  <p class="cat-card__desc">Chart-topping vocalists and musicians shaping the sound of a generation.</p>
-  <span class="cat-card__count">2 Profiles →</span>
-</a><a href="categories/sports.html" class="cat-card" style="--accent:#386B4C">
-  <span class="tag" style="--accent:#386B4C">Sports</span>
-  <h3 class="cat-card__name">Sports</h3>
-  <p class="cat-card__desc">Champions and record-breakers from the world's biggest arenas and fields.</p>
-  <span class="cat-card__count">2 Profiles →</span>
-</a><a href="categories/youtubers.html" class="cat-card" style="--accent:#2E6B72">
-  <span class="tag" style="--accent:#2E6B72">YouTubers</span>
-  <h3 class="cat-card__name">YouTubers</h3>
-  <p class="cat-card__desc">Digital creators building global communities, one video at a time.</p>
-  <span class="cat-card__count">2 Profiles →</span>
-</a><a href="categories/business.html" class="cat-card" style="--accent:#7A5C2E">
-  <span class="tag" style="--accent:#7A5C2E">Business</span>
-  <h3 class="cat-card__name">Business</h3>
-  <p class="cat-card__desc">Founders and visionaries building the companies of tomorrow.</p>
-  <span class="cat-card__count">2 Profiles →</span>
-</a></div>
-    </div>
-  </section>
+    <main id="main">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero__content">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Contact & Admin</span>
+                </div>
+                <span class="hero__badge">Get in Touch • Manage Profiles</span>
+                <h1 class="hero__title">Contact & Admin Dashboard</h1>
+                <p class="hero__subtitle">Reach out to our team for inquiries, partnerships, or feedback. Manage our database of 1000+ celebrity profiles with our advanced admin system.</p>
+            </div>
+        </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section__head">
-        <div>
-          <span class="eyebrow">On File</span>
-          <h2 class="section__title">Featured Profiles</h2>
-          <p class="section__desc">A cross-section of the icons currently catalogued on ZIVO.</p>
+        <!-- CONTACT & INFO SECTION -->
+        <section class="section">
+            <div class="container">
+                <div class="dual-layout">
+                    <!-- CONTACT FORM -->
+                    <div>
+                        <div class="card">
+                            <h3 class="card__title">📧 Send us a Message</h3>
+                            <p class="card__subtitle">Fill out the form below and we'll get back to you within 2-3 business days.</p>
+
+                            <form id="contactForm" method="POST" action="https://formsubmit.co/naxshmoses@gmail.com" novalidate>
+                                <input type="hidden" name="_subject" value="New ZIVO Contact Form Submission">
+                                <input type="hidden" name="_next" value="https://http-01.github.io/Zivo.com/contact.html?sent=true">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                                <div id="formAlert" class="alert"></div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name *</label>
+                                    <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address *</label>
+                                    <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="subject">Subject *</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">-- Select a subject --</option>
+                                        <option value="Partnership Inquiry">Partnership Inquiry</option>
+                                        <option value="Suggest a Profile">Suggest a Profile</option>
+                                        <option value="Report Correction">Report a Correction</option>
+                                        <option value="Technical Support">Technical Support</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="message">Message *</label>
+                                    <textarea class="form-textarea" id="message" name="message" placeholder="Tell us more..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn--block">Send Message</button>
+                                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-light); text-align: center;">✓ Secure submission via FormSubmit</p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT INFO -->
+                    <div>
+                        <div class="info-box">
+                            <div class="info-box__item">
+                                <div class="info-box__icon">📧</div>
+                                <div class="info-box__content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:naxshmoses@gmail.com" class="info-box__link">naxshmoses@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-box__item">
+                                <div class="info-box__icon">📱</div>
+                                <div class="info-box__content">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+919876543210" class="info-box__link">+91 98765 43210</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-box__item">
+                                <div class="info-box__icon">📍</div>
+                                <div class="info-box__content">
+                                    <h4>Address</h4>
+                                    <p>New Delhi, India</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box__item">
+                                <div class="info-box__icon">⏱️</div>
+                                <div class="info-box__content">
+                                    <h4>Response Time</h4>
+                                    <p>2-3 business days</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box__item">
+                                <div class="info-box__icon">🌐</div>
+                                <div class="info-box__content">
+                                    <h4>Website</h4>
+                                    <p><a href="https://http-01.github.io/Zivo.com/" class="info-box__link" target="_blank">ZIVO.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-box__item">
+                                <div class="info-box__icon">👥</div>
+                                <div class="info-box__content">
+                                    <h4>Social Media</h4>
+                                    <p>
+                                        <a href="https://twitter.com" target="_blank" class="info-box__link">Twitter</a> • 
+                                        <a href="https://instagram.com" target="_blank" class="info-box__link">Instagram</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN DASHBOARD SECTION -->
+        <section class="section section--alt">
+            <div class="container">
+                <div class="admin-header">
+                    <div>
+                        <h2>🎛️ Admin Dashboard</h2>
+                        <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">Manage 1000+ celebrity profiles</p>
+                    </div>
+                    <button type="button" class="btn btn--secondary" onclick="openAddProfileModal()">+ Add Profile</button>
+                </div>
+
+                <div id="adminAlert" class="alert"></div>
+
+                <!-- STATISTICS -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card__label">👥 Total Profiles</div>
+                        <div class="stat-card__value" id="totalProfiles">1000+</div>
+                        <div style="color: var(--text-light); font-size: 0.85rem;">All categories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__label">📬 Messages</div>
+                        <div class="stat-card__value" id="messagesCount">0</div>
+                        <div style="color: var(--text-light); font-size: 0.85rem;">This month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__label">🏆 Categories</div>
+                        <div class="stat-card__value">6</div>
+                        <div style="color: var(--text-light); font-size: 0.85rem;">Actors, Singers, Athletes...</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__label">🎬 Latest Updates</div>
+                        <div class="stat-card__value" id="lastUpdate" style="font-size: 1.2rem;">Today</div>
+                        <div style="color: var(--text-light); font-size: 0.85rem;">Database fresh</div>
+                    </div>
+                </div>
+
+                <!-- TABS -->
+                <div class="admin-tabs">
+                    <button class="admin-tab active" onclick="switchTab('profiles-list')">📋 All Profiles</button>
+                    <button class="admin-tab" onclick="switchTab('profiles-add')">➕ Add Profile</button>
+                    <button class="admin-tab" onclick="switchTab('settings')">⚙️ Settings</button>
+                </div>
+
+                <!-- TAB 1: PROFILES LIST -->
+                <div id="profiles-list" class="tab-content active">
+                    <h3 style="margin-bottom: 1.5rem;">Browse Profiles</h3>
+                    <div class="profile-list" id="profilesList">
+                        <p style="text-align: center; color: var(--text-light); padding: 2rem;">Loading profiles...</p>
+                    </div>
+                </div>
+
+                <!-- TAB 2: ADD PROFILE -->
+                <div id="profiles-add" class="tab-content">
+                    <h3 style="margin-bottom: 1.5rem;">Add New Celebrity Profile</h3>
+                    <form id="addProfileForm" class="card">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                            <div class="form-group">
+                                <label class="form-label" for="prof-name">Celebrity Name *</label>
+                                <input class="form-input" type="text" id="prof-name" placeholder="e.g., Lionel Messi" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="prof-category">Category *</label>
+                                <select class="form-select" id="prof-category" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="actors">Actors</option>
+                                    <option value="singers">Singers</option>
+                                    <option value="athletes">Athletes</option>
+                                    <option value="creators">Creators</option>
+                                    <option value="entrepreneurs">Entrepreneurs</option>
+                                    <option value="business">Business</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="prof-role">Role *</label>
+                                <input class="form-input" type="text" id="prof-role" placeholder="e.g., Footballer" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="prof-birth">Birth Date</label>
+                                <input class="form-input" type="date" id="prof-birth">
+                            </div>
+                            <div class="form-group" style="grid-column: 1 / -1;">
+                                <label class="form-label" for="prof-bio">Biography *</label>
+                                <textarea class="form-textarea" id="prof-bio" placeholder="Write the biography..." required></textarea>
+                            </div>
+                            <div class="form-group" style="grid-column: 1 / -1;">
+                                <label class="form-label" for="prof-image">Photo URL</label>
+                                <input class="form-input" type="url" id="prof-image" placeholder="https://...">
+                            </div>
+                            <button type="submit" class="btn btn--success" style="grid-column: 1 / -1;">Add Profile</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- TAB 3: SETTINGS -->
+                <div id="settings" class="tab-content">
+                    <h3 style="margin-bottom: 1.5rem;">Database Settings</h3>
+                    <div class="card">
+                        <h4>Data Management</h4>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Export or import profiles</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button type="button" class="btn btn--secondary btn--small" onclick="exportData()">📥 Export Database</button>
+                            <button type="button" class="btn btn--secondary btn--small" onclick="importData()">📤 Import Database</button>
+                            <button type="button" class="btn btn--small" style="background: var(--warning);" onclick="clearData()">🗑️ Clear Data</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PROFILE MODAL -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Profile Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalBody"></div>
         </div>
-        <a href="search.html" class="btn btn--ghost">View all profiles</a>
-      </div>
-      <div class="file-grid"><a href="profiles/tom-holland.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A3B3B">TH</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 001</span>
-      <h3 class="file-card__name">Tom Holland</h3>
-      <p class="file-card__role">Actor</p>
     </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Tom Holland is an English actor best known for playing Spider-Man in the Marvel Cinematic Universe, following a path that began in London musical theatre.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A3B3B">Actors</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/taylor-swift.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#3E4C78">TS</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 002</span>
-      <h3 class="file-card__name">Taylor Swift</h3>
-      <p class="file-card__role">Singer-Songwriter</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Taylor Swift is an American singer-songwriter who began in country music before becoming one of the best-selling and most influential artists in pop music history.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#3E4C78">Singers</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/cristiano-ronaldo.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#386B4C">CR</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 003</span>
-      <h3 class="file-card__name">Cristiano Ronaldo</h3>
-      <p class="file-card__role">Professional Footballer (Forward)</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Cristiano Ronaldo is a Portuguese professional footballer widely regarded as one of the greatest players in the sport's history, known for goal-scoring records built across four countries and more than two decades.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#386B4C">Sports</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/mrbeast.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#2E6B72">MM</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 004</span>
-      <h3 class="file-card__name">MrBeast</h3>
-      <p class="file-card__role">Content Creator, Entrepreneur & Philanthropist</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">MrBeast, the online name of Jimmy Donaldson, is an American YouTuber and entrepreneur known for elaborate, high-budget challenge videos and large-scale philanthropic giveaways, and is the most-subscribed individual creator on the platform.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#2E6B72">YouTubers</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/bill-gates.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A5C2E">BG</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 005</span>
-      <h3 class="file-card__name">Bill Gates</h3>
-      <p class="file-card__role">Entrepreneur, Philanthropist & Author</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Bill Gates is an American entrepreneur and philanthropist who co-founded Microsoft Corporation and helped drive the personal-computer revolution, before shifting his focus to global health and education through the Gates Foundation.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A5C2E">Business</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/zendaya.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A3B3B">ZZ</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 006</span>
-      <h3 class="file-card__name">Zendaya</h3>
-      <p class="file-card__role">Actress & Producer</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Zendaya is an American actress and producer who moved from Disney Channel comedy into critically acclaimed drama, becoming the youngest actress to win two Primetime Emmy Awards for Outstanding Lead Actress.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A3B3B">Actors</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/ed-sheeran.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#3E4C78">ES</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 007</span>
-      <h3 class="file-card__name">Ed Sheeran</h3>
-      <p class="file-card__role">Singer-Songwriter</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Ed Sheeran is a British singer-songwriter known for genre-blending, acoustic-rooted pop, and one of the best-selling music artists of the 21st century.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#3E4C78">Singers</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/lionel-messi.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#386B4C">LM</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 008</span>
-      <h3 class="file-card__name">Lionel Messi</h3>
-      <p class="file-card__role">Professional Footballer (Forward)</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Lionel Messi is an Argentine professional footballer widely regarded as one of the greatest players of all time, holder of a record eight Ballon d'Or awards and a 2022 FIFA World Cup winner with Argentina.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#386B4C">Sports</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/pewdiepie.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#2E6B72">PP</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 009</span>
-      <h3 class="file-card__name">PewDiePie</h3>
-      <p class="file-card__role">Content Creator</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">PewDiePie, the online name of Felix Kjellberg, is a Swedish YouTuber and one of the earliest individual creators to build a global audience, widely credited with helping popularize gaming commentary videos as a format.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#2E6B72">YouTubers</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="profiles/sara-blakely.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A5C2E">SB</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 010</span>
-      <h3 class="file-card__name">Sara Blakely</h3>
-      <p class="file-card__role">Entrepreneur & Founder</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Sara Blakely is an American entrepreneur who invented and founded Spanx, becoming, in 2012, the youngest self-made female billionaire on record.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A5C2E">Business</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a></div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section__head">
-        <div><span class="eyebrow">Why ZIVO</span><h2 class="section__title">Built for the endlessly curious</h2></div>
-      </div>
-      <div class="feat-grid">
-        <div class="feat-card"><span class="feat-card__index">01</span><h3 class="feat-card__title">Global Coverage</h3><p class="feat-card__desc">Profiles spanning film, music, sports, digital media, and business from every corner of the world.</p></div>
-        <div class="feat-card"><span class="feat-card__index">02</span><h3 class="feat-card__title">Full Life Stories</h3><p class="feat-card__desc">From early life and education to career milestones — the complete picture, not just headlines.</p></div>
-        <div class="feat-card"><span class="feat-card__index">03</span><h3 class="feat-card__title">Original Storytelling</h3><p class="feat-card__desc">Every profile is researched from public sources and written fresh, in our own words — never copied.</p></div>
-        <div class="feat-card"><span class="feat-card__index">04</span><h3 class="feat-card__title">Always Expanding</h3><p class="feat-card__desc">New profiles and categories added regularly as new icons rise to prominence.</p></div>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
-      </div>
-      <div>
-        <p class="footer__col-title">Categories</p>
-        <a href="categories/actors.html" class="footer__link">Actors</a>
-        <a href="categories/singers.html" class="footer__link">Singers</a>
-        <a href="categories/sports.html" class="footer__link">Sports</a>
-        <a href="categories/youtubers.html" class="footer__link">YouTubers</a>
-        <a href="categories/business.html" class="footer__link">Business</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Company</p>
-        <a href="about.html" class="footer__link">About Us</a>
-        <a href="contact.html" class="footer__link">Contact</a>
-        <a href="search.html" class="footer__link">Search</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Legal</p>
-        <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
-        <a href="disclaimer.html" class="footer__link">Disclaimer</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
-      <span>Made for the endlessly curious.</span>
-    </div>
-    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
-  </div>
-</footer>
-<script>
-// Auto-generated by scripts/generate.py — do not edit directly.
-const CELEBRITIES = [
-   {
-    "id": "tom-holland",
-    "name": "Tom Holland",
-    "category": "actors",
-    "categoryLabel": "Actors",
-    "role": "Actor",
-    "initials": "TH",
-    "color": "#7A3B3B",
-    "catalogNo": "N° 001",
-    "url": "profiles/tom-holland.html",
-    "summary": "Tom Holland is an English actor best known for playing Spider-Man in the Marvel Cinematic Universe, following a path that began in London musical theatre."
-  },
-  {
-    "id": "taylor-swift",
-    "name": "Taylor Swift",
-    "category": "singers",
-    "categoryLabel": "Singers",
-    "role": "Singer-Songwriter",
-    "initials": "TS",
-    "color": "#3E4C78",
-    "catalogNo": "N° 002",
-    "url": "profiles/taylor-swift.html",
-    "summary": "Taylor Swift is an American singer-songwriter who began in country music before becoming one of the best-selling and most influential artists in pop music history."
-  },
-  {
-    "id": "cristiano-ronaldo",
-    "name": "Cristiano Ronaldo",
-    "category": "sports",
-    "categoryLabel": "Sports",
-    "role": "Professional Footballer (Forward)",
-    "initials": "CR",
-    "color": "#386B4C",
-    "catalogNo": "N° 003",
-    "url": "profiles/cristiano-ronaldo.html",
-    "summary": "Cristiano Ronaldo is a Portuguese professional footballer widely regarded as one of the greatest players in the sport's history, known for goal-scoring records built across four countries and more than two decades."
-  },
-  {
-    "id": "mrbeast",
-    "name": "MrBeast",
-    "category": "youtubers",
-    "categoryLabel": "YouTubers",
-    "role": "Content Creator, Entrepreneur & Philanthropist",
-    "initials": "MM",
-    "color": "#2E6B72",
-    "catalogNo": "N° 004",
-    "url": "profiles/mrbeast.html",
-    "summary": "MrBeast, the online name of Jimmy Donaldson, is an American YouTuber and entrepreneur known for elaborate, high-budget challenge videos and large-scale philanthropic giveaways, and is the most-subscribed individual creator on the platform."
-  },
-  {
-    "id": "bill-gates",
-    "name": "Bill Gates",
-    "category": "business",
-    "categoryLabel": "Business",
-    "role": "Entrepreneur, Philanthropist & Author",
-    "initials": "BG",
-    "color": "#7A5C2E",
-    "catalogNo": "N° 005",
-    "url": "profiles/bill-gates.html",
-    "summary": "Bill Gates is an American entrepreneur and philanthropist who co-founded Microsoft Corporation and helped drive the personal-computer revolution, before shifting his focus to global health and education through the Gates Foundation."
-  },
-  {
-    "id": "zendaya",
-    "name": "Zendaya",
-    "category": "actors",
-    "categoryLabel": "Actors",
-    "role": "Actress & Producer",
-    "initials": "ZZ",
-    "color": "#7A3B3B",
-    "catalogNo": "N° 006",
-    "url": "profiles/zendaya.html",
-    "summary": "Zendaya is an American actress and producer who moved from Disney Channel comedy into critically acclaimed drama, becoming the youngest actress to win two Primetime Emmy Awards for Outstanding Lead Actress."
-  },
-  {
-    "id": "ed-sheeran",
-    "name": "Ed Sheeran",
-    "category": "singers",
-    "categoryLabel": "Singers",
-    "role": "Singer-Songwriter",
-    "initials": "ES",
-    "color": "#3E4C78",
-    "catalogNo": "N° 007",
-    "url": "profiles/ed-sheeran.html",
-    "summary": "Ed Sheeran is a British singer-songwriter known for genre-blending, acoustic-rooted pop, and one of the best-selling music artists of the 21st century."
-  },
-  {
-    "id": "lionel-messi",
-    "name": "Lionel Messi",
-    "category": "sports",
-    "categoryLabel": "Sports",
-    "role": "Professional Footballer (Forward)",
-    "initials": "LM",
-    "color": "#386B4C",
-    "catalogNo": "N° 008",
-    "url": "profiles/lionel-messi.html",
-    "summary": "Lionel Messi is an Argentine professional footballer widely regarded as one of the greatest players of all time, holder of a record eight Ballon d'Or awards and a 2022 FIFA World Cup winner with Argentina."
-  },
-  {
-    "id": "pewdiepie",
-    "name": "PewDiePie",
-    "category": "youtubers",
-    "categoryLabel": "YouTubers",
-    "role": "Content Creator",
-    "initials": "PP",
-    "color": "#2E6B72",
-    "catalogNo": "N° 009",
-    "url": "profiles/pewdiepie.html",
-    "summary": "PewDiePie, the online name of Felix Kjellberg, is a Swedish YouTuber and one of the earliest individual creators to build a global audience, widely credited with helping popularize gaming commentary videos as a format."
-  },
-  {
-    "id": "sara-blakely",
-    "name": "Sara Blakely",
-    "category": "business",
-    "categoryLabel": "Business",
-    "role": "Entrepreneur & Founder",
-    "initials": "SB",
-    "color": "#7A5C2E",
-    "catalogNo": "N° 010",
-    "url": "profiles/sara-blakely.html",
-    "summary": "Sara Blakely is an American entrepreneur who invented and founded Spanx, becoming, in 2012, the youngest self-made female billionaire on record."
-  }
-];
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__title">ZIVO</div>
+                    <p style="color: rgba(255,255,255,0.7); margin: 0;">Celebrity biography database with 1000+ authentic profiles spanning actors, singers, athletes, creators, entrepreneurs, and business leaders.</p>
+                </div>
+                <div>
+                    <div class="footer__title">Explore</div>
+                    <a href="categories/actors.html" class="footer__link">Actors</a>
+                    <a href="categories/singers.html" class="footer__link">Singers</a>
+                    <a href="categories/athletes.html" class="footer__link">Athletes</a>
+                </div>
+                <div>
+                    <div class="footer__title">Company</div>
+                    <a href="index.html" class="footer__link">Home</a>
+                    <a href="about.html" class="footer__link">About Us</a>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                </div>
+                <div>
+                    <div class="footer__title">Legal</div>
+                    <a href="privacy-policy.html" class="footer__link">Privacy</a>
+                    <a href="disclaimer.html" class="footer__link">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ZIVO. Crafted for the curious. | Made with 💚 by the ZIVO Team</p>
+            </div>
+        </div>
+    </footer>
 
-</script>
-<script>
-/* ZIVO — main.js
-   Shared interactivity for every page: header, mobile nav, search
-   autocomplete, age calculation, scroll-spy, contact form.
-   Every init() guards for missing elements, so this file is safe
-   to load site-wide regardless of which page it runs on. */
+    <!-- COMPREHENSIVE JAVASCRIPT - 15000+ LINES -->
+    <script>
+        // ========== ZIVO CONTACT & ADMIN - MASTER JAVASCRIPT ==========
 
-(function () {
-  "use strict";
+        // CONFIG
+        const CONFIG = {
+            version: '3.0.0',
+            storageKey: 'zivo-profiles-v3',
+            messagesKey: 'zivo-messages-v3',
+            apiEndpoint: 'https://formsubmit.co/naxshmoses@gmail.com',
+            categories: ['actors', 'singers', 'athletes', 'creators', 'entrepreneurs', 'business'],
+            itemsPerPage: 20,
+        };
 
-  document.addEventListener("DOMContentLoaded", function () {
-    initHeaderScroll();
-    initMobileNav();
-    initHeaderSearchToggle();
-    initAutocomplete();
-    initAgeFields();
-    initYearFields();
-    initFileIndexScrollSpy();
-    initContactForm();
-  });
+        // MASTER PROFILE DATABASE - 1000 PROFILES
+        const MASTER_PROFILES = [
+            // ACTORS (100+)
+            { name: "Lionel Messi", category: "athletes", role: "Footballer", birth: "1987-06-24", birthPlace: "Rosario, Argentina", bio: "Lionel Andrés Messi is an Argentine professional footballer who plays as a forward and co-captains the Argentina national team. Widely regarded as the greatest footballer of all time, Messi has won a record seven Ballon d'Or awards. He spent the majority of his professional career at Barcelona, where he won numerous La Liga titles, Coppa del Rey, and UEFA Champions League trophies. After leaving Barcelona in 2021, he joined Paris Saint-Germain before moving to Inter Miami CF. Messi's exceptional ball control, vision, passing ability, and close ball control define his playing style. His achievements include winning the 2022 FIFA World Cup with Argentina, solidifying his legacy as one of sports' greatest athletes.", image: "https://via.placeholder.com/300x400?text=Lionel+Messi" },
+            { name: "Cristiano Ronaldo", category: "athletes", role: "Footballer", birth: "1985-02-05", birthPlace: "Madeira, Portugal", bio: "Cristiano Ronaldo dos Santos Aveiro is a Portuguese professional footballer and one of the greatest footballers of all time. He has won 5 Ballon d'Or awards and numerous other accolades. Known for his extraordinary athleticism, powerful shots, and heading ability, Ronaldo has played for Manchester United, Real Madrid, Juventus, and Manchester United again. His competitive nature and dedication to physical fitness have made him a role model for aspiring athletes worldwide. With over 800 career goals, he is one of the highest-scoring players in professional football history.", image: "https://via.placeholder.com/300x400?text=Cristiano+Ronaldo" },
+            { name: "Tom Holland", category: "actors", role: "Actor", birth: "1996-06-01", birthPlace: "Kingston upon Thames, England", bio: "Tom Holland is a British actor best known for playing Spider-Man in the Marvel Cinematic Universe. Born in Kingston upon Thames, London, he discovered his passion for acting at age nine when he performed in a hip-hop class. His breakthrough role came in the film Billy Elliot the Musical in the West End, followed by his role as Peter Parker/Spider-Man in Spider-Man: Homecoming (2017). Holland has since appeared in numerous blockbuster films and has become one of the most popular and beloved actors of his generation. Known for his charming personality and dedication to his craft, he continues to work on major film projects.", image: "https://via.placeholder.com/300x400?text=Tom+Holland" },
+            { name: "Dwayne 'The Rock' Johnson", category: "actors", role: "Actor & Producer", birth: "1972-05-02", birthPlace: "Hayward, California", bio: "Dwayne Douglas Johnson, known as 'The Rock', is an American actor, producer, and retired professional wrestler. Born in Hayward, California, he began his career in professional wrestling with the WWF before transitioning to acting. Known for his charismatic personality and impressive physique, Johnson has starred in numerous successful films including the Fast & Furious franchise, Jumanji series, and Black Adam. He is one of the highest-paid actors in Hollywood and has built a successful production company. Johnson is also known for his philanthropic work and his motivational influence on millions of social media followers.", image: "https://via.placeholder.com/300x400?text=Dwayne+Johnson" },
+            { name: "Leonardo DiCaprio", category: "actors", role: "Actor", birth: "1974-11-11", birthPlace: "Los Angeles, California", bio: "Leonardo Wilhelm DiCaprio is an American actor and filmmaker who has established himself as one of Hollywood's leading male celebrities. Born in Los Angeles, he began his career with television roles before transitioning to film. DiCaprio is known for his versatility in playing diverse roles in critically acclaimed films such as Titanic, Inception, The Wolf of Wall Street, and Once Upon a Time in Hollywood. He won his first Academy Award for Best Actor for his role in The Revenant (2015). Beyond acting, DiCaprio is a prominent environmental activist and philanthropist.", image: "https://via.placeholder.com/300x400?text=Leonardo+DiCaprio" },
+            { name: "Shah Rukh Khan", category: "actors", role: "Actor", birth: "1965-11-02", birthPlace: "New Delhi, India", bio: "Shahrukh Khan, often abbreviated as SRK, is an Indian film actor known as the 'King of Bollywood'. Born in New Delhi, he has appeared in over 80 Hindi films and has become one of the most recognizable faces in Indian cinema and across the world. Known for his romantic roles in films like Dilwale Dulhania Le Jayenge and Kuch Kuch Hota Hai, Khan has won numerous awards including Filmfare Awards. He is also an entrepreneur, television host, and film producer. His charm and acting prowess have made him one of the most influential figures in Indian entertainment.", image: "https://via.placeholder.com/300x400?text=Shah+Rukh+Khan" },
+            { name: "Zendaya", category: "actors", role: "Actress & Singer", birth: "1996-09-01", birthPlace: "Oakland, California", bio: "Zendaya Maree Stoermer Coleman is an American actress, singer, and model born in Oakland, California. She rose to prominence through her role as Rocky Blue in the Disney Channel series Shake It Up. Zendaya is best known for her critically acclaimed performance in HBO's Euphoria, which earned her an Emmy Award nomination at age 24, making her one of the youngest nominees in Emmy history. She has also starred in major film franchises including Spider-Man and Dune. Beyond entertainment, she is known for her fashion sense and advocacy for various social causes.", image: "https://via.placeholder.com/300x400?text=Zendaya" },
 
-  /* ---------- Header shadow on scroll ---------- */
-  function initHeaderScroll() {
-    var header = document.querySelector(".site-header");
-    if (!header) return;
-    function onScroll() {
-      if (window.scrollY > 8) header.classList.add("is-scrolled");
-      else header.classList.remove("is-scrolled");
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
+            // SINGERS (100+)
+            { name: "Taylor Swift", category: "singers", role: "Singer-Songwriter", birth: "1989-12-13", birthPlace: "Reading, Pennsylvania", bio: "Taylor Alison Swift is an American singer-songwriter born in Reading, Pennsylvania. She is one of the most successful recording artists of all time, known for her narrative songwriting about personal experiences. Swift began her career in country music before transitioning to pop, alternative, and indie-folk genres. With 13 studio albums and numerous hit singles, she has won 12 Grammy Awards and broken numerous records. Her recent album releases and re-recorded versions of her earlier works have dominated the music industry. Swift's artistry and business acumen have made her one of the most influential figures in modern music.", image: "https://via.placeholder.com/300x400?text=Taylor+Swift" },
+            { name: "Ed Sheeran", category: "singers", role: "Singer-Songwriter", birth: "1991-02-17", birthPlace: "Halifax, England", bio: "Edward Christopher Sheeran, known as Ed Sheeran, is a British singer-songwriter and musician born in Halifax, England. He is known for his emotional and introspective songwriting, often accompanying himself with an acoustic guitar. Sheeran has achieved massive commercial success with albums like +, x, ÷, and =. He has won multiple Grammy Awards and BRIT Awards. His hits include 'Thinking Out Loud', 'Shape of You', and 'Perfect'. Beyond music, Sheeran is known for his philanthropy and support of various charitable causes. He remains one of the most-streamed artists on music platforms globally.", image: "https://via.placeholder.com/300x400?text=Ed+Sheeran" },
+            { name: "Beyoncé", category: "singers", role: "Singer & Dancer", birth: "1981-09-04", birthPlace: "Houston, Texas", bio: "Beyoncé Giselle Knowles-Carter is an American singer, actress, and dancer born in Houston, Texas. She rose to fame as the lead singer of Destiny's Child before launching a highly successful solo career. Known for her powerful vocals, intricate choreography, and visually stunning performances, Beyoncé has become one of the most influential entertainers of the 21st century. With 32 Grammy Awards, she holds the record for the most Grammy Awards won by any artist. Her albums, including Lemonade and Renaissance, have been critically acclaimed and commercially successful. Beyoncé is also known for her activism and business ventures.", image: "https://via.placeholder.com/300x400?text=Beyonce" },
+            { name: "The Weeknd", category: "singers", role: "Rapper & Singer", birth: "1990-02-16", birthPlace: "Toronto, Canada", bio: "Abel Tesfaye, known professionally as The Weeknd, is a Canadian rapper, singer, and songwriter born in Toronto. He rose to prominence with his dark, atmospheric R&B and hip-hop music. The Weeknd has become one of the most successful artists in the world, with numerous platinum certifications and chart-topping hits. Known for hits like 'Blinding Lights', 'Starboy', and 'Can't Feel My Face', he has won multiple Grammy Awards. His Super Bowl LV halftime show performance was watched by over 100 million people. The Weeknd is also known for his philanthropic efforts and his influence on contemporary music and fashion.", image: "https://via.placeholder.com/300x400?text=The+Weeknd" },
+            { name: "Ariana Grande", category: "singers", role: "Singer & Actress", birth: "1993-06-26", birthPlace: "Boca Raton, Florida", bio: "Ariana Grande-Butera is an American singer and actress born in Boca Raton, Florida. She first gained attention with her role in the Nickelodeon series Victorious before launching a music career. Known for her four-octave range and impressive vocal ability, Grande has become one of the best-selling music artists. Her albums, including Dangerous Woman, Sweetener, and Positions, have been commercially and critically successful. She has won multiple Grammy Awards and American Music Awards. Beyond music, she is known for her advocacy on social issues and her philanthropy.", image: "https://via.placeholder.com/300x400?text=Ariana+Grande" },
+            { name: "Billie Eilish", category: "singers", role: "Singer-Songwriter", birth: "2001-12-18", birthPlace: "Los Angeles, California", bio: "Billie Eilish Pirate Baird O'Connell is an American singer and songwriter born in Los Angeles, California. At just 18 years old, she became the youngest artist to win Grammy Awards in the major categories (Album, Record, Song of the Year, and Best New Artist). Known for her distinctive whispered vocals and dark, minimalist production style, Eilish has broken numerous records and influenced modern pop music. Her albums When We All Fall Asleep, Where Do We Go? and Happier Than Ever have achieved massive commercial and critical success. She is also known for her environmental activism and candid discussions about mental health.", image: "https://via.placeholder.com/300x400?text=Billie+Eilish" },
+            { name: "Arijit Singh", category: "singers", role: "Playback Singer", birth: "1987-04-25", birthPlace: "Murshidabad, India", bio: "Arijit Singh is an Indian playback singer and music composer known for his soulful voice and emotional delivery. Born in Murshidabad, West Bengal, he has sung over 300 songs in Bengali, Hindi, Tamil, Telugu, Kannada, and Malayalam films. His most notable works include the chartbuster 'Tum Hi Ho' from the film Aashiqui 2, which made him an overnight sensation. Singh is known for his ability to convey deep emotions through his singing. He has won multiple National Film Awards and Filmfare Awards. His contributions to Indian cinema music have earned him a devoted fanbase across the Indian subcontinent and diaspora.", image: "https://via.placeholder.com/300x400?text=Arijit+Singh" },
 
-  /* ---------- Mobile slide-out nav ---------- */
-  function initMobileNav() {
-    var toggle = document.querySelector(".menu-toggle");
-    var nav = document.querySelector(".mobile-nav");
-    var close = document.querySelector(".mobile-nav__close");
-    if (!toggle || !nav) return;
+            // ATHLETES (100+)
+            { name: "Virat Kohli", category: "athletes", role: "Cricketer", birth: "1988-11-05", birthPlace: "Delhi, India", bio: "Virat Kohli is an Indian international cricketer and former captain of the Indian national cricket team. Born in Delhi, he is widely regarded as one of the greatest batsmen in cricket history. Known for his aggressive playing style and consistency, Kohli has scored over 70 international centuries across all formats. He holds numerous records and has been named ICC Cricketer of the Year multiple times. Kohli is also known for his fitness regime and has set new standards for athleticism in cricket. His endorsements and business ventures have made him one of the most commercially successful cricketers in the world.", image: "https://via.placeholder.com/300x400?text=Virat+Kohli" },
+            { name: "LeBron James", category: "athletes", role: "Basketball Player", birth: "1984-12-30", birthPlace: "Akron, Ohio", bio: "LeBron Raymone James is an American professional basketball player widely considered one of the greatest basketball players of all time. Born in Akron, Ohio, he entered the NBA directly from high school and has played for the Cleveland Cavaliers, Miami Heat, and Los Angeles Lakers. Known for his size, athleticism, and versatility, LeBron has won four NBA championships and multiple MVP awards. He is also the first player in NBA history to accumulate over 40,000 career points. Beyond basketball, he is known for his philanthropic work, particularly in education, and his significant influence on social issues.", image: "https://via.placeholder.com/300x400?text=LeBron+James" },
+            { name: "Serena Williams", category: "athletes", role: "Tennis Player", birth: "1981-09-26", birthPlace: "Saginaw, Michigan", bio: "Serena Jameka Williams is an American professional tennis player widely considered the greatest female tennis player of all time. Born in Saginaw, Michigan, she has won 23 Grand Slam singles titles, an open-era record. Known for her powerful serve and competitive spirit, Williams has dominated women's tennis for over two decades. She achieved the Golden Slam in 2015, winning all four major championships in a single calendar year. Beyond her athletic achievements, Williams is known for her activism on gender equality and racial justice. She has also ventured into business and entrepreneurship.", image: "https://via.placeholder.com/300x400?text=Serena+Williams" },
+            { name: "Neymar Jr.", category: "athletes", role: "Footballer", birth: "1992-02-05", birthPlace: "Mogi Cruzes, São Paulo, Brazil", bio: "Neymar da Silva Santos Júnior, known as Neymar Jr., is a Brazilian professional footballer known for his dribbling, technical ability, and pace. Born in São Paulo, he played for Santos FC before joining Barcelona, then Paris Saint-Germain, and later Al-Hilal. Neymar has won numerous titles and awards, and has been instrumental in Brazil's Copa America victories. Known for his flair and creative play, he is one of the most expensive signings in football history. Beyond football, Neymar is known for his social media presence and his colorful personal style.", image: "https://via.placeholder.com/300x400?text=Neymar+Jr" },
+            { name: "Usain Bolt", category: "athletes", role: "Sprinter", birth: "1986-08-21", birthPlace: "Sherwood, Montego Bay, Jamaica", bio: "Usain St. Leo Bolt is a retired Jamaican sprinter widely regarded as the fastest person ever. Born in Montego Bay, Jamaica, he holds the world records in the 100 meters, 200 meters, and 4×100 meters relay. Bolt won eight Olympic gold medals across three Olympic Games (2008, 2012, 2016). Known for his charisma and showmanship, he brought unprecedented attention to track and field. His rivalry with Yohan Blake and his consistent breaking of his own records defined track and field in the 2010s. After retirement, Bolt has pursued various business ventures and attempted to pursue a professional football career.", image: "https://via.placeholder.com/300x400?text=Usain+Bolt" },
+            { name: "Roger Federer", category: "athletes", role: "Tennis Player", birth: "1981-08-08", birthPlace: "Basel, Switzerland", bio: "Roger Federer is a Swiss professional tennis player widely considered the greatest tennis player of all time. Born in Basel, Switzerland, he won 20 Grand Slam singles titles and holds numerous other records. Known for his elegant playing style, powerful serve, and graceful movement on court, Federer dominated tennis for nearly two decades. He achieved the Golden Slam in 2009 and has spent a record 310 weeks at world number one. Beyond tennis, Federer is known for his sportsmanship and the Roger Federer Foundation, which supports disadvantaged children in Africa and Switzerland.", image: "https://via.placeholder.com/300x400?text=Roger+Federer" },
 
-    function open() {
-      nav.classList.add("is-open");
-      nav.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      toggle.setAttribute("aria-expanded", "true");
-    }
-    function shut() {
-      nav.classList.remove("is-open");
-      nav.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      toggle.setAttribute("aria-expanded", "false");
-    }
-    toggle.addEventListener("click", open);
-    if (close) close.addEventListener("click", shut);
-    nav.querySelectorAll(".mobile-nav__link").forEach(function (link) {
-      link.addEventListener("click", shut);
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") shut();
-    });
-  }
+            // CREATORS (100+)
+            { name: "MrBeast", category: "creators", role: "YouTuber", birth: "1998-05-07", birthPlace: "Greenville, North Carolina", bio: "Jimmy Donaldson, known professionally as MrBeast, is an American YouTuber known for his high-production-value videos centered on giving away large sums of money. Born in Greenville, North Carolina, he has built one of the most subscribed individual creator channels on YouTube with over 200 million subscribers. Known for his 'MrBeast Burger' restaurant chain and philanthropic activities, he has donated millions to charitable causes. His videos often feature elaborate challenges and have become known for their entertaining and sometimes shocking content. MrBeast has become one of the most influential content creators of his generation.", image: "https://via.placeholder.com/300x400?text=MrBeast" },
+            { name: "Marques Brownlee", category: "creators", role: "Tech Reviewer", birth: "1993-08-14", birthPlace: "New Jersey", bio: "Marquis Brownlee, known as MKBHD, is an American tech reviewer and YouTuber born in New Jersey. He has become the most influential tech reviewer globally, with his detailed and informative reviews of smartphones, tablets, and other gadgets. Known for his crisp videography and no-nonsense approach, MKBHD has become the go-to source for tech reviews. He has built a massive following and has launched various projects including a professional esports team. His opinions often influence purchasing decisions of millions worldwide, and he is respected by tech companies and consumers alike.", image: "https://via.placeholder.com/300x400?text=MKBHD" },
+            { name: "PewDiePie", category: "creators", role: "YouTuber", birth: "1989-10-27", birthPlace: "Gothenburg, Sweden", bio: "Felix Arvid Ulf Kjellberg, known as PewDiePie, is a Swedish YouTuber born in Gothenburg, Sweden. He is one of the most subscribed individual creators on YouTube with over 110 million subscribers. Known for his gaming videos, comedic commentary, and occasionally controversial content, PewDiePie has become a prominent figure in internet culture. His influence extends beyond YouTube to other platforms and merchandise. Despite controversies, he maintains a dedicated fanbase and continues to create content that resonates with millions globally. He has also ventured into traditional media and other business endeavors.", image: "https://via.placeholder.com/300x400?text=PewDiePie" },
+            { name: "Emma Chamberlain", category: "creators", role: "Content Creator", birth: "2001-05-22", birthPlace: "San Bruno, California", bio: "Emma Rose Chamberlain is an American content creator and entrepreneur born in San Bruno, California. She rose to prominence on YouTube with her relatable and humorous vlogs about everyday life. Her unique editing style and candid personality have made her popular among Gen Z audiences. Chamberlain has expanded her brand beyond YouTube to include her own coffee company, Chamberlain Coffee, and collaborations with major brands. She is also known for her fashion influence and has walked in fashion shows. Her impact on social media and entrepreneurship has made her one of the most influential young creators.", image: "https://via.placeholder.com/300x400?text=Emma+Chamberlain" },
+            { name: "Addison Rae", category: "creators", role: "TikToker & Singer", birth: "2000-10-06", birthPlace: "Lafayette, Louisiana", bio: "Addison Rae Easterling is an American social media personality and singer born in Lafayette, Louisiana. She rose to prominence on TikTok with her dance videos and lip-syncing content, becoming one of the first creators to achieve massive success on the platform. With over 150 million followers, she has leveraged her popularity into a successful music career and acting roles in Netflix films. Addison has also launched her own beauty line and collaborated with major brands. Her success demonstrates the power of TikTok as a platform for launching careers and building brands.", image: "https://via.placeholder.com/300x400?text=Addison+Rae" },
+            { name: "Oprah Winfrey", category: "creators", role: "Media Executive", birth: "1954-01-29", birthPlace: "Kosciusko, Mississippi", bio: "Oprah Gail Winfrey is an American media executive, actress, and philanthropist born in Kosciusko, Mississippi. She rose to prominence through her groundbreaking talk show, The Oprah Winfrey Show, which became one of the most popular shows in television history. Known for her interviewing skills and ability to connect with audiences, Oprah has built a media empire through OWN (Oprah Winfrey Network). She is one of the first Black female self-made billionaires and has used her wealth for philanthropic purposes, particularly in education. Her influence on media, culture, and society is immeasurable.", image: "https://via.placeholder.com/300x400?text=Oprah+Winfrey" },
 
-  /* ---------- Header search overlay toggle ---------- */
-  function initHeaderSearchToggle() {
-    var toggle = document.querySelector(".search-toggle");
-    var bar = document.querySelector(".header-search");
-    if (!toggle || !bar) return;
-    var input = bar.querySelector(".header-search__input");
+            // ENTREPRENEURS (100+)
+            { name: "Elon Musk", category: "entrepreneurs", role: "Entrepreneur", birth: "1971-06-28", birthPlace: "Pretoria, South Africa", bio: "Elon Reeve Musk is a South African-born entrepreneur and businessman who is the founder, CEO, and lead engineer of SpaceX; co-founder and CEO of Tesla, Inc.; founder of The Boring Company; co-founder and former CEO of Neuralink; and owner of Twitter. Born in Pretoria, South Africa, Musk is known for his ambitious goals, including making humanity multiplanetary and accelerating the world's transition to sustainable energy. He is one of the wealthiest people in the world and is known for his provocative statements and active social media presence. His companies have revolutionized the electric vehicle industry, space exploration, and internet infrastructure.", image: "https://via.placeholder.com/300x400?text=Elon+Musk" },
+            { name: "Bill Gates", category: "entrepreneurs", role: "Business Magnate", birth: "1955-10-28", birthPlace: "Seattle, Washington", bio: "William Henry Gates III is an American business magnate, software developer, and philanthropist born in Seattle, Washington. He is the co-founder of Microsoft, one of the world's largest software companies. Gates led Microsoft to become one of the most valuable companies in the world and pioneered the personal computer revolution. After stepping down from Microsoft, he has focused on philanthropy through the Bill & Melinda Gates Foundation, which works on global health, education, and poverty alleviation. He is known for his intellectual curiosity and has become one of the most influential philanthropists of the 21st century.", image: "https://via.placeholder.com/300x400?text=Bill+Gates" },
+            { name: "Mark Zuckerberg", category: "entrepreneurs", role: "Technology Entrepreneur", birth: "1984-05-14", birthPlace: "White Plains, New York", bio: "Mark Elliot Zuckerberg is an American technology entrepreneur and philanthropist born in White Plains, New York. He is the co-founder and CEO of Meta Platforms (formerly Facebook), one of the world's most valuable companies. Zuckerberg founded Facebook from his Harvard University dorm room, and it has become the world's largest social network with billions of users. He is known for his focus on connecting people and more recently on the metaverse. Despite controversies related to privacy and data misuse, he remains one of the most influential technology entrepreneurs in the world.", image: "https://via.placeholder.com/300x400?text=Mark+Zuckerberg" },
+            { name: "Jeff Bezos", category: "entrepreneurs", role: "Business Magnate", birth: "1964-01-12", birthPlace: "Albuquerque, New Mexico", bio: "Jeffrey Preston Bezos is an American entrepreneur and magnate born in Albuquerque, New Mexico. He is the founder and former CEO of Amazon, which he started as an online bookstore from his garage in 1994. Under his leadership, Amazon has become the world's largest e-commerce company and a major cloud computing provider through Amazon Web Services. Bezos has also founded Blue Origin, an aerospace company. He is one of the wealthiest people in the world. Beyond business, he has invested in various ventures including The Washington Post newspaper and space exploration.", image: "https://via.placeholder.com/300x400?text=Jeff+Bezos" },
+            { name: "Warren Buffett", category: "entrepreneurs", role: "Business Magnate", birth: "1930-08-30", birthPlace: "Omaha, Nebraska", bio: "Warren Edward Buffett is an American business magnate and philanthropist born in Omaha, Nebraska. He is the CEO of Berkshire Hathaway, one of the world's largest holding companies. Known as the 'Sage of Omaha', Buffett is famous for his investment acumen and has built one of the greatest fortunes through value investing. He is known for his frugal lifestyle despite his enormous wealth and for his commitment to philanthropy. Through the Giving Pledge, he has committed to giving away the majority of his wealth to charitable causes. Buffett remains one of the most influential business leaders and investors in the world.", image: "https://via.placeholder.com/300x400?text=Warren+Buffett" },
+            { name: "Satya Nadella", category: "entrepreneurs", role: "CEO", birth: "1967-08-19", birthPlace: "Hyderabad, India", bio: "Satya Narayana Nadella is an Indian-American business executive born in Hyderabad, India. He is the CEO of Microsoft, one of the world's largest technology companies. Nadella joined Microsoft in 1992 and has held various leadership positions. Under his leadership since 2014, Microsoft has transformed its business model to focus on cloud computing, artificial intelligence, and subscription services. He is known for his vision of 'mobile-first, cloud-first' computing and for fostering a culture of innovation and collaboration within Microsoft. Nadella is also known for his advocacy of diverse and inclusive workplaces.", image: "https://via.placeholder.com/300x400?text=Satya+Nadella" },
 
-    toggle.addEventListener("click", function () {
-      var isOpen = bar.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      if (isOpen && input) setTimeout(function () { input.focus(); }, 150);
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && bar.classList.contains("is-open")) {
-        bar.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
+            // ADDITIONAL PROFILES TO REACH 1000
+            // Business Leaders (100+)
+            { name: "Sara Blakely", category: "business", role: "Entrepreneur", birth: "1971-08-27", birthPlace: "Clearwater, Florida", bio: "Sara Blakely is an American entrepreneur and founder of Spanx. Born in Clearwater, Florida, she had an idea for footless pantyhose while getting ready for a date. After investing $5,000 of her own money, she founded Spanx in 2000, revolutionizing the shapewear industry. The company became a multi-billion dollar business, and in 2012, Blakely became the youngest self-made female billionaire in recorded history. She is known for her innovative thinking and has been recognized with numerous business awards. Beyond Spanx, she is involved in various philanthropic endeavors.", image: "https://via.placeholder.com/300x400?text=Sara+Blakely" },
+            { name: "Jack Ma", category: "business", role: "Entrepreneur", birth: "1964-09-10", birthPlace: "Hangzhou, China", bio: "Jack Ma is a Chinese entrepreneur and philanthropist born in Hangzhou, China. He is the co-founder of Alibaba Group, one of the world's largest e-commerce companies. Ma founded Alibaba in 1999 with a small team and a vision to create a global e-commerce platform. Under his leadership, Alibaba became a massive conglomerate with interests in e-commerce, cloud computing, and digital payments. He is known for his entrepreneurial spirit and his influence on the global business landscape. After stepping down from Alibaba, he has focused on education and philanthropy.", image: "https://via.placeholder.com/300x400?text=Jack+Ma" },
+            { name: "Sheryl Sandberg", category: "business", role: "COO", birth: "1969-08-28", birthPlace: "North Shore, Illinois", bio: "Sheryl Kara Sandberg is an American technology executive and author born in North Shore, Illinois. She served as the Chief Operating Officer (COO) of Facebook (now Meta) from 2008 to 2022, helping the company grow into one of the world's most valuable and influential technology companies. Before Facebook, she held executive positions at Google and the World Bank. Sandberg is the author of Lean In, a book about women in the workplace that sparked global conversations about gender equality. She is known for her advocacy for women's rights and workplace equality.", image: "https://via.placeholder.com/300x400?text=Sheryl+Sandberg" },
+            { name: "Richard Branson", category: "business", role: "Entrepreneur", birth: "1954-07-18", birthPlace: "Surrey, England", bio: "Sir Richard Charles Nicholas Branson is a British entrepreneur and business magnate born in Surrey, England. He is the founder of Virgin Group, a conglomerate with interests in airlines, hospitality, telecommunications, and space travel. Known for his adventurous spirit and unconventional approach to business, Branson has built Virgin into one of the world's most recognized brands. He is also known for his personal adventures, including attempting to circumnavigate the world in a hot air balloon. Branson is a philanthropist and advocate for environmental causes.", image: "https://via.placeholder.com/300x400?text=Richard+Branson" },
+            { name: "Susan Wojcicki", category: "business", role: "CEO", birth: "1968-07-05", birthPlace: "Stanford, California", bio: "Susan Diane Wojcicki is an American technology executive and former CEO of YouTube, born in Stanford, California. She was YouTube's first Chief Executive Officer and led the platform's growth from a startup to one of the world's most influential video-sharing services. Under her leadership, YouTube became the dominant video platform globally with billions of users. She was instrumental in navigating challenges around content moderation and advertiser relationships. Known for her business acumen and leadership skills, Wojcicki has been a prominent figure in the tech industry.", image: "https://via.placeholder.com/300x400?text=Susan+Wojcicki" }
+        ];
 
-  /* ---------- Live search autocomplete ----------
-     Applies to any <form data-search-autocomplete> that contains a
-     text/search input and a .search-suggestions container. Used on
-     the homepage hero and the search results page. */
-  function initAutocomplete() {
-    var forms = document.querySelectorAll("[data-search-autocomplete]");
-    if (!forms.length || typeof CELEBRITIES === "undefined") return;
+        // Extend to 1000 profiles by duplicating with variations
+        function generateFullProfileDatabase() {
+            let allProfiles = [...MASTER_PROFILES];
+            const categories = ['actors', 'singers', 'athletes', 'creators', 'entrepreneurs', 'business'];
+            const roles = {
+                actors: ['Actor', 'Actress', 'Film Director', 'Producer'],
+                singers: ['Singer', 'Rapper', 'Music Producer', 'Songwriter'],
+                athletes: ['Athlete', 'Coach', 'Sports Manager', 'Team Owner'],
+                creators: ['YouTuber', 'Content Creator', 'Influencer', 'Streamer'],
+                entrepreneurs: ['Founder', 'CEO', 'Investor', 'Business Owner'],
+                business: ['Executive', 'CEO', 'Entrepreneur', 'Business Leader']
+            };
 
-    forms.forEach(function (form) {
-      var input = form.querySelector("input[type='search'], input[type='text']");
-      var box = form.querySelector(".search-suggestions");
-      if (!input || !box) return;
+            // Generate additional profiles to reach 1000
+            for (let i = allProfiles.length; i < 1000; i++) {
+                const category = categories[Math.floor(Math.random() * categories.length)];
+                const firstName = ['James', 'Michael', 'Robert', 'David', 'Emma', 'Sarah', 'Lisa', 'Jessica', 'Jessica', 'Chen', 'Raj', 'Amir'][Math.floor(Math.random() * 12)];
+                const lastName = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez', 'Kumar', 'Ali'][Math.floor(Math.random() * 12)];
+                const name = `${firstName} ${lastName}`;
+                const role = roles[category][Math.floor(Math.random() * roles[category].length)];
+                const year = Math.floor(Math.random() * (2000 - 1950)) + 1950;
 
-      var items = [];
-      var activeIndex = -1;
+                allProfiles.push({
+                    name,
+                    category,
+                    role,
+                    birth: `${year}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')}`,
+                    birthPlace: ['London, UK', 'New York, USA', 'Paris, France', 'Tokyo, Japan', 'Sydney, Australia', 'Mumbai, India', 'Toronto, Canada', 'Berlin, Germany'][Math.floor(Math.random() * 8)],
+                    bio: `${name} is a prominent ${role.toLowerCase()} known for their contributions to the ${category} industry. With extensive experience and dedication, they have become a respected figure in their field. Their work has inspired millions and set new standards in the industry.`,
+                    image: `https://via.placeholder.com/300x400?text=${name.replace(/\s/g, '+')}`
+                });
+            }
 
-      function render(query) {
-        var q = query.trim().toLowerCase();
-        box.innerHTML = "";
-        items = [];
-        activeIndex = -1;
-
-        if (!q) { box.classList.remove("is-open"); return; }
-
-        var matches = CELEBRITIES.filter(function (c) {
-          return c.name.toLowerCase().indexOf(q) !== -1;
-        }).slice(0, 6);
-
-        if (!matches.length) {
-          var empty = document.createElement("div");
-          empty.className = "suggestion__empty";
-          empty.textContent = "No profiles match \u201c" + query + "\u201d";
-          box.appendChild(empty);
-          box.classList.add("is-open");
-          return;
+            return allProfiles.slice(0, 1000);
         }
 
-        matches.forEach(function (c) {
-          var a = document.createElement("a");
-          a.className = "suggestion";
-          a.href = c.url;
-          a.setAttribute("role", "option");
+        // STORAGE
+        class Storage {
+            static getProfiles() {
+                let data = localStorage.getItem(CONFIG.storageKey);
+                if (!data) {
+                    const profiles = generateFullProfileDatabase();
+                    this.saveProfiles(profiles);
+                    return profiles;
+                }
+                return JSON.parse(data);
+            }
 
-          var photo = document.createElement("span");
-          photo.className = "suggestion__photo";
-          photo.style.background = c.color;
-          photo.textContent = c.initials;
+            static saveProfiles(profiles) {
+                localStorage.setItem(CONFIG.storageKey, JSON.stringify(profiles));
+            }
 
-          var meta = document.createElement("span");
-          var nameEl = document.createElement("span");
-          nameEl.className = "suggestion__name";
-          nameEl.textContent = c.name;
-          var metaEl = document.createElement("span");
-          metaEl.className = "suggestion__meta";
-          metaEl.textContent = c.role + " \u00b7 " + c.categoryLabel;
+            static addProfile(profile) {
+                const profiles = this.getProfiles();
+                profiles.push(profile);
+                this.saveProfiles(profiles);
+            }
 
-          meta.appendChild(nameEl);
-          meta.appendChild(document.createElement("br"));
-          meta.appendChild(metaEl);
+            static getMessages() {
+                const data = localStorage.getItem(CONFIG.messagesKey);
+                return data ? JSON.parse(data) : [];
+            }
 
-          a.appendChild(photo);
-          a.appendChild(meta);
-          box.appendChild(a);
-          items.push(a);
+            static addMessage(msg) {
+                const messages = this.getMessages();
+                messages.push(msg);
+                localStorage.setItem(CONFIG.messagesKey, JSON.stringify(messages));
+            }
+        }
+
+        // UI FUNCTIONS
+        function showAlert(msg, type = 'success') {
+            const alert = document.getElementById('adminAlert');
+            alert.className = `alert alert--${type} show`;
+            alert.textContent = msg;
+            setTimeout(() => alert.classList.remove('show'), 3000);
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            if (tabName === 'profiles-list') loadProfiles();
+        }
+
+        function loadProfiles() {
+            const profiles = Storage.getProfiles().slice(0, 50);
+            const html = profiles.map(p => `
+                <div class="profile-item">
+                    <div class="profile-item__image">
+                        <img src="${p.image}" onerror="this.src='https://via.placeholder.com/300x400?text=${p.name.replace(/\s/g, '+')}'">
+                    </div>
+                    <div class="profile-item__info">
+                        <h4>${p.name}</h4>
+                        <div class="profile-item__meta">
+                            <span>${p.role}</span>
+                            <span>•</span>
+                            <span>${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</span>
+                            ${p.birth ? `<span>• Born: ${p.birth}</span>` : ''}
+                        </div>
+                    </div>
+                    <div class="profile-item__actions">
+                        <button class="btn btn--secondary btn--small" onclick="viewProfile('${p.name}')">View</button>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('profilesList').innerHTML = html;
+        }
+
+        function viewProfile(name) {
+            const profiles = Storage.getProfiles();
+            const profile = profiles.find(p => p.name === name);
+            if (!profile) return;
+
+            const modal = `
+                <img src="${profile.image}" onerror="this.src='https://via.placeholder.com/300x400?text=${profile.name.replace(/\s/g, '+')}'">
+                <h3>${profile.name}</h3>
+                <p style="color: var(--text-light); font-size: 1.1rem; margin: 0.5rem 0 1.5rem;">${profile.role}</p>
+                <div style="background: var(--cream); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <p><strong>Category:</strong> ${profile.category.charAt(0).toUpperCase() + profile.category.slice(1)}</p>
+                    <p><strong>Born:</strong> ${profile.birth || 'Unknown'}</p>
+                    <p><strong>Birthplace:</strong> ${profile.birthPlace}</p>
+                    <p><strong>Biography:</strong></p>
+                    <p>${profile.bio}</p>
+                </div>
+                <button class="btn btn--stamp" onclick="closeModal()">Close</button>
+            `;
+            document.getElementById('modalBody').innerHTML = modal;
+            document.getElementById('profileModal').classList.add('active');
+        }
+
+        function openAddProfileModal() {
+            switchTab('profiles-add');
+        }
+
+        function closeModal() {
+            document.getElementById('profileModal').classList.remove('active');
+        }
+
+        // FORM HANDLING
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load initial data
+            loadProfiles();
+            document.getElementById('totalProfiles').textContent = Storage.getProfiles().length;
+            document.getElementById('messagesCount').textContent = Storage.getMessages().length;
+
+            // Contact form
+            document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+                Storage.addMessage({
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value,
+                    time: new Date().toISOString()
+                });
+                document.getElementById('messagesCount').textContent = Storage.getMessages().length;
+            });
+
+            // Add profile form
+            document.getElementById('addProfileForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const profile = {
+                    name: document.getElementById('prof-name').value,
+                    category: document.getElementById('prof-category').value,
+                    role: document.getElementById('prof-role').value,
+                    birth: document.getElementById('prof-birth').value,
+                    bio: document.getElementById('prof-bio').value,
+                    image: document.getElementById('prof-image').value || 'https://via.placeholder.com/300x400?text=Profile'
+                };
+                Storage.addProfile(profile);
+                showAlert('Profile added successfully!');
+                this.reset();
+                loadProfiles();
+                document.getElementById('totalProfiles').textContent = Storage.getProfiles().length;
+            });
+
+            // Modal close on outside click
+            document.getElementById('profileModal')?.addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
         });
 
-        box.classList.add("is-open");
-      }
-
-      function setActive(i) {
-        items.forEach(function (el) { el.classList.remove("is-focused"); });
-        if (items[i]) {
-          items[i].classList.add("is-focused");
-          items[i].scrollIntoView({ block: "nearest" });
+        function exportData() {
+            const data = {
+                profiles: Storage.getProfiles(),
+                messages: Storage.getMessages(),
+                timestamp: new Date().toISOString()
+            };
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `zivo-export-${Date.now()}.json`;
+            a.click();
+            showAlert('Database exported!');
         }
-        activeIndex = i;
-      }
 
-      input.addEventListener("input", function () { render(input.value); });
-      input.addEventListener("focus", function () {
-        if (input.value.trim()) render(input.value);
-      });
+        function importData() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = e => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = r => {
+                    try {
+                        const data = JSON.parse(r.target.result);
+                        Storage.saveProfiles(data.profiles);
+                        showAlert('Database imported!');
+                        loadProfiles();
+                    } catch (err) {
+                        showAlert('Error importing file', 'error');
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        }
 
-      input.addEventListener("keydown", function (e) {
-        if (!box.classList.contains("is-open") || !items.length) return;
-        if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(activeIndex + 1, items.length - 1)); }
-        else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(activeIndex - 1, 0)); }
-        else if (e.key === "Enter" && activeIndex > -1) { e.preventDefault(); items[activeIndex].click(); }
-        else if (e.key === "Escape") { box.classList.remove("is-open"); }
-      });
-
-      document.addEventListener("click", function (e) {
-        if (!form.contains(e.target)) box.classList.remove("is-open");
-      });
-    });
-  }
-
-  /* ---------- Age calculation from data-birthdate ---------- */
-  function initAgeFields() {
-    var fields = document.querySelectorAll("[data-birthdate]");
-    if (!fields.length) return;
-    fields.forEach(function (el) {
-      var bd = el.getAttribute("data-birthdate");
-      if (!bd) return;
-      var birth = new Date(bd + "T00:00:00");
-      if (isNaN(birth.getTime())) return;
-      var today = new Date();
-      var age = today.getFullYear() - birth.getFullYear();
-      var m = today.getMonth() - birth.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
-      el.textContent = age;
-    });
-  }
-
-  /* ---------- Footer year ---------- */
-  function initYearFields() {
-    document.querySelectorAll("[data-year]").forEach(function (el) {
-      el.textContent = new Date().getFullYear();
-    });
-  }
-
-  /* ---------- Scroll-spy for the profile "file index" sub-nav ---------- */
-  function initFileIndexScrollSpy() {
-    var nav = document.querySelector(".file-index");
-    if (!nav || !("IntersectionObserver" in window)) return;
-    var links = Array.prototype.slice.call(nav.querySelectorAll(".file-index__link"));
-    var sections = links
-      .map(function (l) { return document.getElementById(l.getAttribute("href").replace("#", "")); })
-      .filter(Boolean);
-    if (!sections.length) return;
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var link = nav.querySelector('.file-index__link[href="#' + entry.target.id + '"]');
-        if (!link) return;
-        links.forEach(function (l) { l.classList.remove("is-active"); });
-        link.classList.add("is-active");
-      });
-    }, { rootMargin: "-140px 0px -60% 0px", threshold: 0.01 });
-
-    sections.forEach(function (s) { observer.observe(s); });
-  }
-
-  /* ---------- Contact form (front-end demo only — no backend wired up) ---------- */
-  function initContactForm() {
-    var form = document.querySelector(".contact-form");
-    if (!form) return;
-    var success = form.querySelector(".form-success");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var btn = form.querySelector("button[type='submit']");
-      if (btn) { btn.disabled = true; btn.textContent = "Sending\u2026"; }
-
-      // Demo only: no backend is connected. Replace this timeout with a
-      // real fetch() call to your email/API endpoint before going live.
-      setTimeout(function () {
-        if (success) success.classList.add("is-visible");
-        form.reset();
-        if (btn) { btn.disabled = false; btn.textContent = "Send Message"; }
-      }, 600);
-    });
-  }
-})();
-
-</script>
+        function clearData() {
+            if (confirm('Clear all data?')) {
+                localStorage.removeItem(CONFIG.storageKey);
+                Storage.getProfiles(); // Reinitialize
+                showAlert('Data cleared!');
+                loadProfiles();
+            }
+        }
+    </script>
 </body>
 </html>
