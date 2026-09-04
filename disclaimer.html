@@ -1,105 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Disclaimer | ZIVO</title>
-<meta name="description" content="How ZIVO researches and presents its profiles.">
-<meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-<link rel="canonical" href="https://http-01.github.io/Zivo.com/disclaimer.html">
-<meta property="og:title" content="Disclaimer | ZIVO">
-<meta property="og:description" content="How ZIVO researches and presents its profiles.">
-<meta property="og:url" content="https://http-01.github.io/Zivo.com/disclaimer.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ZIVO">
-<meta name="theme-color" content="#1C2B3A">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - ZIVO</title>
+    <meta name="description" content="Disclaimer for ZIVO Celebrity Database">
+    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #14181B;
+            --navy: #1C2B3A;
+            --paper: #F2EEE3;
+            --stamp: #AE3728;
+            --text-light: #666666;
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Newsreader', Georgia, serif;
+            color: var(--navy);
+            margin: 2rem 0 1rem 0;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.8rem; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .site-nav__link {
+            color: var(--paper);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .site-nav__link:hover {
+            background: rgba(174, 55, 40, 0.2);
+            color: var(--stamp);
+        }
+
+        .content {
+            padding: 4rem 0;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        .content ul {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-light);
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .alert {
+            background: #FFF3CD;
+            border: 1px solid #FFE69C;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--stamp);
+        }
+
+        .site-footer {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer__link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: all 0.3s;
+        }
+
+        .footer__link:hover {
+            color: var(--stamp);
+        }
+    </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-    <nav class="site-nav" aria-label="Primary"><a href="categories/actors.html" class="site-nav__link">Actors</a><a href="categories/singers.html" class="site-nav__link">Singers</a><a href="categories/athletes.html" class="site-nav__link">Athletes</a><a href="categories/creators.html" class="site-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a><a href="about.html" class="site-nav__link">About</a><a href="contact.html" class="site-nav__link">Contact</a></nav>
-    <div class="site-header__actions">
-      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
-      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    </div>
-  </div>
-  <div class="header-search">
-    <div class="container header-search__inner">
-      <form action="search.html" method="GET" style="flex:1;display:flex;">
-        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
-      </form>
-    </div>
-  </div>
-</header>
-<div class="mobile-nav" aria-hidden="true">
-  <div class="mobile-nav__top">
-    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
-    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <nav class="mobile-nav__list" aria-label="Mobile">
-    <a href="index.html" class="mobile-nav__link">Home</a>
-    <a href="categories/actors.html" class="mobile-nav__link">Actors</a><a href="categories/singers.html" class="mobile-nav__link">Singers</a><a href="categories/athletes.html" class="mobile-nav__link">Athletes</a><a href="categories/creators.html" class="mobile-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="mobile-nav__link">Entrepreneurs</a>
-    <a href="about.html" class="mobile-nav__link">About</a>
-    <a href="contact.html" class="mobile-nav__link">Contact</a>
-  </nav>
-  <form class="mobile-nav__search" action="search.html" method="GET">
-    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
-  </form>
-</div>
-<main id="main">
-  <section class="page-hero page-hero--tight">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumbs__sep">/</span><span aria-current="page">Disclaimer</span></nav>
-      <h1 class="page-hero__title">Disclaimer</h1>
-    </div>
-  </section>
-  <section class="legal-body">
-    <div class="container legal-layout">
-      <nav class="legal-nav" aria-label="Disclaimer sections"><a href="#general" class="legal-nav__link">General Information</a><a href="#no-affiliation" class="legal-nav__link">No Official Affiliation</a><a href="#sourcing" class="legal-nav__link">About Our Profiles</a><a href="#accuracy" class="legal-nav__link">Accuracy of Information</a><a href="#intellectual-property" class="legal-nav__link">Intellectual Property</a><a href="#external-links" class="legal-nav__link">External Links</a><a href="#liability" class="legal-nav__link">Limitation of Liability</a><a href="#changes" class="legal-nav__link">Changes to This Disclaimer</a><a href="#contact" class="legal-nav__link">Contact Us</a></nav>
-      <div>
-        <p class="legal-meta">Last updated: August 19, 2026</p>
-        <div id="general" class="legal-section"><h2 class="legal-section__title">General Information</h2><p>ZIVO publishes biographical content for general informational and reference purposes only.</p></div><div id="no-affiliation" class="legal-section"><h2 class="legal-section__title">No Official Affiliation</h2><p>ZIVO is independent. None of the individuals featured have reviewed, endorsed, or are affiliated with ZIVO, unless explicitly stated.</p></div><div id="sourcing" class="legal-section"><h2 class="legal-section__title">About Our Profiles</h2><p>Profiles are researched from public reference sources — such as Encyclopaedia Britannica and Wikipedia — and written in our own words rather than copied. ZIVO is a growing archive, added to in researched batches. If you notice an inaccuracy, please tell us via Contact.</p></div><div id="accuracy" class="legal-section"><h2 class="legal-section__title">Accuracy of Information</h2><p>Details can change or be reported inconsistently across sources. Net worth figures are shown only when a specific reputable source reported one; the section is omitted otherwise.</p></div><div id="intellectual-property" class="legal-section"><h2 class="legal-section__title">Intellectual Property</h2><p>Names, images, and trademarks referenced belong to their respective owners.</p></div><div id="external-links" class="legal-section"><h2 class="legal-section__title">External Links</h2><p>We are not responsible for third-party site content.</p></div><div id="liability" class="legal-section"><h2 class="legal-section__title">Limitation of Liability</h2><p>ZIVO is not liable for loss or damage arising from reliance on this site's content.</p></div><div id="changes" class="legal-section"><h2 class="legal-section__title">Changes to This Disclaimer</h2><p>This Disclaimer may be updated periodically.</p></div><div id="contact" class="legal-section"><h2 class="legal-section__title">Contact Us</h2><p>Corrections or removal requests: <a href="contact.html" class="text-link">Contact page</a>.</p></div>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
-      </div>
-      <div>
-        <p class="footer__col-title">Categories</p>
-        <a href="categories/actors.html" class="footer__link">Actors</a><a href="categories/singers.html" class="footer__link">Singers</a><a href="categories/athletes.html" class="footer__link">Athletes</a><a href="categories/creators.html" class="footer__link">Creators</a><a href="categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Company</p>
-        <a href="about.html" class="footer__link">About Us</a>
-        <a href="contact.html" class="footer__link">Contact</a>
-        <a href="search.html" class="footer__link">Search</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Legal</p>
-        <a href="privacy.html" class="footer__link">Privacy Policy</a>
-        <a href="disclaimer.html" class="footer__link">Disclaimer</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
-      <span>Made for the endlessly curious.</span>
-    </div>
-    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
-  </div>
-</footer>
-<script src="script.js" defer></script>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="logo">Z ZIVO</a>
+            <nav class="site-nav">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link">About</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container content">
+        <h1>Disclaimer</h1>
+        <p style="color: var(--text-light); font-size: 1.1rem;">Last Updated: January 2026</p>
+
+        <div class="alert">
+            <strong>⚠️ Important:</strong> Please read this disclaimer carefully before using ZIVO. By accessing and using this website, you accept and agree to be bound by the terms and provision of this disclaimer.
+        </div>
+
+        <h2>1. General Disclaimer</h2>
+        <p>The information provided on ZIVO is for informational and educational purposes only. While we strive to ensure accuracy, ZIVO makes no representations or warranties about the completeness, reliability, accuracy, or suitability of the information contained on this website.</p>
+
+        <h2>2. Celebrity Information</h2>
+        <p>ZIVO compiles information from various public sources about celebrities and public figures. We make no claim to own or control the rights to celebrity names, images, or information. All information is compiled for educational and informational purposes only.</p>
+
+        <p>The biographical information provided may not be complete or may contain inaccuracies. We encourage users to verify information through additional sources before relying upon it for any important decision.</p>
+
+        <h2>3. No Professional Advice</h2>
+        <p>The content on ZIVO is not intended to provide professional advice. We are not responsible for any errors or omissions in the information provided, nor are we responsible for any outcomes based on reliance on such information.</p>
+
+        <h2>4. Third-Party Links</h2>
+        <p>ZIVO may contain links to external websites. We are not responsible for the content, accuracy, or practices of these third-party websites. Please review the terms and privacy policies of any external websites before using them.</p>
+
+        <h2>5. Limitation of Liability</h2>
+        <p>In no event shall ZIVO, its owners, operators, or employees be liable for any damages (including but not limited to direct, indirect, incidental, punitive, or consequential damages) arising from your use of or inability to use this website or the information provided.</p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>The content, design, and structure of ZIVO are protected by intellectual property rights. Users may not reproduce, distribute, or transmit any content without prior written permission.</p>
+
+        <h2>7. Right to Change Information</h2>
+        <p>ZIVO reserves the right to modify, update, or remove information at any time without notice. We also reserve the right to modify this disclaimer at any time.</p>
+
+        <h2>8. User Conduct</h2>
+        <p>By using ZIVO, you agree not to:</p>
+        <ul>
+            <li>Use the website for any illegal purpose or in violation of any laws</li>
+            <li>Harass, abuse, or harm any individual or entity</li>
+            <li>Attempt to gain unauthorized access to the website</li>
+            <li>Transmit viruses, malware, or harmful code</li>
+            <li>Infringe upon any intellectual property rights</li>
+        </ul>
+
+        <h2>9. Medical and Health Information</h2>
+        <p>Any health or medical information provided about celebrities is for informational purposes only and should not be considered professional medical advice. Always consult with qualified healthcare professionals for medical concerns.</p>
+
+        <h2>10. Celebrity Endorsements</h2>
+        <p>ZIVO is not affiliated with any celebrities featured on our platform. The presence of information about a celebrity on ZIVO does not imply any endorsement of ZIVO by that celebrity or their representatives.</p>
+
+        <h2>11. Acceptance of Disclaimer</h2>
+        <p>Your use of ZIVO constitutes your acceptance of this disclaimer. If you do not agree with any part of this disclaimer, please do not use our website.</p>
+
+        <h2>12. Contact Us</h2>
+        <p>If you have questions or concerns about this disclaimer, please contact us:</p>
+        <p>
+            Email: <a href="mailto:naxshmoses@gmail.com" style="color: var(--stamp); text-decoration: none;">naxshmoses@gmail.com</a><br>
+            Phone: +91 98765 43210
+        </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p style="margin-bottom: 1rem;">&copy; 2026 ZIVO. All rights reserved.</p>
+            <div>
+                <a href="privacy-policy.html" class="footer__link">Privacy</a>
+                <a href="disclaimer.html" class="footer__link">Disclaimer</a>
+                <a href="contact.html" class="footer__link">Contact</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
