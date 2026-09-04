@@ -1,0 +1,78 @@
+# ZIVO Website Configuration
+title: ZIVO - Celebrity Biography Database
+description: Explore 1000+ authentic celebrity profiles spanning actors, singers, athletes, creators, entrepreneurs, and business leaders
+url: https://http-01.github.io/Zivo.com/
+baseurl: /Zivo.com
+
+# Author
+author:
+  name: ZIVO Team
+  email: naxshmoses@gmail.com
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# SEO
+google_site_verification: 13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU
+
+# Social media
+twitter: 
+instagram: 
+facebook:
+
+# Contact
+contact_email: naxshmoses@gmail.com
+contact_phone: "+91 98765 43210"
+contact_address: "New Delhi, India"
+
+# Categories
+categories:
+  - name: Actors
+    icon: 🎬
+    description: Film and television performers
+  - name: Singers
+    icon: 🎤
+    description: Musicians and vocalists
+  - name: Athletes
+    icon: ⚽
+    description: Sports professionals
+  - name: Creators
+    icon: 🎥
+    description: Content creators and influencers
+  - name: Entrepreneurs
+    icon: 💼
+    description: Business founders and leaders
+  - name: Business
+    icon: 📊
+    description: Corporate executives
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - node_modules
+  - .git
+  - .gitignore
+  - .nojekyll
+  - README.md
+  - package.json
+  - Gemfile
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+
+# Pagination (if needed)
+paginate: 20
+paginate_path: "/page:num/"
+
+# Output
+output: _site
