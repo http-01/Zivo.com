@@ -1,125 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | ZIVO</title>
-<meta name="description" content="Learn about ZIVO's mission to tell honest, original, in-depth stories behind the world's most famous people.">
-<meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-<link rel="canonical" href="https://http-01.github.io/Zivo.com/about.html">
-<meta property="og:title" content="About Us | ZIVO">
-<meta property="og:description" content="Learn about ZIVO's mission to tell honest, original, in-depth stories behind the world's most famous people.">
-<meta property="og:url" content="https://http-01.github.io/Zivo.com/about.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ZIVO">
-<meta name="theme-color" content="#1C2B3A">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ZIVO - Celebrity Database</title>
+    <meta name="description" content="Learn about ZIVO, the world's leading celebrity biography database with 1000+ authentic profiles.">
+    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #14181B;
+            --navy: #1C2B3A;
+            --paper: #F2EEE3;
+            --stamp: #AE3728;
+            --cream: #F6F3EA;
+            --text-light: #666666;
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.16);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Newsreader', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.75rem; }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Newsreader', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .logo__icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--stamp) 0%, #8B2818 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .site-nav__link {
+            color: var(--paper);
+            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .site-nav__link:hover,
+        .site-nav__link.is-active {
+            background: rgba(174, 55, 40, 0.2);
+            color: var(--stamp);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 50%, var(--cream) 100%);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__title {
+            color: var(--navy);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section--dark {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #E8E3D6;
+            margin-bottom: 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .site-footer {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer__title {
+            font-family: 'Newsreader', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer__link {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.75rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer__link:hover {
+            color: var(--stamp);
+        }
+
+        .footer__bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-    <nav class="site-nav" aria-label="Primary"><a href="categories/actors.html" class="site-nav__link">Actors</a><a href="categories/singers.html" class="site-nav__link">Singers</a><a href="categories/athletes.html" class="site-nav__link">Athletes</a><a href="categories/creators.html" class="site-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a><a href="about.html" class="site-nav__link is-active">About</a><a href="contact.html" class="site-nav__link">Contact</a></nav>
-    <div class="site-header__actions">
-      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
-      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    </div>
-  </div>
-  <div class="header-search">
-    <div class="container header-search__inner">
-      <form action="search.html" method="GET" style="flex:1;display:flex;">
-        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
-      </form>
-    </div>
-  </div>
-</header>
-<div class="mobile-nav" aria-hidden="true">
-  <div class="mobile-nav__top">
-    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
-    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <nav class="mobile-nav__list" aria-label="Mobile">
-    <a href="index.html" class="mobile-nav__link">Home</a>
-    <a href="categories/actors.html" class="mobile-nav__link">Actors</a><a href="categories/singers.html" class="mobile-nav__link">Singers</a><a href="categories/athletes.html" class="mobile-nav__link">Athletes</a><a href="categories/creators.html" class="mobile-nav__link">Creators</a><a href="categories/entrepreneurs.html" class="mobile-nav__link">Entrepreneurs</a>
-    <a href="about.html" class="mobile-nav__link">About</a>
-    <a href="contact.html" class="mobile-nav__link">Contact</a>
-  </nav>
-  <form class="mobile-nav__search" action="search.html" method="GET">
-    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
-  </form>
-</div>
-<main id="main">
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumbs__sep">/</span><span aria-current="page">About Us</span></nav>
-      <span class="eyebrow eyebrow--light">About Us</span>
-      <h1 class="page-hero__title">The story behind ZIVO</h1>
-      <p class="page-hero__subtitle">We built ZIVO for people who don't just want to know that someone is famous — but why.</p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container" style="max-width:760px;">
-      <div class="prose">
-        <p>ZIVO was created for the endlessly curious. Headlines tell you what someone just did; they rarely tell you how they got there. We wanted a place that goes further back — to the classrooms, garages, street corners, and small stages where every famous story actually begins.</p>
-        <p>Every profile on ZIVO is organized the same way: Early Life, Education, Career, Achievements, and Interesting Facts, with a Net Worth section included only when a specific, reputable source has reported a figure. We'd rather leave a section out than fill it with a guess.</p>
-        <p>ZIVO covers five worlds — Actors, Singers, Athletes, Creators, and Entrepreneurs — because fame today comes from a film set, a stadium, a studio, a stream, or a startup, equally.</p>
-      </div>
-    </div>
-  </section>
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section__head"><div><span class="eyebrow">What We Stand For</span><h2 class="section__title">Our Values</h2></div></div>
-      <div class="value-grid">
-        <div class="value-card"><h3 class="value-card__title">Accuracy &amp; Care</h3><p class="value-card__desc">We favor leaving a detail out over guessing at one. Where public information is unreliable or unavailable, we say so.</p></div>
-        <div class="value-card"><h3 class="value-card__title">Original Storytelling</h3><p class="value-card__desc">Every biography is researched from public sources and written in our own words.</p></div>
-        <div class="value-card"><h3 class="value-card__title">Global Perspective</h3><p class="value-card__desc">Fame isn't limited to one country or industry. We catalogue icons from every continent and craft.</p></div>
-        <div class="value-card"><h3 class="value-card__title">Respect for Privacy</h3><p class="value-card__desc">Even public figures deserve boundaries. We focus on public, career-relevant milestones — not personal intrusion.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="section u-center">
-    <div class="container">
-      <h2 class="section__title">Have a correction or a suggestion?</h2>
-      <p class="lede u-center" style="margin:0.8em auto var(--sp-4);">We'd genuinely like to hear from you.</p>
-      <a href="contact.html" class="btn btn--stamp">Contact Us</a>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a href="index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
-      </div>
-      <div>
-        <p class="footer__col-title">Categories</p>
-        <a href="categories/actors.html" class="footer__link">Actors</a><a href="categories/singers.html" class="footer__link">Singers</a><a href="categories/athletes.html" class="footer__link">Athletes</a><a href="categories/creators.html" class="footer__link">Creators</a><a href="categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Company</p>
-        <a href="about.html" class="footer__link">About Us</a>
-        <a href="contact.html" class="footer__link">Contact</a>
-        <a href="search.html" class="footer__link">Search</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Legal</p>
-        <a href="privacy.html" class="footer__link">Privacy Policy</a>
-        <a href="disclaimer.html" class="footer__link">Disclaimer</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
-      <span>Made for the endlessly curious.</span>
-    </div>
-    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
-  </div>
-</footer>
-<script src="script.js" defer></script>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="logo">
+                <div class="logo__icon">Z</div>
+                <div>ZIVO</div>
+            </a>
+            <nav class="site-nav">
+                <a href="index.html" class="site-nav__link">Home</a>
+                <a href="about.html" class="site-nav__link is-active">About</a>
+                <a href="contact.html" class="site-nav__link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero__content">
+            <h1 class="hero__title">About ZIVO</h1>
+            <p style="color: var(--text-light); font-size: 1.2rem; max-width: 600px;">Discover our mission to create the world's most comprehensive celebrity biography database</p>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <h2>Our Story</h2>
+                    <p>ZIVO was founded with a simple yet ambitious goal: to create the most comprehensive and accurate celebrity biography database in the world. We believe that the stories of remarkable individuals inspire others to achieve greatness.</p>
+                    <p>Starting from a passion for celebrity culture and entertainment, we've grown to house over 1000 authentic profiles spanning actors, singers, athletes, creators, entrepreneurs, and business leaders from around the globe.</p>
+                    <p>Our team works tirelessly to ensure every profile is accurate, engaging, and regularly updated with the latest information about our featured celebrities.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--stamp) 0%, #8B2818 100%); border-radius: 12px; height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                    📚
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="section section--dark">
+        <div class="container">
+            <h2 style="color: var(--paper); text-align: center; margin-bottom: 3rem;">Our Mission & Vision</h2>
+            
+            <div class="content-grid" style="color: var(--paper);">
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--paper); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--cream); margin-bottom: 1rem;">🎯 Our Mission</h3>
+                    <p>To provide accurate, engaging, and comprehensive celebrity biographies that inspire, educate, and entertain our global audience. We strive to be the go-to source for celebrity information, maintaining the highest standards of accuracy and integrity.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.1); color: var(--paper); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--cream); margin-bottom: 1rem;">✨ Our Vision</h3>
+                    <p>To become the world's most trusted and comprehensive celebrity biography platform, spanning all industries and continents. We envision a world where the remarkable stories of celebrities are easily accessible to everyone, inspiring millions to follow their passions and achieve their dreams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Our Core Values</h2>
+            
+            <div class="values-grid">
+                <div class="card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Accuracy</h3>
+                    <p>We commit to providing verified, accurate, and up-to-date information about every celebrity in our database.</p>
+                </div>
+
+                <div class="card">
+                    <div class="value-icon">✨</div>
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in every aspect, from content quality to user experience and design.</p>
+                </div>
+
+                <div class="card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Global Reach</h3>
+                    <p>We celebrate celebrities from around the world, representing diverse cultures, industries, and backgrounds.</p>
+                </div>
+
+                <div class="card">
+                    <div class="value-icon">💚</div>
+                    <h3>Passion</h3>
+                    <p>We are passionate about celebrity culture and dedicated to sharing inspiring stories with our audience.</p>
+                </div>
+
+                <div class="card">
+                    <div class="value-icon">🔒</div>
+                    <h3>Integrity</h3>
+                    <p>We maintain the highest ethical standards in how we research, verify, and present celebrity information.</p>
+                </div>
+
+                <div class="card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Innovation</h3>
+                    <p>We continuously innovate to improve our platform and provide the best user experience possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section section--dark" style="text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--paper); margin-bottom: 3rem;">By The Numbers</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div>
+                    <div style="font-size: 3rem; color: var(--stamp); font-weight: 700; margin-bottom: 0.5rem;">1000+</div>
+                    <p>Celebrity Profiles</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: var(--stamp); font-weight: 700; margin-bottom: 0.5rem;">6</div>
+                    <p>Categories</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: var(--stamp); font-weight: 700; margin-bottom: 0.5rem;">180+</div>
+                    <p>Countries Represented</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: var(--stamp); font-weight: 700; margin-bottom: 0.5rem;">100%</div>
+                    <p>Free Access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__title">ZIVO</div>
+                    <p style="color: rgba(255,255,255,0.7);">Your ultimate source for celebrity biographies.</p>
+                </div>
+                <div>
+                    <div class="footer__title">Links</div>
+                    <a href="index.html" class="footer__link">Home</a>
+                    <a href="about.html" class="footer__link">About</a>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                </div>
+                <div>
+                    <div class="footer__title">Legal</div>
+                    <a href="privacy-policy.html" class="footer__link">Privacy</a>
+                    <a href="disclaimer.html" class="footer__link">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ZIVO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
