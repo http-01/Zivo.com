@@ -1,136 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actors — Celebrity Profiles | ZIVO</title>
-<meta name="description" content="Screen legends and rising stars from film and television around the globe.">
-<meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
-<link rel="canonical" href="https://http-01.github.io/Zivo.com/categories/actors.html">
-<meta property="og:title" content="Actors — Celebrity Profiles | ZIVO">
-<meta property="og:description" content="Screen legends and rising stars from film and television around the globe.">
-<meta property="og:url" content="https://http-01.github.io/Zivo.com/categories/actors.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ZIVO">
-<meta name="theme-color" content="#1C2B3A">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actors - ZIVO Celebrity Database</title>
+    <meta name="description" content="Browse 100+ actor profiles on ZIVO. Discover biographies of famous actors and actresses from around the world.">
+    <meta name="google-site-verification" content="13ayhNmgX4U5YawyNvmjUyB6RXKO7ziIZd0P7CoAQfU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #14181B;
+            --navy: #1C2B3A;
+            --paper: #F2EEE3;
+            --stamp: #AE3728;
+            --cream: #F6F3EA;
+            --cat-color: #7A3B3B;
+            --text-light: #666666;
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.16);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Newsreader', Georgia, serif;
+            color: var(--navy);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .logo__icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--stamp) 0%, #8B2818 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .site-nav__link {
+            color: var(--paper);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .site-nav__link:hover,
+        .site-nav__link.is-active {
+            background: rgba(174, 55, 40, 0.2);
+            color: var(--stamp);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 50%, var(--cream) 100%);
+            padding: 4rem 0;
+        }
+
+        .hero__title {
+            color: var(--navy);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero__subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .section {
+            padding: 3rem 0;
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .profile-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .profile-card__image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--cat-color), #9a4f4f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .profile-card__content {
+            padding: 1.5rem;
+        }
+
+        .profile-card__name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .profile-card__role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-card__bio {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .site-footer {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1619 100%);
+            color: var(--paper);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer__link {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .footer__link:hover {
+            color: var(--stamp);
+        }
+
+        .footer__bottom {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        @media (max-width: 768px) {
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="../index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-    <nav class="site-nav" aria-label="Primary"><a href="../categories/actors.html" class="site-nav__link is-active">Actors</a><a href="../categories/singers.html" class="site-nav__link">Singers</a><a href="../categories/athletes.html" class="site-nav__link">Athletes</a><a href="../categories/creators.html" class="site-nav__link">Creators</a><a href="../categories/entrepreneurs.html" class="site-nav__link">Entrepreneurs</a><a href="../about.html" class="site-nav__link">About</a><a href="../contact.html" class="site-nav__link">Contact</a></nav>
-    <div class="site-header__actions">
-      <button type="button" class="icon-btn search-toggle" aria-expanded="false" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
-      <button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    </div>
-  </div>
-  <div class="header-search">
-    <div class="container header-search__inner">
-      <form action="../search.html" method="GET" style="flex:1;display:flex;">
-        <input class="header-search__input" type="search" name="q" placeholder="Search celebrities by name…" aria-label="Search">
-      </form>
-    </div>
-  </div>
-</header>
-<div class="mobile-nav" aria-hidden="true">
-  <div class="mobile-nav__top">
-    <span class="logo">ZIVO<span class="logo__dot">.</span></span>
-    <button type="button" class="mobile-nav__close icon-btn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <nav class="mobile-nav__list" aria-label="Mobile">
-    <a href="../index.html" class="mobile-nav__link">Home</a>
-    <a href="../categories/actors.html" class="mobile-nav__link">Actors</a><a href="../categories/singers.html" class="mobile-nav__link">Singers</a><a href="../categories/athletes.html" class="mobile-nav__link">Athletes</a><a href="../categories/creators.html" class="mobile-nav__link">Creators</a><a href="../categories/entrepreneurs.html" class="mobile-nav__link">Entrepreneurs</a>
-    <a href="../about.html" class="mobile-nav__link">About</a>
-    <a href="../contact.html" class="mobile-nav__link">Contact</a>
-  </nav>
-  <form class="mobile-nav__search" action="../search.html" method="GET">
-    <input type="search" name="q" placeholder="Search celebrities…" aria-label="Search">
-  </form>
-</div>
-<main id="main">
-  <section class="page-hero page-hero--tight">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="breadcrumbs__sep">/</span><span aria-current="page">Actors</span></nav>
-      <span class="eyebrow eyebrow--light">Category</span>
-      <h1 class="page-hero__title">Actors</h1>
-      <p class="page-hero__subtitle">Screen legends and rising stars from film and television around the globe.</p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="section__head"><span class="catalog-no">2 PROFILES ON FILE</span></div>
-      <div class="file-grid file-grid--3"><a href="../profiles/tom-holland.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A3B3B">TH</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 001</span>
-      <h3 class="file-card__name">Tom Holland</h3>
-      <p class="file-card__role">Actor</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Tom Holland is an English actor best known for playing Spider-Man in the Marvel Cinematic Universe, following a path that began in London musical theatre.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A3B3B">Actors</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a><a href="../profiles/zendaya.html" class="file-card">
-  <div class="file-card__top">
-    <div class="id-photo" style="--accent:#7A3B3B">ZZ</div>
-    <div class="file-card__id">
-      <span class="catalog-no file-card__catalog">N° 002</span>
-      <h3 class="file-card__name">Zendaya</h3>
-      <p class="file-card__role">Actress & Producer</p>
-    </div>
-  </div>
-  <div class="file-card__body">
-    <p class="file-card__blurb">Zendaya is an American actress and producer who moved from Disney Channel comedy into critically acclaimed drama, becoming the youngest actress to win two Primetime Emmy Awards for Outstanding Lead Actress.</p>
-    <div class="file-card__foot">
-      <span class="tag" style="--accent:#7A3B3B">Actors</span>
-      <span class="file-card__link">View Profile</span>
-    </div>
-  </div>
-</a></div>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a href="../index.html" class="logo">ZIVO<span class="logo__dot">.</span></a>
-        <p class="footer__brand-desc">ZIVO tells the real stories behind the world's most recognizable names — from their earliest days to their biggest achievements.</p>
-      </div>
-      <div>
-        <p class="footer__col-title">Categories</p>
-        <a href="../categories/actors.html" class="footer__link">Actors</a><a href="../categories/singers.html" class="footer__link">Singers</a><a href="../categories/athletes.html" class="footer__link">Athletes</a><a href="../categories/creators.html" class="footer__link">Creators</a><a href="../categories/entrepreneurs.html" class="footer__link">Entrepreneurs</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Company</p>
-        <a href="../about.html" class="footer__link">About Us</a>
-        <a href="../contact.html" class="footer__link">Contact</a>
-        <a href="../search.html" class="footer__link">Search</a>
-      </div>
-      <div>
-        <p class="footer__col-title">Legal</p>
-        <a href="../privacy.html" class="footer__link">Privacy Policy</a>
-        <a href="../disclaimer.html" class="footer__link">Disclaimer</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; <span data-year>2026</span> ZIVO. All rights reserved.</span>
-      <span>Made for the endlessly curious.</span>
-    </div>
-    <p class="footer__note">ZIVO profiles are researched from public reference sources and written in our own words. Details can change or be incomplete — see our <a href="../disclaimer.html" style="color:inherit;">Disclaimer</a> for details.</p>
-  </div>
-</footer>
-<script src="../script.js" defer></script>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="../index.html" class="logo">
+                <div class="logo__icon">Z</div>
+                <div>ZIVO</div>
+            </a>
+            <nav class="site-nav">
+                <a href="../index.html" class="site-nav__link">Home</a>
+                <a href="actors.html" class="site-nav__link is-active">Actors</a>
+                <a href="singers.html" class="site-nav__link">Singers</a>
+                <a href="athletes.html" class="site-nav__link">Athletes</a>
+                <a href="../contact.html" class="site-nav__link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero__title">🎬 Actors</h1>
+            <p class="hero__subtitle">Explore profiles of renowned actors and actresses from around the world</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="profiles-grid">
+                <a href="#tom-holland" class="profile-card">
+                    <div class="profile-card__image">🎭</div>
+                    <div class="profile-card__content">
+                        <div class="profile-card__name">Tom Holland</div>
+                        <div class="profile-card__role">Actor</div>
+                        <div class="profile-card__bio">British actor known for Spider-Man in the MCU and numerous blockbuster films.</div>
+                    </div>
+                </a>
+
+                <a href="#dwayne-johnson" class="profile-card">
+                    <div class="profile-card__image">💪</div>
+                    <div class="profile-card__content">
+                        <div class="profile-card__name">Dwayne Johnson</div>
+                        <div class="profile-card__role">Actor & Producer</div>
+                        <div class="profile-card__bio">Hollywood's highest-paid actor, known for action films and charisma.</div>
+                    </div>
+                </a>
+
+                <a href="#leonardo-dicaprio" class="profile-card">
+                    <div class="profile-card__image">🎬</div>
+                    <div class="profile-card__content">
+                        <div class="profile-card__name">Leonardo DiCaprio</div>
+                        <div class="profile-card__role">Actor</div>
+                        <div class="profile-card__bio">Academy Award-winning actor in critically acclaimed films.</div>
+                    </div>
+                </a>
+
+                <a href="#shah-rukh-khan" class="profile-card">
+                    <div class="profile-card__image">🌟</div>
+                    <div class="profile-card__content">
+                        <div class="profile-card__name">Shah Rukh Khan</div>
+                        <div class="profile-card__role">Actor</div>
+                        <div class="profile-card__bio">King of Bollywood with 80+ film appearances and global recognition.</div>
+                    </div>
+                </a>
+
+                <a href="#zendaya" class="profile-card">
+                    <div class="profile-card__image">✨</div>
+                    <div class="profile-card__content">
+                        <div class="profile-card__name">Zendaya</div>
+                        <div class="profile-card__role">Actress & Singer</div>
+                        <div class="profile-card__bio">Emmy-nominated actress known for Euphoria and Spider-Man films.</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__title">ZIVO</div>
+                    <p style="color: rgba(255,255,255,0.7);">Celebrity biography database.</p>
+                </div>
+                <div>
+                    <div class="footer__title">Categories</div>
+                    <a href="actors.html" class="footer__link">Actors</a>
+                    <a href="singers.html" class="footer__link">Singers</a>
+                    <a href="athletes.html" class="footer__link">Athletes</a>
+                </div>
+                <div>
+                    <div class="footer__title">Legal</div>
+                    <a href="../privacy-policy.html" class="footer__link">Privacy</a>
+                    <a href="../disclaimer.html" class="footer__link">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ZIVO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
