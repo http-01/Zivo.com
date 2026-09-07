@@ -1092,5 +1092,26 @@
             this.value = this.value.trim();
         });
     </script>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCGjiO_KGxBnZLD-xCR1IBd1L1eQk-pcsg",
+  authDomain: "zivo-df6bc.firebaseapp.com",
+  projectId: "zivo-df6bc",
+  storageBucket: "zivo-df6bc.firebasestorage.app",
+  messagingSenderId: "595935823966",
+  appId: "1:595935823966:web:916730ed976cca4c0a8ccf",
+  measurementId: "G-G2N57VKXTT"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 </body>
 </html>
